@@ -1,0 +1,235 @@
+/**
+Homepage (landing page) Css customize
+Author: Bui Thai Son (s4037172)
+**/
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #000000;
+    --Electric-blue: #86EEEC;
+    --Amenthys: #AC63D4;
+    --Grapes: #7B1DaE;
+    --Turquoise: #53E8D4;
+    --hover-background: #d9d9d9;
+    --post-background-light: #d8d8d8;
+    --post-background-dark: #231F20;
+    --animation-timing: 300ms ease-in-out;
+    --cross-height: calc(5px * 3 + 5px * 2);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color-light);
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: 30px;
+    transform-origin: left center;
+    height: 5px;
+    background-color: var(--background-color-dark);
+    border-radius: 9999px;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing);
+}
+
+.hamburger-menu {
+    --x-width: calc(var(--cross-height) * 1.41421356237); 
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 40px;
+    cursor: pointer;
+    width: max-content;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(5px / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(5px / 2);
+}
+
+.logo {
+    font-size: 30px;
+    font-family: 'Karmatic Arcade', sans-serif;
+    color: var(--Grapes);
+    cursor: pointer;
+}
+
+.left-section a {
+    text-decoration: none;
+}
+
+.pedia {
+    color: var(--Turquoise);
+    padding: 1px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 30%;
+    gap: 15px;
+}
+
+.right-section a {
+    text-decoration: none;
+}
+
+.search-button {
+    font-size: 30px;
+    margin-top: 2px;
+    color: var(--background-color-dark);
+}
+
+.login-button {
+    font-size: 16px;
+    color: var(--background-color-dark);
+    padding: 15px 40px;
+    background-color: var(--Turquoise);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.register-button {
+    font-size: 17px;
+    color: var(--background-color-light);
+    padding: 14px 50px;
+    background-color: var(--Grapes);
+    border-radius: 8px;
+}
+
+#profile {
+    font-size: 20px;
+    padding-right: 2px;
+    margin-top: 2px;
+}
+
+.bg-toggle-button {
+    font-size: 40px;
+    margin-right: 20px;
+    margin-left: 5px;
+    color: var(--background-color-dark);
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100vh;
+}
+
+.links, .sublink {
+    list-style-type: none;
+    padding: 0;
+    translate: -100%;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links li {
+    margin-bottom: 5px;
+    padding: 15px 0;
+    border-bottom: 1px solid #d9d9d9;
+    margin-left: 20px;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    color: var(--background-color-dark);
+    gap: 20px;
+    font-size: 24px;
+    padding: 20px 5px;
+    padding-right: 30px;
+    border-radius: 6px;
+}
+
+.items:hover {
+    background-color: #d9d9d9;
+}
+
+.sublink {
+    display: none;
+    font-size: 20px;
+}
+
+.sublink a {
+    color: var(--background-color-dark);
+}
+
+.sublink li {
+    border-bottom: var(--background-color-light);
+    width: fit-content;
+}
+
+#sub-menu:hover .sublink {
+    display: flex;
+    flex-direction: column;
+    transition: ease-in var(--animation-timing);
+}
+
+.sublink li:hover {
+    border-bottom: 3px solid #d9d9d9;
+}
+
+.hamburger-menu:has(input:checked), .links {
+    translate: 0;
+}
