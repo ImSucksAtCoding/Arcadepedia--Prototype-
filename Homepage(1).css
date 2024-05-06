@@ -41,7 +41,6 @@ body {
 .left-section {
     display: flex;
     flex-direction: row;
-    gap: 15px;
     width: 40%;
 }
 
@@ -66,7 +65,7 @@ body {
     padding-left: 40px;
     cursor: pointer;
     width: max-content;
-    margin-top: 7.5px;
+    margin-top: 5px;
     margin-right: 20px;
 }
 
@@ -96,7 +95,7 @@ body {
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 30px;
     font-family: 'Karmatic Arcade', sans-serif;
     color: var(--Grapes);
     cursor: pointer;
@@ -171,19 +170,13 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 0;
-    height: 100vh;
-    transition: width var(--animation-timing);
+    width: 15%;
+    transition: translate var(--animation-timing);
 }
 
 .links, .sublink {
     list-style-type: none;
     padding: 0;
-    transition: opacity var(--animation-timing);
-}
-
-.links {
-    opacity: 0;
 }
 
 .links a {
@@ -236,6 +229,6 @@ body {
     border-bottom: 3px solid #d9d9d9;
 }
 
-.content {
-    transition: margin-left 300ms;
+.sidebar.active {
+    translate: 0;
 }

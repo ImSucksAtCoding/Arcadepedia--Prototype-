@@ -18,8 +18,8 @@
     <div class="header">
         <div class="left-section">
             <div class="menu">
-                <label class="hamburger-menu">
-                    <input type="checkbox">
+                <label class="hamburger-menu" for="check">
+                    <input type="checkbox" id="check" onclick="Menu()">
                 </label>
             </div>
             <a href="Homepage.html">
@@ -72,12 +72,32 @@
             </nav>
         </div>
 
-        <div class="content"></div>
+        <div class="content">
+
+        </div>
     </div>
 
     <div class="footer"></div>
     <script>
-        
+        //Variables declaration 
+        var check = document.getElementById("check");
+        var sidebar = document.querySelector('.sidebar');
+        var content = document.querySelector('.content');
+        var links = document.querySelector('.links');
+        //Menu() fuction (to display the sidebar on the left and slide the content to the right)
+        function Menu() {
+            if (check.checked == true) {
+                sidebar.style.width = "15%";
+                content.style.marginLeft = "15%";
+                links.style.opacity = "100%";
+            }
+
+            else if (check.checked == false) {
+                sidebar.style.width = "0";
+                content.style.marginLeft = "0";
+                links.style.opacity = "0";
+            }
+        }
     </script>
 </body>
 </html>
