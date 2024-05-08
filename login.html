@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import some text font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--Css file-->
+    <link rel="stylesheet" href="login.css">   
+    <!--Import fonts for icons-->
+    <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
+
+    <title>Arcadepedia | Login</title>
+</head>
+<body>
+    <div class="exit">
+        <a href="Homepage.html"><i class="fa-regular fa-circle-xmark"></i></a>
+    </div>
+    
+    <div class="login-form">
+        <div class="login">Login</div>
+        <div class="register">Don't have an account? <a href="register.html">Register now!</a></div>
+        <form action="" method="post">
+            <div class="email">
+                <label for="Email">Login</label>
+                <input type="email" id="Login" name="Email" placeholder="Email or username">
+            </div>
+
+            <div class="password">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="Password" placeholder="Enter password">
+                <span>
+                    <i class="fa-solid fa-eye"></i> 
+                </span>  
+            </div>
+
+            <div class="forgot-password">Forgot password ?</div>
+            <input type="submit" value="Sign in" id="Submit" name="Submit">
+        </form>
+        <div class="line"></div>
+    </div>
+    <div class="bg-toggle-button">
+        <i class="fa-solid fa-moon"></i>
+    </div>
+    <script>
+        //Hide and show the password field by toggle the eye button using Javascript
+        var show = document.querySelector('.fa-eye')
+        var password = document.getElementById("Password")
+        //Click event
+        show.addEventListener('click', () => {
+            if (password.type === "password") {
+                password.type = "text"
+                show.classList.replace('fa-eye', 'fa-eye-slash')
+            }
+            else {
+                password.type = "password"
+                show.classList.replace('fa-eye-slash', 'fa-eye')
+            }
+        })
+    </script>
+</body>
+</html>
