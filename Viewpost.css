@@ -267,10 +267,34 @@ body {
 .option {
     cursor: pointer;
     margin-left: auto;
+    position: relative;
 }
 
 .userAction {
     cursor: pointer;
+}
+
+.userAction:first-of-type button {
+    border-radius: 20px 20px 0 0;
+}
+
+.userAction:last-of-type button {
+    border-radius: 0 0 20px 20px;
+}
+
+.userAction button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: #FFFFFF;
+}
+
+.userAction button:hover {
+    background-color: #DADADA;
 }
 
 .reaction {
