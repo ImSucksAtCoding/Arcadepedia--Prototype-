@@ -1,0 +1,122 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap" />
+    <link href="https://fonts.cdnfonts.com/css/karmatic-arcade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Import fonts for icons-->
+    <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="post.css" />
+    <title>Arcadepedia</title>
+  </head>
+  <body>
+      <header class="header">
+            
+        <div class="logo left">          
+            <span class="arcade">
+                arcade<span class="pedia">pedia</span>
+            </span>
+        </div>
+          
+          <div class="search center">
+            <form action="">
+              <input type="text" placeholder="Search" id="search">
+              <button><i class="material-icons">search</i></button>
+            </form>
+          </div>
+          
+          <div class="icons right">
+            <i class="material-icons display-this">account_circle</i>
+            <i class="material-icons">dark_mode</i>
+            <button class="log">Log out</button>
+          </div>
+      </header>
+      <main>
+          <div class="sidebar">
+            <a class="nav-link">
+              <i class="material-icons">home</i>
+              <span>Home</span>
+           </a>
+           <a class="nav-link dropdown-btn">
+              <i class="material-icons">explore</i>
+              <span>Explore</span>
+              <i class="material-icons expand">expand_more</i>
+           </a>
+           <div class="dropdown-container">
+            <a class="nav-link"><span>General</span></a>
+            <a class="nav-link"><span>All entries</span></a>
+          </div> 
+           <a class="nav-link dropdown-btn">
+              <i class="material-icons">forum</i>
+              <span>Forum</span>
+              <i class="material-icons expand">expand_more</i>
+           </a>
+           <div class="dropdown-container">
+            <a class="nav-link"><span>Discussions</span></a>
+            <a class="nav-link"><span>Users</span></a>
+          </div> 
+           <a class="nav-link dropdown-btn">
+              <i class="material-icons">help</i>
+              <span>About</span>
+              <i class="material-icons expand">expand_more</i>
+           </a>
+           <div class="dropdown-container">
+            <a class="nav-link"><span>About us</span></a>
+            <a class="nav-link"><span>Rules</span></a>
+            <a class="nav-link"><span>Disclaimer</span></a>
+          </div> 
+            <hr>
+          </div>
+          <div class="content">
+            <div class="post">
+              <h2>Create post</h2>
+              <form action="">
+                <div class="title">
+                  <label for="title">Title<span id="req">*</span></label><br>
+                  <input type="text" id="title" placeholder="Up to 300 characters"><br>
+                </div>
+                <button id="tag" type="button">Add tag +</button><br>
+                <div class="editor">
+                  <button type="button" class="edit-btn" data-element="bold"><i class="material-icons">format_bold</i></button>
+                  <button type="button" class="edit-btn" data-element="italic"><i class="material-icons">format_italic</i></button>
+                  <button type="button" class="edit-btn" data-element="underline"><i class="material-icons">format_underline</i></button>
+                  <button type="button" class="edit-btn" data-element="unorderedList"><i class="material-icons">list</i></button>
+                </div>
+                <button type="submit">Post</button>
+              </form>
+            </div>
+            <div class="rules">
+              <h2>Rules</h2>
+              <ol>
+                <li>Be nice and treat people with respect. Keep discussions civil and be open-minded about differing opinions.</li>
+                <li>Do not ask for or share links to pirated material.</li>
+                <li>Spamming, trolling, or impersonating other users will lead to your account being banned.</li>
+              </ol>
+            </div>
+          </div>
+      </main>
+      <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>
+  <!-- Main Body Ends -->
+</body>
+</html>

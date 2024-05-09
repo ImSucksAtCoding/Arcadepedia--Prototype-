@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+:root {
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #000000;
+    --Electric-blue: #86EEEC;
+    --Amenthys: #AC63D4;
+    --Grapes: #7B1DaE;
+    --Turquoise: #53E8D4;
+    --hover-background: #d9d9d9;
+    --post-background-light: #d8d8d8;
+    --post-background-dark: #231F20;
+}
+
+body {
+    background-color: var(--background-color-light);
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+}
+
+main {
+    height: calc(100vh - 70px);
+    display: flex;
+}
+.sidebar {
+    height: 100%;
+    width: 22%;
+    background-color: white;
+    overflow-y: hidden;
+} 
+@media (max-width: 768px) {
+    .side-bar {
+      display: none;
+    }
+    .search {
+        display: none;
+      }
+  }
+@media (max-width: 900px) {
+    .search input {
+      width: 25rem;
+    }
+  }
+
+.logo {
+    font-size: 20px;
+    font-family: 'Karmatic Arcade', sans-serif;
+    cursor: pointer;
+}
+.arcade {
+    color: var(--Grapes);
+}
+.pedia {
+    color: var(--Turquoise);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+   
+.left #menu {
+    padding: 0 7px;
+    cursor: pointer;
+}
+.search {
+    display: flex;
+}
+   
+.search form {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 45px;
+}
+
+.search input {
+    width: 500px;
+    padding:10px;
+    border: 0;
+    height: 100%;
+    border-radius: 10px;
+}
+  
+#search:focus {
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 10px 0 0 10px ;
+}
+
+.search button {
+    height: 100%;
+    width: 60px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+  }
+
+.expand {
+    padding: 0 100px;
+    float: right;
+    cursor: pointer;
+}
+
+.log {
+    background-color: #53E8D4;
+    border-style: none;
+    border-radius: 8px;
+    display: inline-flex;
+    padding: 10px 20px 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.dropdown-container {
+  display: none;
+  background-color: white;
+  padding-left: 8px;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.nav-link, .dropdown-btn{
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+}
+  
+.nav-link span {
+    margin-left: 15px;
+}
+  
+.nav-link:hover , .dropdown-btn:hover{
+    background: #f2f2f2;
+    cursor: pointer;
+}
+ 
+.active {
+    background: #e5e5e5;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: white;
+    padding-left: 8px;
+  }
+
+  hr {
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+  }
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.post {
+    flex: 0 1 70%;
+    padding-left: 50px;
+}
+.title {
+    margin-top: 20px;
+}
+
+.post input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 700px;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    
+}
+
+#req {
+    color: red;
+}
+
+.rules {
+    flex: 0 1 30%;
+    background-color: #e5e5e5;
+    padding: 30px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1px;
+    margin-right: 50px;
+}
+.rules h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+ol li {
+    margin-bottom: 10px;
+}
+#tag {
+    margin-bottom: 15px;
+}
+textarea {
+    margin-bottom: 20px;
+}
+ul {
+    list-style-type: none;
+}
