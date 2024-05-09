@@ -80,7 +80,7 @@
                 <div class="post">
                     <div class="d-flex justify-content-between">
                         <div>
-                            <span><img class="profilePic" src="./assest/Arcadepedia.png" alt="profilePic" width="40px" height="40px"></span>
+                            <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
                             <span class="username">Minh Khoi</span>
                             <span class="timestampSeperator">•</span>
                             <span class="timestamp">May 15th, 2099</span>
@@ -105,7 +105,7 @@
                                 <button class="dislike-post-button">&#x25BC;</button>    
                             </span>
                             <span class="comment-outline">
-                                <img src="./Slice-1.png" alt="comment-outline" width="16px">
+                                <img src="./assets/Viewpost/comment-outline.png" alt="comment-outline" width="16px">
                             </span>
                         </span>
                     </div>
@@ -115,7 +115,7 @@
                     <div class="comment" id="1">
                         <div class="d-flex justify-content-between">
                             <div>
-                                <span><img class="profilePic" src="./assest/Arcadepedia.png" alt="profilePic" width="40px" height="40px"></span>
+                                <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
                                 <span class="username">Minh Khoi</span>
                                 <span class="timestampSeperator">•</span>
                                 <span class="timestamp">May 15th, 2099</span>
@@ -140,7 +140,7 @@
                                     <button class="dislike-post-button">&#x25BC;</button>    
                                 </span>
                                 <span class="comment-outline">
-                                    <img src="./Slice-1.png" alt="comment-outline" width="16px">
+                                    <img src="./assets/Viewpost/comment-outline.png" alt="comment-outline" width="16px">
                                 </span>
                             </span>
                         </div>
@@ -149,7 +149,7 @@
                     <div class="comment" id="2">
                         <div class="d-flex justify-content-between">
                             <div>
-                                <span><img class="profilePic" src="./assest/Arcadepedia.png" alt="profilePic" width="40px" height="40px"></span>
+                                <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
                                 <span class="username">Minh Khoi</span>
                                 <span class="timestampSeperator">•</span>
                                 <span class="timestamp">May 15th, 2099</span>
@@ -174,7 +174,7 @@
                                     <button class="dislike-post-button">&#x25BC;</button>    
                                 </span>
                                 <span class="comment-outline">
-                                    <img src="./Slice-1.png" alt="comment-outline" width="16px">
+                                    <img src="./assets/Viewpost/comment-outline.png" alt="comment-outline" width="16px">
                                 </span>
                             </span>
                         </div>    
@@ -183,7 +183,7 @@
                     <div class="comment" id="3">
                         <div class="d-flex justify-content-between">
                             <div>
-                                <span><img class="profilePic" src="./assest/Arcadepedia.png" alt="profilePic" width="40px" height="40px"></span>
+                                <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
                                 <span class="username">Minh Khoi</span>
                                 <span class="timestampSeperator">•</span>
                                 <span class="timestamp">May 15th, 2099</span>
@@ -208,10 +208,16 @@
                                     <button class="dislike-post-button">&#x25BC;</button>    
                                 </span>
                                 <span class="comment-outline">
-                                    <img src="./Slice-1.png" alt="comment-outline" width="16px">
+                                    <img src="./assets/Viewpost/comment-outline.png" alt="comment-outline" width="16px">
                                 </span>
                             </span>
-                        </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="makeComment">
+                    <div class="userClick">
+                        <img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="60px" height="60px">
+                        <span>Leave a comment</span>
                     </div>
                 </div>
             </div>
@@ -220,7 +226,7 @@
 
     <div class="footer"></div>
     <script>
-        //Variables declaration 
+        //Variables declaration
         let check = document.querySelector("#check");
         let sidebar = document.querySelector('.sidebar');
         let content = document.querySelector('.content');
@@ -232,7 +238,9 @@
         let likePostBtns = document.querySelectorAll(".like-post-button");
         let dislikePostBtns = document.querySelectorAll(".dislike-post-button");
 
-        // let commentOutline = document.querySelector
+        let makeCommentWidget = document.querySelector(".makeComment");
+        let i = 0;
+        let initialHeight;
 
         check.addEventListener("click", (e) => {
             if (check.checked == true) {
@@ -262,13 +270,70 @@
             likePostBtn.addEventListener("click", ((e) => {
                 likePostBtn.classList.toggle("likedLike");
             }))
-        })
+        });
 
         dislikePostBtns.forEach((dislikePostBtn) => {
             dislikePostBtn.addEventListener("click", ((e) => {
                 dislikePostBtn.classList.toggle("dislikedDislike");
             }))
-        })
+        });
+
+
+        makeCommentWidget.addEventListener("click", (e) => {
+            if(i === 0) {
+                i++;
+                e.currentTarget.classList.add('expanded');
+                // e.currentTarget.innerHTML = '<form action="/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment" method="get" class="formAction"><textarea name="comment" placeholder="Write your comment here..."></textarea></form>';
+
+                e.currentTarget.innerHTML = ''; // Clear the current content
+
+                //Create the submit button
+                let submitBtn = document.createElement('button');
+                submitBtn.type = 'submit';
+                submitBtn.textContent = 'Post';
+                submitBtn.className = "submitBtnB";
+
+                // Create the form element
+                let form = document.createElement('form');
+                form.action = "/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment";
+                form.method = "get";
+                form.className = "formAction";
+
+                // Create the textarea element
+                let textarea = document.createElement('textarea');
+                textarea.name = "comment";
+                textarea.style.overflow = "auto";
+                textarea.placeholder = "Write your comment here...";
+
+                // Append the textarea to the form
+                form.appendChild(textarea);
+                form.appendChild(submitBtn);
+
+                // Append the form to the e.currentTarget
+                e.currentTarget.appendChild(form);
+            }
+
+
+            // <form action="/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment" method="get"></form>
+
+            i++;
+
+            let commentArea = document.querySelector('.makeComment textarea');
+
+            if (initialHeight !== commentArea.offsetHeight) {
+                initialHeight = commentArea.offsetHeight;
+            }
+
+            commentArea1(commentArea);
+        });
+
+        function commentArea1(dom_elem) {
+            if(dom_elem.offsetHeight > 200) {
+                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 200) + "px";
+            } else {
+                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 100) + "px";
+            }
+        }
     </script>
 </body>
 </html>

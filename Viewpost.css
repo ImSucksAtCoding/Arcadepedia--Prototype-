@@ -1,6 +1,6 @@
 /**
-Homepage (landing page) Css customize
-Author: Bui Thai Son (s4037172)
+View post + Make comment CSS customize
+Author: Nguyen Tuan Minh Khoi (S3995060)
 **/
 * {
     box-sizing: border-box;
@@ -260,6 +260,7 @@ body {
 .post {
     margin-top: 10px;
 }
+
 .profilePic {
     border-radius: 50%;
 }
@@ -332,6 +333,65 @@ body {
 
 .comment {
     margin-bottom: 30px;
+}
+
+.makeComment {
+    cursor: pointer;
+    /* display: grid; */
+    background-color: white;
+    height: 100px;
+    margin-bottom: 50px;
+    align-content: center;
+    /* text-align: center; */
+    transition: height 0.5s ease;
+}
+
+.makeComment.expanded {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formAction {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.makeComment textarea {
+    /* overflow: scroll; */
+    /* height: 65%; */
+    height: 100px;
+    width: 90%;
+    /* margin: 30px 0 30px 0; */
+}
+
+.submitBtnB {
+    border-radius: 10px 10px 10px 10px;
+    color: rgba(0, 0, 0, 50%);
+    background-color: rgba(83, 232, 212, 50%);
+    font-weight: bold;
+    border: 0;
+    margin-top: 20px;
+    float: right;
+}
+
+.makeComment div {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.makeComment span {
+    display: inline-block;
+    /* vertical-align: top; */
+    margin-left: 20px;
+    font-size: 36px;
+    color: gray;
+    /* align-items: center;
+    vertical-align: top; */
 }
 
 /* Footer */
