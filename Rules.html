@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadepedia | Homepage</title>
+    <!--Import some text font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap" />
+    <link href="https://fonts.cdnfonts.com/css/karmatic-arcade" rel="stylesheet">
+    <!--Import fonts for icons-->
+    <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
+    <!--Css file-->
+    <link rel="stylesheet" href="Rules.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="left-section">
+            <div class="menu">
+                <label class="hamburger-menu" for="check">
+                    <input type="checkbox" id="check" onclick="Menu()">
+                </label>
+            </div>
+            <a href="Homepage.html">
+            <div class="logo">
+                <span>
+                    arcade<span class="pedia">pedia</span>
+                </span>
+            </div>
+           </a> 
+        </div>
+
+        <div class="right-section">
+            <a href="#">
+                <div class="search-button" role="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div> 
+            </a>   
+            <a href="login.html">
+                <div class="login-button" role="button">
+                    Login
+                </div>
+            </a>
+            <a href="register.html">
+                <div class="register-button" role="button">
+                    <i class="fa-regular fa-circle-user" id="profile"></i>
+                    Register
+                </div>
+            </a>
+            <div class="bg-toggle-button" role="button">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <nav role="navigation">
+                <ul class="links">
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
+                    <li><a href="#"><div class="items"><i class="fa-regular fa-compass"></i>Explore</div></a></li>
+                    <li><a href="#"><div class="items"><i class="fa-regular fa-comments"></i>Forums</div></a></li>
+                    <li id="sub-menu"><a href="#"><div class="items"><i class="fa-regular fa-circle-question"></i>About</div></a>
+                        <ul class="sublink">
+                            <li><a href="AboutUs.html">About us</a></li>
+                            <li><a href="Rules.html">Rules</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>                    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <div class="content">
+            <div class="center-title">
+                <h1>Legal and Compliance</h1>
+            </div>
+            
+            <p>
+                <a class="legal-button" href="#" data-target="copyright">Copyright</a>
+            </p>
+        
+            <div id="copyright" class="legal-info">
+            <p>+ All content on this website, including text, images, videos, and other media, is either original or properly licensed from the respective copyright holders. 
+            <p>+ Users are prohibited from copying, distributing, or using any content from this website without explicit permission, except where allowed under fair use or other applicable copyright exceptions. </p>
+            <p>+ Copyright notices are prominently displayed throughout the website to inform users of the ownership of content and any restrictions on its use. </p>
+            <p>+ The speedrun records displayed on this website are sourced from speedrun.com. All rights to these records belong to their respective creators and contributors.</p>
+            </div>
+
+            <p>
+                <a class="legal-button" href="#" data-target="privacy-policy">Privacy Policy</a>
+            </p>
+            <div id="privacy-policy" class="legal-info">
+            <p>+ Our privacy policy outlines how user data is collected, used, and protected on this website. </p>
+            <p>+ We collect limited personal information, such as email addresses for newsletter subscriptions, and use it solely for the intended purpose with user consent. </p>
+            <p>+ User data is stored securely and is not shared with third parties without explicit consent, except where required by law or for essential website functions. </p>
+            <p>+ Users have the right to access, modify, or delete their personal information and can exercise these rights through the website's privacy settings.</p>
+            </div>
+
+            <p>
+                <a class="legal-button" href="#" data-target="terms-of-use">Terms of Use</a>
+            </p>
+            <div id="terms-of-use" class="legal-info">
+            <p>+ By accessing and using this website, users agree to abide by the terms of use outlined herein. 
+            <p>+ Users are prohibited from engaging in any illegal or unauthorized activities, including but not limited to hacking, spamming, or distributing malware. </p>
+            <p>+ User-generated content, such as comments and forum posts, must adhere to community guidelines and may be moderated or removed if found to violate our terms of use. </p>
+            <p>+ The website admin reserves the right to suspend or terminate user accounts that violate these terms or pose a threat to the security and integrity of the website. </p>
+            <p>+ By accessing the speedrun records displayed on this platform, you agree to abide by the following terms: </p>
+            <p>    - You may view and reference the speedrun records for non-commercial purposes. </p>
+            <p>    - You may not modify, distribute, or reproduce the records without proper attribution to speedrun.com. </p>
+            <p>    - Any misuse or violation of these terms may result in account suspension.</p>
+            </div>
+
+            <p>
+                <a class="legal-button" href="#" data-target="cookie-usage">Cookie Usage</a>
+            </p>
+            <div id="cookie-usage" class="legal-info">
+           <p>+ Automatic Saving of User Comments/Drafts and Theme Selection:</p>
+           <p>+ This website employs cookies to enhance user experience by automatically saving comment drafts while users compose their messages. This feature ensures that users can return to unfinished drafts later without losing their progress. Additionally, the website utilizes cookies to store users' theme selection preferences, including choices between light mode and dark mode. By saving these preferences, users can enjoy a consistent browsing experience tailored to their visual preferences.</p>
+        
+          <h3>Light Mode and Dark Mode:</h3>
+          <p>+ Light Mode: This mode features a traditional bright background with dark text, suitable for well-lit environments and daytime usage. Users may prefer light mode for its clarity and ease of reading.</p>
+          <p>+ Dark Mode: Dark mode provides a darker background with light text, which is beneficial for users in low-light conditions or those seeking reduced eye strain during nighttime browsing. This mode offers enhanced readability and visual comfort.</p>
+        
+          <h3>Cookie Consent and Management:</h3>
+          <p>+ Upon visiting the website, users are presented with a cookie consent banner that informs them about the use of cookies for saving comment drafts and theme selections. </p>
+          <p>+ Users have the option to accept or reject these cookies based on their preferences. </p>
+          <p>+ The cookie consent banner also includes a link to the website's privacy policy, where users can find detailed information about the types of cookies used, their purposes, and how they can manage their cookie settings. </p>
+          <p>+ Users can manage their cookie preferences at any time through the website's settings or their browser's cookie management tools. They have the freedom to adjust their consent preferences or revoke consent for specific cookie categories as desired.</p>
+        
+          <h3>Compliance with Privacy Regulations:</h3>
+          <p>+ The website ensures compliance with relevant privacy regulations, such as the General Data Protection Regulation (GDPR), by providing transparent information about cookie usage and obtaining user consent before placing cookies on their devices. </p>
+          <p>+ Privacy policies are regularly reviewed and updated to reflect changes in regulations or website practices, ensuring that users are informed about their rights and the website's data handling practices. </p>
+          <p>+ User data collected through cookies is used solely for the specified purposes of saving comment drafts and theme selections. The website does not engage in any unauthorized data collection or sharing practices, maintaining the privacy and security of user information.</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script>
+        //Variables declaration 
+        var check = document.getElementById("check");
+        var sidebar = document.querySelector('.sidebar');
+        var content = document.querySelector('.content');
+        var links = document.querySelector('.links');
+        //Menu() fuction (to display the sidebar on the left and slide the content to the right)
+        function Menu() {
+            if (check.checked == true) {
+                sidebar.style.width = "15%";
+                content.style.marginLeft = "15%";
+                links.style.opacity = "100%";
+            }
+
+            else if (check.checked == false) {
+                sidebar.style.width = "0";
+                content.style.marginLeft = "0";
+                links.style.opacity = "0";
+            }
+        }
+
+        document.querySelectorAll('.legal-button').forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+
+                // Get the target ID from the data-target attribute
+                var targetId = this.getAttribute('data-target');
+                var targetSection = document.getElementById(targetId);
+
+                // Toggle visibility of target section
+                if (targetSection.style.display === 'none') {
+                    targetSection.style.display = 'block';
+                } else {
+                    targetSection.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
