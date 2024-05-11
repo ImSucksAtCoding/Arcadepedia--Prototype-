@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Viewpost.css">
+    <link rel="stylesheet" href="/Viewpost(+comments).css">
 </head>
 <body>
     <div class="header">
@@ -78,22 +78,24 @@
                     <a class="noUnderlineLink" href="#">&larr;All posts</a>
                 </div>
                 <div class="post">
-                    <div class="d-flex justify-content-between">
-                        <div>
+                    <div class="infoRow justify-content-between">
+                        <div class="userInfo">
                             <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
                             <span class="username">Minh Khoi</span>
                             <span class="timestampSeperator">•</span>
                             <span class="timestamp">May 15th, 2099</span>
                         </div>
-                        <span>
+                        <div class="options-container">
                             <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
-                            <form action="#" method="get" class="userAction invisible">
-                                <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
-                            </form>
-                            <form action="#" method="get" class="userAction invisible">
-                                <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
-                            </form>
-                    </span>
+                            <div class="buttons-container invisible">
+                                <form action="#" method="get" class="userAction">
+                                    <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                </form>
+                                <form action="#" method="get" class="userAction">
+                                    <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <h1>Title</h1>
@@ -128,22 +130,24 @@
                 <hr>
                 <div class="commentSection">
                     <div class="comment" id="1">
-                        <div class="d-flex justify-content-between">
-                            <div>
+                        <div class="infoRow justify-content-between">
+                            <div class="userInfo">
                                 <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
                                 <span class="username">Minh Khoi</span>
                                 <span class="timestampSeperator">•</span>
                                 <span class="timestamp">May 15th, 2099</span>
                             </div>
-                            <span>
+                            <div class="options-container">
                                 <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
-                                <form action="#" method="get" class="userAction invisible">
-                                    <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
-                                </form>
-                                <form action="#" method="get" class="userAction invisible">
-                                    <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
-                                </form>
-                            </span>
+                                <div class="buttons-container invisible">
+                                    <form action="#" method="get" class="userAction">
+                                        <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                    </form>
+                                    <form action="#" method="get" class="userAction">
+                                        <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <h1>Title</h1>
@@ -165,7 +169,7 @@
                                         </span>
                                         <span class="numberOfComments">
                                             123
-                                        </span>    
+                                        </span>
                                     </a>
                                 </span>
                             </span>
@@ -173,22 +177,24 @@
                     </div>
                     <hr>
                     <div class="comment" id="2">
-                        <div class="d-flex justify-content-between">
-                            <div>
+                        <div class="infoRow justify-content-between">
+                            <div class="userInfo">
                                 <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
                                 <span class="username">Minh Khoi</span>
                                 <span class="timestampSeperator">•</span>
                                 <span class="timestamp">May 15th, 2099</span>
                             </div>
-                            <span>
+                            <div class="options-container">
                                 <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
-                                <form action="#" method="get" class="userAction invisible">
-                                    <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
-                                </form>
-                                <form action="#" method="get" class="userAction invisible">
-                                    <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
-                                </form>
-                            </span>
+                                <div class="buttons-container invisible">
+                                    <form action="#" method="get" class="userAction">
+                                        <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                    </form>
+                                    <form action="#" method="get" class="userAction">
+                                        <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <h1>Title</h1>
@@ -210,7 +216,7 @@
                                         </span>
                                         <span class="numberOfComments">
                                             123
-                                        </span>    
+                                        </span>
                                     </a>
                                 </span>
                             </span>
@@ -218,22 +224,24 @@
                     </div>
                     <hr>
                     <div class="comment" id="3">
-                        <div class="d-flex justify-content-between">
-                            <div>
+                        <div class="infoRow justify-content-between">
+                            <div class="userInfo">
                                 <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
                                 <span class="username">Minh Khoi</span>
                                 <span class="timestampSeperator">•</span>
                                 <span class="timestamp">May 15th, 2099</span>
                             </div>
-                            <span>
+                            <div class="options-container">
                                 <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
-                                <form action="#" method="get" class="userAction invisible">
-                                    <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
-                                </form>
-                                <form action="#" method="get" class="userAction invisible">
-                                    <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
-                                </form>
-                            </span>
+                                <div class="buttons-container invisible">
+                                    <form action="#" method="get" class="userAction">
+                                        <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                    </form>
+                                    <form action="#" method="get" class="userAction">
+                                        <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <h1>Title</h1>
@@ -269,13 +277,12 @@
     <div class="footer"></div>
     <script>
         //Variables declaration
-        let check = document.querySelector("#check");
-        let sidebar = document.querySelector('.sidebar');
-        let content = document.querySelector('.content');
-        let links = document.querySelector('.links');
+        // let check = document.querySelector("#check");
+        // let sidebar = document.querySelector('.sidebar');
+        // let content = document.querySelector('.content');
+        // let links = document.querySelector('.links');
         
         let options = document.querySelectorAll(".option");
-        let forms = document.querySelectorAll(".userAction");
 
         let likePostBtns = document.querySelectorAll(".like-post-button");
         let dislikePostBtns = document.querySelectorAll(".dislike-post-button");
@@ -287,23 +294,23 @@
         let initialHeight;
         let makeCommentWidget1 = document.querySelector(".reply");
 
-        check.addEventListener("click", (e) => {
-            if (check.checked == true) {
-                sidebar.style.width = "15%";
-                content.style.marginLeft = "15%";
-                links.style.opacity = "100%";
-            } else {
-                sidebar.style.width = "0";
-                content.style.marginLeft = "0";
-                links.style.opacity = "0";
-            }
-        });
+        // check.addEventListener("click", (e) => {
+        //     if (check.checked == true) {
+        //         sidebar.style.width = "15%";
+        //         content.style.marginLeft = "15%";
+        //         links.style.opacity = "100%";
+        //     } else {
+        //         sidebar.style.width = "0";
+        //         content.style.marginLeft = "0";
+        //         links.style.opacity = "0";
+        //     }
+        // });
 
         options.forEach((option) => {
             option.addEventListener("click", (e) => {
-                let forms = option.parentElement.querySelectorAll(".userAction");
-                forms.forEach((form) => {
-                    form.classList.toggle("invisible");
+                let btnsContainer = option.parentElement.querySelectorAll(".buttons-container");
+                btnsContainer.forEach((btn) => {
+                    btn.classList.toggle("invisible");
                 })
             })
         });
