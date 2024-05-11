@@ -265,14 +265,35 @@ body {
     border-radius: 50%;
 }
 
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+}
+
+.options-container {
+    position: relative;
+}
+
 .option {
     cursor: pointer;
     margin-left: auto;
     position: relative;
 }
 
+.buttons-container {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 100px;
+}
+
 .userAction {
-    /* border: 2px solid black; */
+    cursor: pointer;
+    display: block;
+}
+
+.userAction {
     cursor: pointer;
 }
 

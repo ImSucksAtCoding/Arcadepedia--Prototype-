@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadepedia | View Topic "Arcadepedia"</title>
+    <!--Import fonts for icons-->
+    <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
+    <!--Css file-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Viewtopic(+posts).css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="menu">
+                <label class="hamburger-menu" for="check">
+                    <input type="checkbox" id="check">
+                </label>
+            </div>
+            <a href="Homepage.html">
+            <div class="logo">
+                <span>
+                    arcade<span class="pedia">pedia</span>
+                </span>
+            </div>
+           </a> 
+        </div>
+
+        <div class="right-section">
+            <a href="#">
+                <div class="search-button" role="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div> 
+            </a>   
+            <a href="login.html">
+                <div class="login-button" role="button">
+                    Login
+                </div>
+            </a>
+            <a href="register.html">
+                <div class="register-button" role="button">
+                    <i class="fa-regular fa-circle-user" id="profile"></i>
+                    Register
+                </div>
+            </a>
+            <div class="bg-toggle-button" role="button">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="sidebar">
+            <nav role="navigation">
+                <ul class="links">
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">All entries</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Users</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Rules</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>                    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content container-fluid">
+            <div class="row" style="margin-bottom: 0;">
+                <div class="topicDescription col-10 mx-auto">
+                    <h1>Arcadepedia</h1>
+                    <p>Important information regarding Arcadepedia will be posted here.</p>
+                </div>
+            </div>
+
+            <div class="row" style="padding: 20px;">
+                <div class="feed col-6 mx-auto">
+                    <div class="makePost">
+                        <div class="userClick">
+                            <img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="60px" height="60px">
+                            <span>What's on your mind?</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <form action="#" method="get">
+                        <select id="filterPosts" name="filterPosts">
+                            <option value="oldest" selected>Oldest</option>
+                            <option value="latest">Latest</option>
+                        </select>
+                        <input type="text" name="searchTitle" id="searchTitle" placeholder="Search posts' title">
+                        <input type="text" name="searchContent" id="searchContent" placeholder="Search posts' content">
+                        <button type="submit">Submit</button>
+                    </form>
+                    <hr>
+                    <div class="postSection">
+                        <div class="post" id="1">
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
+                                    <span class="username">Minh Khoi</span>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">May 15th, 2099</span>
+                                </div>
+                                <div class="options-container">
+                                    <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
+                                    <div class="buttons-container invisible">
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                        </form>
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h2>Title</h2>
+                            </div>
+                            <div class="row">
+                                <p>Body</p>
+                            </div>
+                            <div class="row">
+                                <span>
+                                    <span class="reaction">
+                                        <span class="like-post-button">&#x25B2;</span>
+                                        0
+                                        <span class="dislike-post-button">&#x25BC;</span>    
+                                    </span>
+                                    <span class="reply">
+                                        <a href="#" class="commentOpen">
+                                            <span class="comment-outline">
+                                                <i class="fa-regular fa-message"></i>
+                                            </span>
+                                            <span class="numberOfComments">
+                                                123
+                                            </span>    
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="post" id="2">
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
+                                    <span class="username">Minh Khoi</span>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">May 15th, 2099</span>
+                                </div>
+                                <div class="options-container">
+                                    <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
+                                    <div class="buttons-container invisible">
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                        </form>
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h2>Title</h2>
+                            </div>
+                            <div class="row">
+                                <p>Body</p>
+                            </div>
+                            <div class="row">
+                                <span>
+                                    <span class="reaction">
+                                        <span class="like-post-button">&#x25B2;</span>
+                                        0
+                                        <span class="dislike-post-button">&#x25BC;</span>    
+                                    </span>
+                                    <span class="reply">
+                                        <a href="#" class="commentOpen">
+                                            <span class="comment-outline">
+                                                <i class="fa-regular fa-message"></i>
+                                            </span>
+                                            <span class="numberOfComments">
+                                                123
+                                            </span>    
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>    
+                        </div>
+                        <hr>
+                        <div class="post" id="3">
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
+                                    <span class="username">Minh Khoi</span>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">May 15th, 2099</span>
+                                </div>
+                                <div class="options-container">
+                                    <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
+                                    <div class="buttons-container invisible">
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                        </form>
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h2>Title</h2>
+                            </div>
+                            <div class="row">
+                                <p>Body</p>
+                            </div>
+                            <div class="row">
+                                <span>
+                                    <span class="reaction">
+                                        <span class="like-post-button">&#x25B2;</span>
+                                        0
+                                        <span class="dislike-post-button">&#x25BC;</span>    
+                                    </span>
+                                    <span class="reply">
+                                        <a href="#" class="commentOpen">
+                                            <span class="comment-outline">
+                                                <i class="fa-regular fa-message"></i>
+                                            </span>
+                                            <span class="numberOfComments">
+                                                123
+                                            </span>    
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rules col-3">
+                    <h2 class="text-center">Rules</h2>
+                    <p>1. Be nice and treat people with respect. Keep discussions civil and be open-minded about differing opinions.</p>
+                    <p>2. Do not ask for or share links to pirated material.</p>
+                    <p>3. Spamming, trolling, or impersonating other users will lead to your account being banned.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+    <script>
+        //Variables declaration
+        let makePostWidget = document.querySelector(".makePost");
+        let i = 0;
+        let initialHeight;
+
+        let options = document.querySelectorAll(".option");
+
+        let likePostBtns = document.querySelectorAll(".like-post-button");
+        let dislikePostBtns = document.querySelectorAll(".dislike-post-button");
+        let likeCommentBtns = document.querySelectorAll(".like-comment-button");
+        let dislikeCommentBtns = document.querySelectorAll(".dislike-comment-button");
+
+        makePostWidget.addEventListener("click", (e) => {
+            if(i === 0) {
+                i++;
+                e.currentTarget.classList.add('expanded');
+
+                e.currentTarget.innerHTML = '';
+
+                // Create the form element
+                let form = document.createElement('form');
+                form.action = "/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment";
+                form.method = "get";
+                form.className = "formAction";
+
+                // Create the input element
+                let input = document.createElement('input');
+                input.type = 'text';
+                input.name = 'post[title]';
+                input.placeholder = "Post title";
+
+                // Create the textarea element
+                let textarea = document.createElement('textarea');
+                textarea.name = "post[content]";
+                textarea.placeholder = "Post content";
+
+                //Create the submit button
+                let submitBtn = document.createElement('button');
+                submitBtn.type = 'submit';
+                submitBtn.textContent = 'Post';
+                submitBtn.className = "submitBtnB";
+
+                // Append the textarea to the form
+                form.appendChild(input);
+                form.appendChild(textarea);
+                form.appendChild(submitBtn);
+
+                // Append the form to the e.currentTarget
+                e.currentTarget.appendChild(form);
+
+                /*============================================================================================================
+                <div class="makePost">
+                    <form action="/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment" method="get" class="formAction">
+                        <textarea name="comment" placeholder="Write your comment here.."></textarea>
+                        <button type="submit" class="submitBtnB">Post</button>
+                    </form>
+                </div>
+                ============================================================================================================*/
+            }
+
+            i++;
+
+            let commentArea = document.querySelector('.makePost textarea');
+
+            if (initialHeight !== commentArea.offsetHeight) {
+                initialHeight = commentArea.offsetHeight;
+            }
+
+            makePostArea(commentArea);
+        });
+
+        function makePostArea(dom_elem) {
+            if(dom_elem.offsetHeight > 200) {
+                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 200) + "px";
+            } else {
+                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 100) + "px";
+            }
+        }
+
+        options.forEach((option) => {
+            option.addEventListener("click", (e) => {
+                let btnsContainer = option.parentElement.querySelectorAll(".buttons-container");
+                btnsContainer.forEach((btn) => {
+                    btn.classList.toggle("invisible");
+                })
+            })
+        });
+
+        [...likePostBtns, ...likeCommentBtns].forEach(button => {
+            button.addEventListener("click", (e) => {
+                if(button.classList.contains("like-post-button")) {
+                    button.classList.toggle("likedLike");
+                } else {
+                    button.classList.toggle("likedLike");
+                }
+            });
+        });
+
+        [...dislikePostBtns, ...dislikeCommentBtns].forEach(button => {
+            button.addEventListener("click", (e) => {
+                if(button.classList.contains("dislike-post-button")) {
+                    button.classList.toggle("dislikedDislike");
+                } else {
+                    button.classList.toggle("dislikedDislike");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+/**
+Homepage (landing page) Css customize
+Author: Bui Thai Son (s4037172)
+**/
+
+
+/** 
+---------- Import header style for the webpage */ @import url('header.css'); /* ----------
+*/
+
+
+/**
+----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
+**/
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #000000;
+    --Electric-blue: #86EEEC;
+    --Amenthys: #AC63D4;
+    --Grapes: #7B1DaE;
+    --Turquoise: #53E8D4;
+    --hover-background: #d9d9d9;
+    --post-background-light: #d8d8d8;
+    --post-background-dark: #231F20;
+    --animation-timing: 300ms ease-in-out;
+    --cross-height: calc(5px * 3 + 5px * 2);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color-light);
+    font-family: 'Inter', sans-serif;
+}
+
+/* .hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: 30px;
+    transform-origin: left center;
+    height: 5px;
+    background-color: var(--background-color-dark);
+    border-radius: 9999px;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing);
+}
+
+.hamburger-menu {
+    --x-width: calc(var(--cross-height) * 1.41421356237); 
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 40px;
+    cursor: pointer;
+    width: max-content;
+    margin-top: 7.5px;
+    margin-right: 20px;
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(5px / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(5px / 2);
+} */
+
+
+/* 
+--------- Right button styles ----------
+*/
+
+.right-section a {
+    text-decoration: none;
+} 
+
+.search-button {
+    font-size: 25px;
+    margin-top: 2px;
+    color: var(--background-color-dark);
+    cursor: pointer;
+}
+
+.login-button {
+    font-size: 13px;
+    color: var(--background-color-dark);
+    padding: 13px 30px;
+    background-color: var(--Turquoise);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.register-button {
+    font-size: 14px;
+    color: var(--background-color-light);
+    padding: 13px 40px;
+    background-color: var(--Grapes);
+    border-radius: 8px;
+}
+
+.bg-toggle-button {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 5px;
+    color: var(--background-color-dark);
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+/*-------------- End of right button styles -------------
+---------------------------------------------------------
+---------------- Main content styles --------------------
+**
+*/
+
+.topicDescription {
+    background-color: #DADADA;
+    margin: 50px 0 10px 0;
+    padding: 35px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.feed {
+    /* transition: margin-left 300ms; */
+    margin: 20px auto 100px auto;
+    background-color: #DADADA;
+    border-radius: 20px 20px 20px 20px;
+    padding: 20px;
+    /* border: 3px solid black; */
+}
+
+.rules {
+    /* transition: margin-left 300ms; */
+    margin: 20px auto 100px 0;
+    background-color: #DADADA;
+    padding: 30px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.profilePic {
+    border-radius: 50%;
+}
+
+.makePost {
+    cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
+    /* display: grid; */
+    background-color: white;
+    height: 100px;
+    margin-bottom: 50px;
+    align-content: center;
+    /* text-align: center; */
+    transition: height 0.5s ease;
+}
+
+.makePost.expanded {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formAction {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.makePost textarea {
+    /* overflow: scroll; */
+    /* height: 65%; */
+    height: 100px;
+    width: 90%;
+    z-index: 1;
+    /* margin: 30px 0 30px 0; */
+}
+
+.submitBtnB {
+    border-radius: 10px 10px 10px 10px;
+    color: rgba(0, 0, 0, 50%);
+    background-color: rgba(83, 232, 212, 50%);
+    font-weight: bold;
+    border: 0;
+    margin-top: 20px;
+    float: right;
+}
+
+.makePost div {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.makePost span {
+    display: inline-block;
+    /* vertical-align: top; */
+    margin-left: 20px;
+    font-size: 36px;
+    color: gray;
+    /* align-items: center;
+    vertical-align: top; */
+}
+
+.postSection {
+    margin-left: 30px;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+}
+
+.options-container {
+    position: relative;
+}
+
+.option {
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+}
+
+.buttons-container {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 100px;
+}
+
+.userAction {
+    cursor: pointer;
+    display: block;
+}
+
+.userAction:first-of-type button {
+    border: 2px solid black;
+    border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+    transition: background 0.3s ease;
+}
+
+.userAction:last-of-type button {
+    border: 2px solid black;
+    border-top: 0;
+    border-radius: 0 0 20px 20px;
+    transition: background 0.3s ease;
+}
+
+.userAction button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: #FFFFFF;
+}
+
+.userAction:hover {
+    background-color: white;
+}
+
+.userAction:first-of-type button:hover {
+    background-color: #DADADA;
+    border-radius: 20px 20px 0 0;
+}
+
+.userAction:last-of-type button:hover {
+    background-color: #DADADA;
+}
+
+.reaction {
+    display: inline-flex;
+    box-sizing: border-box;
+    /* width: 100px; */
+    border: 2px solid #000000;
+    border-radius: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.reaction span.like-post-button, .reaction span.dislike-post-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.reaction span.like-post-button:hover, .reaction span.dislike-post-button:hover {
+    background-color: white;
+}
+
+.likedLike {
+    color: green;
+}
+
+.dislikedDislike {
+    color: red;    
+}
+
+.reply {
+    cursor: pointer;
+    display: inline-flex;
+    box-sizing: border-box;
+    /* width: 100px; */
+    border: 2px solid #000000;
+    border-radius: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.reply a {
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.reply a:hover {
+    background-color: white;
+}
+
+.reply span {
+    display: inline-block;
+    padding: 2.5px 7px 2.5px 7px;
+}
+
+.comment-outline {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.comment-outline:hover {
+    background-color: white;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: #8921C2;
+}
