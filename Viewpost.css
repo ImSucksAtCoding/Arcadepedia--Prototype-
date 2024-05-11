@@ -272,15 +272,22 @@ body {
 }
 
 .userAction {
+    /* border: 2px solid black; */
     cursor: pointer;
 }
 
 .userAction:first-of-type button {
+    border: 2px solid black;
+    border-bottom: 0;
     border-radius: 20px 20px 0 0;
+    transition: background 0.3s ease;
 }
 
 .userAction:last-of-type button {
+    border: 2px solid black;
+    border-top: 0;
     border-radius: 0 0 20px 20px;
+    transition: background 0.3s ease;
 }
 
 .userAction button {
@@ -294,7 +301,16 @@ body {
     background: #FFFFFF;
 }
 
-.userAction button:hover {
+.userAction:hover {
+    background-color: white;
+}
+
+.userAction:first-of-type button:hover {
+    background-color: #DADADA;
+    border-radius: 20px 20px 0 0;
+}
+
+.userAction:last-of-type button:hover {
     background-color: #DADADA;
 }
 
@@ -308,11 +324,18 @@ body {
     align-items: center;
 }
 
-.reaction button {
+.reaction span.like-post-button, .reaction span.dislike-post-button {
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
+    padding: 0 5px 0 5px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.reaction span.like-post-button:hover, .reaction span.dislike-post-button:hover {
+    background-color: white;
 }
 
 .likedLike {
@@ -323,8 +346,42 @@ body {
     color: red;    
 }
 
-.comment-outline {
+.reply {
     cursor: pointer;
+    display: inline-flex;
+    box-sizing: border-box;
+    /* width: 100px; */
+    border: 2px solid #000000;
+    border-radius: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.reply a {
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.reply a:hover {
+    background-color: white;
+}
+
+.reply span {
+    display: inline-block;
+    padding: 2.5px 7px 2.5px 7px;
+}
+
+.comment-outline {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.comment-outline:hover {
+    background-color: white;
 }
 
 .commentSection {
@@ -335,8 +392,23 @@ body {
     margin-bottom: 30px;
 }
 
+.reaction span.like-comment-button, .reaction span.dislike-comment-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.reaction span.like-comment-button:hover, .reaction span.dislike-comment-button:hover {
+    background-color: white;
+}
+
 .makeComment {
     cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
     /* display: grid; */
     background-color: white;
     height: 100px;
@@ -365,6 +437,7 @@ body {
     /* height: 65%; */
     height: 100px;
     width: 90%;
+    z-index: 1;
     /* margin: 30px 0 30px 0; */
 }
 
