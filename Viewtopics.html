@@ -7,15 +7,15 @@
     <!--Import fonts for icons-->
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
     <!--Css file-->
-    <link rel="stylesheet" href="Homepage.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Viewtopicss.css">
 </head>
 <body>
     <header class="header">
         <div class="left-section">
             <div class="menu">
                 <label class="hamburger-menu" for="check">
-                    <input type="checkbox" id="check" onclick="Menu()">
+                    <input type="checkbox" id="check">
                 </label>
             </div>
             <a href="Homepage.html">
@@ -78,32 +78,393 @@
             </nav>
         </div>
 
-        <div class="content">
+        <div class="content container-fluid">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Forum</a></li>
+                    <li class="breadcrumb-item"><a href="/forum/topics">Topics</a></li>
+                    <li class="breadcrumb-item"><a href="#"><%= topic._id %></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Posts</li>
+                </ol>
+            </nav>
+            
+            <div class="row">
+                <div class="forumDescription col-xl-10 col-lg-10 col-md-10 col-8 mx-auto">
+                    <h1>Arcadepedia Forums</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="feed col-xl-6 col-lg-6 col-md-6 col-8 mx-auto">
+                    <div class="forumGroup">
+                        <div class="ribbon">
+                            <h2>Arcadepedia</h2>
+                        </div>
+                        <hr>
+                        <div class="topic" id="1">
+                            <div class="topicInfo">
+                                <span class="icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.7 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z"/></svg>
+                                </span>
+                                <span class="mainInfo">
+                                    <span class="name tooltipDiv">
+                                        <a href="#" class="noUnderlineLink"><h3>Announcements</h3></a>
+                                        <span class="tooltipText">Important information regarding Arcadepedia will be posted here.</span>
+                                    </span>
+                                    <span class="postInfo">
+                                        <a href="#"><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></a>
+                                        <a href="#" class="title">Title</a>
+                                        <a href="#" class="username">Minhkhoi</a>
+                                        <span class="timestampSeperator">•</span>
+                                        <span class="timestamp" style="text-wrap: nowrap;">Wednesday at 02:33</span>
+                                    </span>
+                                </span>
+                                <span class="threadRow">
+                                    <span class="numberThreads"><b>123</b> THREADS</span>
+                                </span>    
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="topic" id="2">
+                            <div class="topicInfo">
+                                <span class="icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.7 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z"/></svg>
+                                </span>
+                                <span class="mainInfo">
+                                    <span class="name tooltipDiv">
+                                        <a href="#" class="noUnderlineLink"><h3>Announcements</h3></a>
+                                        <span class="tooltipText">Important information regarding Arcadepedia will be posted here.</span>
+                                    </span>
+                                    <span class="postInfo">
+                                        <a href="#"><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></a>
+                                        <a href="#" class="title">Title</a>
+                                        <a href="#" class="username">Minhkhoi</a>
+                                        <span class="timestampSeperator">•</span>
+                                        <span class="timestamp" style="text-wrap: nowrap;">Wednesday at 02:33</span>
+                                    </span>
+                                </span>
+                                <span class="threadRow">
+                                    <span class="numberThreads"><b>123</b> THREADS</span>
+                                </span>    
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="topic" id="3">
+                            <div class="topicInfo">
+                                <span class="icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.7 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z"/></svg>
+                                </span>
+                                <span class="mainInfo">
+                                    <span class="name tooltipDiv">
+                                        <a href="#" class="noUnderlineLink"><h3>Announcements</h3></a>
+                                        <span class="tooltipText">Important information regarding Arcadepedia will be posted here.</span>
+                                    </span>
+                                    <span class="postInfo">
+                                        <a href="#"><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></a>
+                                        <a href="#" class="title">Title</a>
+                                        <a href="#" class="username">Minhkhoi</a>
+                                        <span class="timestampSeperator">•</span>
+                                        <span class="timestamp" style="text-wrap: nowrap;">Wednesday at 02:33</span>
+                                    </span>
+                                </span>
+                                <span class="threadRow">
+                                    <span class="numberThreads"><b>123</b> THREADS</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="postSection">
+                        <div class="post" id="1">
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
+                                    <span class="username">Minh Khoi</span>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">May 15th, 2099</span>
+                                </div>
+                                <div class="options-container">
+                                    <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
+                                    <div class="buttons-container invisible">
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                        </form>
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="#"><h2>Title</h2></a>
+                            </div>
+                            <div class="row">
+                                <p>Body</p>
+                            </div>
+                            <div class="row">
+                                <span>
+                                    <span class="reaction">
+                                        <span class="like-post-button">&#x25B2;</span>
+                                        0
+                                        <span class="dislike-post-button">&#x25BC;</span>    
+                                    </span>
+                                    <span class="reply">
+                                        <a href="#" class="commentOpen">
+                                            <span class="comment-outline">
+                                                <i class="fa-regular fa-message"></i>
+                                            </span>
+                                            <span class="numberOfComments">
+                                                123
+                                            </span>    
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="post" id="2">
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
+                                    <span class="username">Minh Khoi</span>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">May 15th, 2099</span>
+                                </div>
+                                <div class="options-container">
+                                    <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
+                                    <div class="buttons-container invisible">
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                        </form>
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="#"><h2>Title</h2></a>
+                            </div>
+                            <div class="row">
+                                <p>Body</p>
+                            </div>
+                            <div class="row">
+                                <span>
+                                    <span class="reaction">
+                                        <span class="like-post-button">&#x25B2;</span>
+                                        0
+                                        <span class="dislike-post-button">&#x25BC;</span>    
+                                    </span>
+                                    <span class="reply">
+                                        <a href="#" class="commentOpen">
+                                            <span class="comment-outline">
+                                                <i class="fa-regular fa-message"></i>
+                                            </span>
+                                            <span class="numberOfComments">
+                                                123
+                                            </span>    
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>    
+                        </div>
+                        <hr>
+                        <div class="post" id="3">
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
+                                    <span class="username">Minh Khoi</span>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">May 15th, 2099</span>
+                                </div>
+                                <div class="options-container">
+                                    <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
+                                    <div class="buttons-container invisible">
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                                        </form>
+                                        <form action="#" method="get" class="userAction">
+                                            <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="#"><h2>Title</h2></a>
+                            </div>
+                            <div class="row">
+                                <p>Body</p>
+                            </div>
+                            <div class="row">
+                                <span>
+                                    <span class="reaction">
+                                        <span class="like-post-button">&#x25B2;</span>
+                                        0
+                                        <span class="dislike-post-button">&#x25BC;</span>    
+                                    </span>
+                                    <span class="reply">
+                                        <a href="#" class="commentOpen">
+                                            <span class="comment-outline">
+                                                <i class="fa-regular fa-message"></i>
+                                            </span>
+                                            <span class="numberOfComments">
+                                                123
+                                            </span>    
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
 
+                <div class="stats col-3">
+                    <div class="latestPost">
+                        <h3>Latest Posts</h3>
+                        <hr>
+                        <div class="post" id="1">
+                            <div class="row">
+                                <span class="newestPostInfo">
+                                    <a href="#"><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></a>
+                                    <a href="#"><h4>Title</h4></a><span>(body)</span>
+                                </span>
+                            </div>
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <a href="#" class="username">Minhkhoi</a>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">Wednesday at 02:33</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="post" id="2">
+                            <div class="row">
+                                <span class="newestPostInfo">
+                                    <a href="#"><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></a>
+                                    <a href="#"><h4>Title</h4></a><span>(body)</span>
+                                </span>
+                            </div>
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <a href="#" class="username">Minhkhoi</a>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">Wednesday at 02:33</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="post" id="3">
+                            <div class="row">
+                                <span class="newestPostInfo">
+                                    <a href="#"><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></a>
+                                    <a href="#"><h4>Title</h4></a><span>(body)</span>
+                                </span>
+                            </div>
+                            <div class="infoRow justify-content-between">
+                                <div class="userInfo">
+                                    <a href="#" class="username">Minhkhoi</a>
+                                    <span class="timestampSeperator">•</span>
+                                    <span class="timestamp">Wednesday at 02:33</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="forumStatistic">
+                        <h3>Forum statistic</h3>
+                        <hr>
+                        <div class="block-body block-row">
+                            <dl class="pairs pairs--justified count--threads">
+                                <dt>Threads</dt>
+                                <dd>575,082</dd>
+                            </dl>
+                            <!-- <dl class="pairs pairs--justified count--messages">
+                                <dt>Messages</dt>
+                                <dd>6,907,315</dd>
+                            </dl> -->
+                            <dl class="pairs pairs--justified count--users">
+                                <dt>Members</dt>
+                                <dd>232,653</dd>
+                            </dl>
+                            <dl class="pairs pairs--justified">
+                                <dt>Latest member</dt>
+                                <dd><a href="/members/bleeoipe.708182/" class="username" dir="auto" data-user-id="708182" data-xf-init="member-tooltip" id="js-XFUniqueId140">bleeoipe</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="footer"></div>
     <script>
-        // //Variables declaration 
-        // var check = document.getElementById("check");
-        // var sidebar = document.querySelector('.sidebar');
-        // var content = document.querySelector('.content');
-        // var links = document.querySelector('.links');
-        // //Menu() fuction (to display the sidebar on the left and slide the content to the right)
-        // function Menu() {
-        //     if (check.checked == true) {
-        //         sidebar.style.width = "15%";
-        //         content.style.marginLeft = "15%";
-        //         links.style.opacity = "100%";
-        //     }
+        //Variables declaration
+        let threadRows = document.querySelectorAll('.threadRow');
+        let icons = document.querySelectorAll('.icon');
+        let statistic = document.querySelector('.stats');
+        let postInfos = document.querySelectorAll('.postInfo');
 
-        //     else if (check.checked == false) {
-        //         sidebar.style.width = "0";
-        //         content.style.marginLeft = "0";
-        //         links.style.opacity = "0";
-        //     }
-        // }
-    </script>
+        // threadsRows.forEach((threadsRow) => {
+        //     threadsRow.addEventListener("")
+        // })
+
+        const adjustRulesVisibility = (e) => {
+            if (window.matchMedia('(min-width: 0px) and (max-width: 1276px)').matches) {
+                threadRows.forEach((threadRow) => {
+                    threadRow.classList.add('invisible');
+                    threadRow.style.position = 'absolute';
+                })
+            } else {
+                threadRows.forEach((threadRow) => {
+                    threadRow.classList.remove('invisible');
+                    threadRow.style.position = 'relative';
+                })
+            }
+
+            if (window.matchMedia('(min-width: 0px) and (max-width: 1005px)').matches) {
+                icons.forEach((icon) => {
+                    icon.classList.add('invisible');
+                    icon.style.position = 'absolute';
+                })
+            } else {
+                icons.forEach((icon) => {
+                    icon.classList.remove('invisible');
+                    icon.style.position = 'relative';
+                })
+            }
+
+            if (window.matchMedia('(min-width: 0px) and (max-width: 768px)').matches) {
+                // postInfos.forEach((postInfo) => {
+                    statistic.classList.add('invisible');
+                    statistic.style.position = 'absolute';
+                // })
+            } else {
+                // postInfos.forEach((postInfo) => {
+                    statistic.classList.remove('invisible');
+                    statistic.style.position = 'relative';
+                // })
+            }
+
+            if (window.matchMedia('(min-width: 0px) and (max-width: 576px)').matches) {
+                postInfos.forEach((postInfo) => {
+                    postInfo.classList.add('invisible');
+                    postInfo.style.position = 'absolute';
+                })
+            } else {
+                postInfos.forEach((postInfo) => {
+                    postInfo.classList.remove('invisible');
+                    postInfo.style.position = 'relative';
+                })
+            }
+        };
+
+        // Call the function when the page loads
+        adjustRulesVisibility();
+
+        // Call the function when the window is resized
+        window.addEventListener('resize', adjustRulesVisibility);
+        </script>
 </body>
 </html>

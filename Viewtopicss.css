@@ -137,7 +137,7 @@ body {
 .main {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 99vw;
     /* height: 100vh; */
 }
 
@@ -146,12 +146,124 @@ body {
 ---------------- Main content styles --------------------
 **
 */
-
-.topicDescription {
+.forumDescription {
     background-color: #DADADA;
     margin: 50px 0 10px 0;
     padding: 35px;
     border-radius: 20px 20px 20px 20px;
+}
+
+.icon {
+    vertical-align: middle;
+    text-align: center;
+    /* width: 90px; */
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 10px 10px 10px 10px;
+    grid-area: icon;
+}
+
+.icon svg {
+    width: 70px;
+    height: 70px;
+    /* line-height: 70px; */
+    background: transparent;
+    /* color: white; */
+}
+
+.tooltipDiv {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px black;
+}
+
+.tooltipDiv .tooltipText {
+    visibility: hidden;
+    width: 400px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+    left: 100%;
+    margin-left: 10px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltipDiv:hover .tooltipText {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mainInfo {
+    grid-area: main;
+    margin: 0 30px 0 0;
+}
+
+.infoRow {
+    grid-area: aside;
+}
+
+.topic {
+    display: grid;
+    grid-template-columns: 70px 320px 15px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+       "icon main aside"
+       "icon main ."
+       "icon main .";
+}
+
+.profilePic {
+    grid-area: img;
+}
+
+.title {
+    grid-area: title;
+}
+
+.username {
+    grid-area: username;
+}
+
+.timestampSeperator {
+    grid-area: seperator;
+}
+
+.timestamp {
+    grid-area: timestamp;
+}
+
+.postInfo {
+    display: grid;
+    grid-template-columns: 50px auto auto auto;
+    grid-template-rows: 25px 25px;
+    grid-template-areas: 
+       "img title title title"
+       "img username seperator timestamp"
+}
+
+.newestPostInfo a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.infoRow a {
+    text-decoration: none;
+}
+
+.topicInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    /* width: 40%; */
 }
 
 .feed {
@@ -163,12 +275,40 @@ body {
     /* border: 3px solid black; */
 }
 
-.rules {
+.stats {
     /* transition: margin-left 300ms; */
     margin: 20px auto 100px 0;
     background-color: #DADADA;
     padding: 30px;
     border-radius: 20px 20px 20px 20px;
+}
+
+.block-row {
+    display: table;
+}
+
+.pairs.pairs--justified>dt {
+    float: left;
+    max-width: 100%;
+    margin-right: 6px;
+}
+
+.pairs.pairs--justified>dd {
+    float: right;
+    text-align: right;
+    max-width: 100%;
+}
+
+.pairs>dd {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 40px;
+    unicode-bidi: isolate;
 }
 
 .profilePic {
@@ -181,7 +321,7 @@ body {
     /* display: grid; */
     background-color: white;
     height: 100px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     align-content: center;
     /* text-align: center; */
     transition: height 0.5s ease;
@@ -236,42 +376,15 @@ body {
     vertical-align: top; */
 }
 
-.rules-embed {
-    position: absolute;
-}
-
-@media only screen and (max-width: 991px) and (min-width: 576px) {
-    .rulesBtn {
-        background-color: #1C3AA9;
-        color: white;
-        border: 0px;
-        border-radius: 20px;
-        padding: 5px;
-    }
-
-    .rules-embed {
-        position: relative;
-        display: block;
-    }
-
-    .rules {
-        position: absolute;
-    }
-
-    .rules-embed-show {
-        position: absolute;
-    }
-}
-
 .postSection {
     margin-left: 30px;
 }
 
-.infoRow {
+/* .infoRow {
     display: flex;
     justify-content: space-between;
     margin: 0 0 10px 0;
-}
+} */
 
 .options-container {
     position: relative;

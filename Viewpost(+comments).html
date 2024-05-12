@@ -72,7 +72,18 @@
             </nav>
         </div>
 
-        <div class="content col-10 mx-auto">
+        <div class="content col-xl-8 col-lg-8 col-md-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Forum</a></li>
+                    <li class="breadcrumb-item"><a href="/forum/topics">Topics</a></li>
+                    <li class="breadcrumb-item"><a href="#"><%= topic_id %></a></li>
+                    <li class="breadcrumb-item"><a href="/forum/topics/<%= topic_id %>/posts">Posts</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><%= post.title %></li>
+                </ol>
+            </nav>
+
             <div class="content-margin">
                 <div class="row">
                     <a class="noUnderlineLink" href="#">&larr;All posts</a>
@@ -150,9 +161,6 @@
                             </div>
                         </div>
                         <div class="row">
-                            <h1>Title</h1>
-                        </div>
-                        <div class="row">
                             <p>Body</p>
                         </div>
                         <div class="row">
@@ -197,9 +205,6 @@
                             </div>
                         </div>
                         <div class="row">
-                            <h1>Title</h1>
-                        </div>
-                        <div class="row">
                             <p>Body</p>
                         </div>
                         <div class="row">
@@ -242,9 +247,6 @@
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h1>Title</h1>
                         </div>
                         <div class="row">
                             <p>Body</p>

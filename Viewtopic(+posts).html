@@ -9,7 +9,6 @@
     <!--Css file-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./Viewtopic(+posts).css">
-
 </head>
 <body>
     <header class="header">
@@ -80,19 +79,38 @@
         </div>
 
         <div class="content container-fluid">
-            <div class="row" style="margin-bottom: 0;">
-                <div class="topicDescription col-10 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Forum</a></li>
+                    <li class="breadcrumb-item"><a href="/forum/topics">Topics</a></li>
+                    <li class="breadcrumb-item"><a href="#"><%= topic._id %></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Posts</li>
+                </ol>
+            </nav>
+            
+            <div class="row">
+                <div class="topicDescription col-xl-10 col-lg-10 col-md-10 mx-auto">
                     <h1>Arcadepedia</h1>
                     <p>Important information regarding Arcadepedia will be posted here.</p>
                 </div>
             </div>
 
-            <div class="row" style="padding: 20px;">
-                <div class="feed col-6 mx-auto">
+            <div class="row">
+                <div class="feed col-xl-6 col-lg-6 col-md-10 mx-auto">
                     <div class="makePost">
                         <div class="userClick">
                             <img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="60px" height="60px">
                             <span>What's on your mind?</span>
+                        </div>
+                    </div>
+                    <div class="rules-embed">
+                        <button class="rulesBtn">Rules</button>
+                        <div class="rules-embed-show invisible">
+                            <h2 class="text-center">Rules</h2>
+                            <p>1. Be nice and treat people with respect. Keep discussions civil and be open-minded about differing opinions.</p>
+                            <p>2. Do not ask for or share links to pirated material.</p>
+                            <p>3. Spamming, trolling, or impersonating other users will lead to your account being banned.</p>        
                         </div>
                     </div>
                     <hr>
@@ -128,7 +146,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <h2>Title</h2>
+                                <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                             </div>
                             <div class="row">
                                 <p>Body</p>
@@ -175,7 +193,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <h2>Title</h2>
+                                <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                             </div>
                             <div class="row">
                                 <p>Body</p>
@@ -222,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <h2>Title</h2>
+                                <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                             </div>
                             <div class="row">
                                 <p>Body</p>
@@ -250,7 +268,7 @@
                     </div>
                 </div>
 
-                <div class="rules col-3">
+                <div class="rules col-xl-3 col-lg-3">
                     <h2 class="text-center">Rules</h2>
                     <p>1. Be nice and treat people with respect. Keep discussions civil and be open-minded about differing opinions.</p>
                     <p>2. Do not ask for or share links to pirated material.</p>
@@ -275,6 +293,10 @@
         let dislikePostBtns = document.querySelectorAll(".dislike-post-button");
         let likeCommentBtns = document.querySelectorAll(".like-comment-button");
         let dislikeCommentBtns = document.querySelectorAll(".dislike-comment-button");
+
+        let rulesEmbed = document.querySelector('.rules-embed');
+        let rules = document.querySelector('.rules');
+        let rulesDetails = document.querySelector('.rules-embed-show');
 
         makePostWidget.addEventListener("click", (e) => {
             if(i === 0) {
@@ -342,6 +364,35 @@
                 dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 100) + "px";
             }
         }
+
+        const adjustRulesVisibility = (e) => {
+            if (window.matchMedia('(min-width: 768px) and (max-width: 991px)').matches) {
+                // if (rulesEmbed.classList.contains('invisible')) {
+                    rulesEmbed.classList.remove('invisible');
+                    rules.classList.add('invisible');
+                // }
+            } else {
+                // if (!rulesEmbed.classList.contains('invisible')) {
+                    rulesEmbed.classList.add('invisible');
+                    rules.classList.remove('invisible');
+                // }
+            }
+        };
+
+        // Call the function when the page loads
+        adjustRulesVisibility();
+
+        // Call the function when the window is resized
+        window.addEventListener('resize', adjustRulesVisibility);
+
+        rulesEmbed.addEventListener("click", (e) => {
+            rulesDetails.classList.toggle('invisible');
+            if(rulesDetails.style.position === 'relative') {
+                rulesDetails.style.position = 'absolute';
+            } else {
+                rulesDetails.style.position = 'relative';
+            }
+        });
 
         options.forEach((option) => {
             option.addEventListener("click", (e) => {
