@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="speedrunDataContainer" style="border: 1px solid black;"></div>
+    
+    <!-- {
+        "id": "vm9vn63k",
+        "name": "Arcade",
+        "released": 1980,
+        "links": [
+            {
+                "rel": "self",
+                "uri": "https://www.speedrun.com/api/v1/platforms/vm9vn63k"
+            },
+            {
+                "rel": "games",
+                "uri": "https://www.speedrun.com/api/v1/games?platform=vm9vn63k"
+            },
+            {
+                "rel": "runs",
+                "uri": "https://www.speedrun.com/api/v1/runs?platform=vm9vn63k"
+            }
+        ]
+    }, -->
+
+    <script>
+    async function getAllDataForPacmanSeries() {
+        let allData = [];
+        let offset = 0;
+        let hasMore = true;
+        const speedrunDataContainer = document.querySelector('.speedrunDataContainer');
+    
+        while (hasMore) {
+            // Fetch data from the server
+            const response = await fetch(`https://www.speedrun.com/api/v1/series/z7830kne/games?offset=${offset}`, {
+                method: "GET"
+            });
+            const data = await response.json();
+    
+            // Add the fetched data to the allData array
+            allData = allData.concat(data.data);
+    
+            // Check if there are more games to fetch
+            hasMore = data.pagination.size > offset + 20;
+            offset += 20;
+        }
+
+        // for(i = 0; i < allData.length; i++) {
+        //     let div = document.createElement('div');
+        //     div.className = 'game';
+        //     div.id = `${i + 1}`;
+        //     div.innerHTML = `ID: ${allData[i].id}, Name: ${allData[i].names.international}`;
+        //     speedrunDataContainer.appendChild(div);
+        // }
+        
+        let div = document.createElement('div');
+        div.className = 'game';
+
+        for (let key in allData[0]) {
+            // // Create a new line for each key-value pair
+            // div.innerHTML += `${key}: ${JSON.stringify(allData[0][key])}<br>`;
+            // Check if the value is an object or an array
+            if (typeof allData[0][key] === 'object' && allData[0][key] !== null) {
+                // Convert the object or array to a string and format it with indentation
+                div.innerHTML += `${key}: <pre>${JSON.stringify(allData[0][key], null, 2)}</pre><br>`;
+            } else {
+                // Create a new line for each key-value pair
+                div.innerHTML += `${key}: ${allData[0][key]}<br>`;
+            }
+        }
+
+        // div.innerHTML = `ID: ${allData[0].id}, Name: ${allData[0].names.international}`;
+        speedrunDataContainer.appendChild(div);
+
+        return allData;
+    }
+    
+    getAllDataForPacmanSeries();
+    </script>
+</body>
+</html>
