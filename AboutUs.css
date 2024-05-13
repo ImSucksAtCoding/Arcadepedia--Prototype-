@@ -1,3 +1,20 @@
+/**
+Homepage (landing page) Css customize
+Author: Bui Thai Son (s4037172)
+**/
+
+
+/** 
+---------- Import header style for the webpage */ @import url('header.css'); /* ----------
+*/
+
+
+/**
+----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
+**/
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -12,7 +29,7 @@
     --hover-background: #d9d9d9;
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
-    --animation-timing: 300ms ease-in-out;
+    --animation-timing: 200ms ease-in-out;
     --cross-height: calc(5px * 3 + 5px * 2);
 }
 
@@ -26,22 +43,12 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 150px;
+input {
+    display: none;
 }
 
-.left-section {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    width: 40%;
-}
 
-.hamburger-menu::before,
+/* .hamburger-menu::before,
 .hamburger-menu::after,
 .hamburger-menu input {
     content: "";
@@ -89,68 +96,43 @@ body {
     rotate: -45deg;
     width: var(--x-width);
     translate: 0 calc(5px / 2);
-}
+} */
 
-.logo {
-    font-size: 32px;
-    font-family: 'Karmatic Arcade', sans-serif;
-    color: var(--Grapes);
-    cursor: pointer;
-}
 
-.left-section a {
-    text-decoration: none;
-}
-
-.pedia {
-    color: var(--Turquoise);
-    padding: 1px;
-}
-
-.right-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 30%;
-    gap: 15px;
-}
+/* 
+--------- Right button styles ----------
+*/
 
 .right-section a {
     text-decoration: none;
-}
+} 
 
 .search-button {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 2px;
     color: var(--background-color-dark);
+    cursor: pointer;
 }
 
 .login-button {
-    font-size: 16px;
+    font-size: 13px;
     color: var(--background-color-dark);
-    padding: 15px 40px;
+    padding: 13px 30px;
     background-color: var(--Turquoise);
     border-radius: 8px;
     font-weight: 600;
 }
 
 .register-button {
-    font-size: 17px;
+    font-size: 14px;
     color: var(--background-color-light);
-    padding: 14px 50px;
+    padding: 13px 40px;
     background-color: var(--Grapes);
     border-radius: 8px;
 }
 
-#profile {
-    font-size: 20px;
-    padding-right: 2px;
-    margin-top: 2px;
-}
-
 .bg-toggle-button {
-    font-size: 40px;
+    font-size: 30px;
     margin-right: 20px;
     margin-left: 5px;
     color: var(--background-color-dark);
@@ -161,84 +143,22 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    height: calc(100% - 80px); /*Actually this is the real reason why the sidebar is wrong :) */
 }
 
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    width: 0;
-    height: 100vh;
-    transition: width var(--animation-timing);
-}
-
-.links, .sublink {
-    list-style-type: none;
-    padding: 0;
-    transition: opacity var(--animation-timing);
-}
-
-.links {
-    opacity: 0;
-}
-
-.links a {
-    text-decoration: none;
-}
-
-.links li {
-    margin-bottom: 5px;
-    padding: 15px 0;
-    border-bottom: 1px solid #d9d9d9;
-    margin-left: 20px;
-}
-
-.items {
-    display: flex;
-    flex-direction: row;
-    color: var(--background-color-dark);
-    gap: 20px;
-    font-size: 24px;
-    padding: 20px 5px;
-    padding-right: 30px;
-    border-radius: 6px;
-}
-
-.items:hover {
-    background-color: #d9d9d9;
-}
-
-.sublink {
-    display: none;
-    font-size: 20px;
-}
-
-.sublink a {
-    color: var(--background-color-dark);
-}
-
-.sublink li {
-    border-bottom: var(--background-color-light);
-    width: fit-content;
-}
-
-#sub-menu:hover .sublink {
-    display: flex;
-    flex-direction: column;
-    transition: ease-in var(--animation-timing);
-}
-
-.sublink li:hover {
-    border-bottom: 3px solid #d9d9d9;
-}
-
+/** --------------------------------- End of right button styles -------------------------------------- **/
+/*** ----------------------------------------------------------------------------------------------------***/
+/** ------------------------------------- Main styles ---------------------------------------------------- ***/
 .content {
-    transition: margin-left 300ms;
+    width: calc(100% - 15%);
+    height: calc(100% - 80px);
 }
 
 .content h1{
     text-align: center;
+    font-size: 40px;
 }
+
 .title{
     margin-top: 200px;
     margin-bottom: 100px;
@@ -287,9 +207,32 @@ body {
     font-size: 1.3rem;
     margin: 0 2rem;
     text-align: justify;
+    font-weight: 600;
 }
- 
-button {
+
+.more-info {
+    display: none;
+    transition: var(--animation-timing);
+}
+
+.more-info p {
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.more-info p span {
+    color: var(--Grapes);
+}
+
+.more-info span .pedia {
+    color: var(--Turquoise);
+}
+
+.readmore {
     border: none;
     outline: 0;
     padding: 10px;
@@ -303,8 +246,9 @@ button {
     border-radius: 4px;
 }
  
-button:hover {
+.readmore:hover {
     background-color: #399c8f;
+    transition: var(--animation-timing);
 }
  
 .team-container {
@@ -323,9 +267,11 @@ button:hover {
     align-items: center;
 
 }
+
 #teammate1{
     margin-left: 80px;
 }
+
 .teammate img {
     width: 150px;
     height: 150px;
@@ -374,4 +320,13 @@ button:hover {
 
 .teammate-info p{
     color: #37bdab;
+}
+
+/** ------------------------------------- End of main styles --------------------------------- ****/
+/**** ------------------------------------------------------------------------------------------ ***/
+/**** --------------------------------------- Footer styles ----------------------------------- ***/
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: #8921C2;
 }
