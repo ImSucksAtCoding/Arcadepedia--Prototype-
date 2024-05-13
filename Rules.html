@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcadepedia | Homepage</title>
-    <!--Import some text font-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap" />
-    <link href="https://fonts.cdnfonts.com/css/karmatic-arcade" rel="stylesheet">
+    <title>Arcadepedia | Rules</title>
     <!--Import fonts for icons-->
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
     <!--Css file-->
     <link rel="stylesheet" href="Rules.css">
-
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="left-section">
             <div class="menu">
                 <label class="hamburger-menu" for="check">
@@ -52,16 +47,26 @@
                 <i class="fa-solid fa-moon"></i>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="main">
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
                     <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
-                    <li><a href="#"><div class="items"><i class="fa-regular fa-compass"></i>Explore</div></a></li>
-                    <li><a href="#"><div class="items"><i class="fa-regular fa-comments"></i>Forums</div></a></li>
-                    <li id="sub-menu"><a href="#"><div class="items"><i class="fa-regular fa-circle-question"></i>About</div></a>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">All entries</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Users</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="AboutUs.html">About us</a></li>
                             <li><a href="Rules.html">Rules</a></li>
@@ -80,24 +85,24 @@
             </div>
             
             <p>
-                <a class="legal-button" href="#" data-target="copyright">Copyright</a>
+                <a class="legal-button" href="#" data-target="copyright">Copyrights</a>
             </p>
         
             <div id="copyright" class="legal-info">
-            <p>+ All content on this website, including text, images, videos, and other media, is either original or properly licensed from the respective copyright holders. 
-            <p>+ Users are prohibited from copying, distributing, or using any content from this website without explicit permission, except where allowed under fair use or other applicable copyright exceptions. </p>
-            <p>+ Copyright notices are prominently displayed throughout the website to inform users of the ownership of content and any restrictions on its use. </p>
-            <p>+ The speedrun records displayed on this website are sourced from speedrun.com. All rights to these records belong to their respective creators and contributors.</p>
+            <p> All content on this website, including text, images, videos, and other media, is either original or properly licensed from the respective copyright holders. 
+            <p> Users are prohibited from copying, distributing, or using any content from this website without explicit permission, except where allowed under fair use or other applicable copyright exceptions. </p>
+            <p> Copyright notices are prominently displayed throughout the website to inform users of the ownership of content and any restrictions on its use. </p>
+            <p> The speedrun records displayed on this website are sourced from speedrun.com. All rights to these records belong to their respective creators and contributors.</p>
             </div>
 
             <p>
                 <a class="legal-button" href="#" data-target="privacy-policy">Privacy Policy</a>
             </p>
             <div id="privacy-policy" class="legal-info">
-            <p>+ Our privacy policy outlines how user data is collected, used, and protected on this website. </p>
-            <p>+ We collect limited personal information, such as email addresses for newsletter subscriptions, and use it solely for the intended purpose with user consent. </p>
-            <p>+ User data is stored securely and is not shared with third parties without explicit consent, except where required by law or for essential website functions. </p>
-            <p>+ Users have the right to access, modify, or delete their personal information and can exercise these rights through the website's privacy settings.</p>
+            <p> Our privacy policy outlines how user data is collected, used, and protected on this website. </p>
+            <p> We collect limited personal information, such as email addresses for newsletter subscriptions, and use it solely for the intended purpose with user consent. </p>
+            <p> User data is stored securely and is not shared with third parties without explicit consent, except where required by law or for essential website functions. </p>
+            <p> Users have the right to access, modify, or delete their personal information and can exercise these rights through the website's privacy settings.</p>
             </div>
 
             <p>
@@ -123,7 +128,7 @@
         
           <h3>Light Mode and Dark Mode:</h3>
           <p>+ Light Mode: This mode features a traditional bright background with dark text, suitable for well-lit environments and daytime usage. Users may prefer light mode for its clarity and ease of reading.</p>
-          <p>+ Dark Mode: Dark mode provides a darker background with light text, which is beneficial for users in low-light conditions or those seeking reduced eye strain during nighttime browsing. This mode offers enhanced readability and visual comfort.</p>
+          <p>+ Dark Mode: Dark mode provides a darker background with light text, which is beneficial for users in low-light conditions or those seeking reduced eye strain during night-time browsing. This mode offers enhanced readability and visual comfort.</p>
         
           <h3>Cookie Consent and Management:</h3>
           <p>+ Upon visiting the website, users are presented with a cookie consent banner that informs them about the use of cookies for saving comment drafts and theme selections. </p>
@@ -141,25 +146,25 @@
 
     <div class="footer"></div>
     <script>
-        //Variables declaration 
-        var check = document.getElementById("check");
-        var sidebar = document.querySelector('.sidebar');
-        var content = document.querySelector('.content');
-        var links = document.querySelector('.links');
-        //Menu() fuction (to display the sidebar on the left and slide the content to the right)
-        function Menu() {
-            if (check.checked == true) {
-                sidebar.style.width = "15%";
-                content.style.marginLeft = "15%";
-                links.style.opacity = "100%";
-            }
+        // //Variables declaration 
+        // var check = document.getElementById("check");
+        // var sidebar = document.querySelector('.sidebar');
+        // var content = document.querySelector('.content');
+        // var links = document.querySelector('.links');
+        // //Menu() fuction (to display the sidebar on the left and slide the content to the right)
+        // function Menu() {
+        //     if (check.checked == true) {
+        //         sidebar.style.width = "15%";
+        //         content.style.marginLeft = "15%";
+        //         links.style.opacity = "100%";
+        //     }
 
-            else if (check.checked == false) {
-                sidebar.style.width = "0";
-                content.style.marginLeft = "0";
-                links.style.opacity = "0";
-            }
-        }
+        //     else if (check.checked == false) {
+        //         sidebar.style.width = "0";
+        //         content.style.marginLeft = "0";
+        //         links.style.opacity = "0";
+        //     }
+        // }
 
         document.querySelectorAll('.legal-button').forEach(function(button) {
             button.addEventListener('click', function(event) {
@@ -171,7 +176,7 @@
 
                 // Toggle visibility of target section
                 if (targetSection.style.display === 'none') {
-                    targetSection.style.display = 'block';
+                    targetSection.style.display = 'flex';
                 } else {
                     targetSection.style.display = 'none';
                 }
