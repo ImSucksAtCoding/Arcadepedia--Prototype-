@@ -78,7 +78,7 @@
               <form action="">
                 <div class="title">
                   <label for="title">Title<span id="req">*</span></label><br>
-                  <input type="text" id="title" placeholder="Up to 300 characters"><br>
+                  <input type="text" id="title" placeholder="Up to 300 characters" required maxlength="300"><br>
                 </div>
                 <button id="tag" type="button">Add tag +</button><br>
                 <div class="editor">
@@ -90,7 +90,7 @@
                   <button type="button" class="edit-btn" data-element="createLink"><i class="material-icons">add_link</i></button>
                   <button type="button" class="edit-btn" data-element="insertImage"><i class="material-icons">image</i></button>
                 </div>
-                <div class="output" contenteditable="true">
+                <div class="output" contenteditable="true" aria-required="true">
 
                 </div>
                 <script src="makepost.js"></script>
