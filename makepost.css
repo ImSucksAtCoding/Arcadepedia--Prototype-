@@ -209,7 +209,25 @@ ol li {
 }
 #tag {
     margin-bottom: 15px;
+    background-color: #7B1DaE;
+    padding: 10px 15px 10px 15px;
+    border-style: none ;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
 }
+
+#submit {
+    margin-top: 15px;
+    background-color: #53E8D4;
+    padding: 10px 15px 10px 15px;
+    border-style: none ;
+    border-radius: 15px;
+    cursor: pointer;
+    float: right;
+    margin-right: 120px;
+}
+
 textarea {
     margin-bottom: 20px;
 }
