@@ -1,78 +1,83 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap" />
-    <link href="https://fonts.cdnfonts.com/css/karmatic-arcade" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadepedia | Homepage</title>
     <!--Import fonts for icons-->
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
-    <!-- CSS File -->
-    <link rel="stylesheet" href="makepost.css" />
-    <title>Arcadepedia</title>
-  </head>
-  <body>
-      <header class="header">
-            
-        <div class="logo left">          
-            <span class="arcade">
-                arcade<span class="pedia">pedia</span>
-            </span>
+    <!--Css file-->
+    <link rel="stylesheet" href="Homepage.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="menu">
+                <label class="hamburger-menu" for="check">
+                    <input type="checkbox" id="check" onclick="Menu()">
+                </label>
+            </div>
+            <a href="Homepage.html">
+            <div class="logo">
+                <span>
+                    arcade<span class="pedia">pedia</span>
+                </span>
+            </div>
+           </a> 
         </div>
-          
-          <div class="search center">
-            <form action="">
-              <input type="text" placeholder="Search" id="search">
-              <button><i class="material-icons">search</i></button>
-            </form>
-          </div>
-          
-          <div class="icons right">
-            <i class="material-icons display-this">account_circle</i>
-            <i class="material-icons">dark_mode</i>
-            <button class="log">Log out</button>
-          </div>
-      </header>
-      <main>
-          <div class="sidebar">
-            <a class="nav-link">
-              <i class="material-icons">home</i>
-              <span>Home</span>
-           </a>
-           <a class="nav-link dropdown-btn">
-              <i class="material-icons">explore</i>
-              <span>Explore</span>
-              <i class="material-icons expand">expand_more</i>
-           </a>
-           <div class="dropdown-container">
-            <a class="nav-link"><span>General</span></a>
-            <a class="nav-link"><span>All entries</span></a>
-          </div> 
-           <a class="nav-link dropdown-btn">
-              <i class="material-icons">forum</i>
-              <span>Forum</span>
-              <i class="material-icons expand">expand_more</i>
-           </a>
-           <div class="dropdown-container">
-            <a class="nav-link"><span>Discussions</span></a>
-            <a class="nav-link"><span>Users</span></a>
-          </div> 
-           <a class="nav-link dropdown-btn">
-              <i class="material-icons">help</i>
-              <span>About</span>
-              <i class="material-icons expand">expand_more</i>
-           </a>
-           <div class="dropdown-container">
-            <a class="nav-link"><span>About us</span></a>
-            <a class="nav-link"><span>Rules</span></a>
-            <a class="nav-link"><span>Disclaimer</span></a>
-          </div> 
-            <hr>
-          </div>
-          <div class="content">
+
+        <div class="right-section">
+            <a href="#">
+                <div class="search-button" role="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div> 
+            </a>   
+            <a href="login.html">
+                <div class="login-button" role="button">
+                    Login
+                </div>
+            </a>
+            <a href="register.html">
+                <div class="register-button" role="button">
+                    <i class="fa-regular fa-circle-user" id="profile"></i>
+                    Register
+                </div>
+            </a>
+            <div class="bg-toggle-button" role="button">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="sidebar">
+            <nav role="navigation">
+                <ul class="links">
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">All entries</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Users</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="AboutUs.html">About us</a></li>
+                            <li><a href="Rules.html">Rules</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>                    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
             <div class="post">
               <h2>Create post</h2>
               <form action="">
@@ -106,7 +111,7 @@
               </ol>
             </div>
           </div>
-      </main>
+      </div>
       <script>
         /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var dropdown = document.getElementsByClassName("dropdown-btn");
