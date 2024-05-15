@@ -138,7 +138,7 @@
                     <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                 </div>
                 <div class="row">
-                    <p>Body</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="row">
                     <span>
@@ -185,6 +185,17 @@
         //         links.style.opacity = "0";
         //     }
         // }
+
+        let BtnOption = document.querySelector('.option')
+        let BtnContainer = document.querySelector('.buttons-container')
+        BtnOption.addEventListener("click", (e) => {
+            e.preventDefault()
+            if (BtnContainer.style.display == 'none') {
+                BtnContainer.style.display = 'block'
+            } else {
+                BtnContainer.style.display = 'none'
+            }
+        })
     </script>
 </body>
 </html>
