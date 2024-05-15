@@ -143,12 +143,12 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: calc(100% - 80px); /*Actually this is the real reason why the sidebar is wrong :) */
+    height: calc(100% - 80px); /* Actually this is the real reason why the sidebar is wrong :) */
 }
 
 /*-------------- End of right button styles -------------
 ---------------------------------------------------------
----------------- Main content styles --------------------
+---------------- Main content styles -------------------- 
 **
 */
 
