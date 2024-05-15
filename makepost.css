@@ -23,6 +23,7 @@ Author: Bui Thai Son (s4037172)
 }
 
 :root {
+    --animation-timing: 200ms ease-in-out;
     --background-color-light: #FFFFFF;
     --background-color-dark: #000000;
     --Electric-blue: #86EEEC;

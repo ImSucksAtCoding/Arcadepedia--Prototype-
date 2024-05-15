@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadepedia | User Profile</title>
+    <!--Importing fonts for icons-->
+    <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
+    <!--Css file-->
+    <link rel="stylesheet" href="Userprofile.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="menu">
+                <label class="hamburger-menu" for="check">
+                    <input type="checkbox" id="check" class="hamburger-menu-trigger">
+                </label>
+            </div>
+            <a href="Homepage.html">
+            <div class="logo">
+                <span>
+                    arcade<span class="pedia">pedia</span>
+                </span>
+            </div>
+           </a> 
+        </div>
+
+        <div class="right-section">
+            <a href="#">
+                <div class="search-button" role="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div> 
+            </a>   
+            <a href="Userprofile.html">
+                <div class="username">
+                    <img src="assets/Welcome.png" alt="hehe" width="40px" height="40px">
+                    Son Bui
+                </div>
+            </a>
+            <a href="#">
+                <div class="logout-button" role="button">
+                    Logout
+                </div>
+            </a>
+            <div class="bg-toggle-button" role="button">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="sidebar">
+            <nav role="navigation">
+                <ul class="links">
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">All entries</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Users</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="AboutUs.html">About us</a></li>
+                            <li><a href="Rules.html">Rules</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>                    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="user-profile">
+                <img src="assets/Welcome.png" alt="Hehe" width="100px" height="100px">
+                Son Bui
+                <span>Joined 2nd May, 2024</span>
+            </div>
+            <div class="user-settings">
+                <div class="edit">
+                    <i class="fa-solid fa-pen"></i>Edit profile
+                </div>
+                <div class="deactivate">
+                    Deactivate
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script>
+        
+    </script>
+</body>
+</html>

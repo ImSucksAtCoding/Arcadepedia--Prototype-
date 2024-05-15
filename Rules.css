@@ -1,6 +1,7 @@
 /**
-Homepage (landing page) Css customize
-Author: Bui Thai Son (s4037172)
+Rules page Css customize
+Authors: - Bui Thai Son (s4037172)
+         - Nguyen Anh Tung (s4045602)
 **/
 
 
@@ -175,6 +176,7 @@ body {
     cursor: pointer;
     color: #53E8D4; 
     display: block;
+    width: fit-content;
     font-size: 40px;
     font-weight: bold;
     text-decoration: none;
