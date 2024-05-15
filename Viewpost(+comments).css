@@ -153,7 +153,9 @@ body {
     flex-direction: column; /* if the layout is vertical */
     transition: margin-left 300ms;
     background-color: #DADADA;
-    margin-bottom: 100px;
+    margin: 20px 0 100px 0;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .content-margin {
@@ -288,6 +290,10 @@ body {
     align-items: center;
 }
 
+.reply:hover {
+    background-color: white;
+}
+
 .reply a {
     text-decoration: none;
     color: black;
@@ -306,7 +312,7 @@ body {
 
 .comment-outline {
     display: inline-block;
-    cursor: pointer;
+    /* cursor: pointer; */
     border-radius: 50%;
     transition: background 0.3s ease;
 }

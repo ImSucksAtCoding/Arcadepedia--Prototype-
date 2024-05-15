@@ -385,7 +385,7 @@ body {
 }
 
 .reply {
-    cursor: pointer;
+    /* cursor: pointer; */
     display: inline-flex;
     box-sizing: border-box;
     /* width: 100px; */
@@ -413,7 +413,7 @@ body {
 
 .comment-outline {
     display: inline-block;
-    cursor: pointer;
+    /* cursor: pointer; */
     border-radius: 50%;
     transition: background 0.3s ease;
 }
