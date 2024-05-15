@@ -1,6 +1,7 @@
 /**
-Homepage (landing page) Css customize
-Author: Bui Thai Son (s4037172)
+View topics with post page Css customize
+Authors:  - Bui Thai Son (s4037172)
+        - Nguyen Tuan Minh Khoi (s3995060)
 **/
 
 
@@ -178,12 +179,10 @@ body {
 .makePost {
     cursor: pointer;
     border-radius: 20px 20px 20px 20px;
-    /* display: grid; */
     background-color: white;
     height: 100px;
     margin-bottom: 30px;
     align-content: center;
-    /* text-align: center; */
     transition: height 0.5s ease;
 }
 
@@ -197,17 +196,29 @@ body {
 .formAction {
     width: 100%;
     display: grid;
-    justify-items: center;
     align-items: center;
+    padding: 10px;
+}
+
+.makePost input {
+    width: 90%;
+}
+
+.makePost div.editor {
+    margin: 10px 0 0 0;
+    border: 1px solid black;
+    width: 90%;
+}
+
+.makePost button.edit-btn {
+    height: 40px;
+    width: 40px;
 }
 
 .makePost textarea {
-    /* overflow: scroll; */
-    /* height: 65%; */
     height: 100px;
     width: 90%;
     z-index: 1;
-    /* margin: 30px 0 30px 0; */
 }
 
 .submitBtnB {
@@ -217,23 +228,14 @@ body {
     font-weight: bold;
     border: 0;
     margin-top: 20px;
-    float: right;
-}
-
-.makePost div {
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
+    width: 10%;
 }
 
 .makePost span {
     display: inline-block;
-    /* vertical-align: top; */
     margin-left: 20px;
     font-size: 36px;
     color: gray;
-    /* align-items: center;
-    vertical-align: top; */
 }
 
 .rules-embed {
@@ -370,7 +372,7 @@ body {
 }
 
 .reply {
-    cursor: pointer;
+    /* cursor: pointer; */
     display: inline-flex;
     box-sizing: border-box;
     /* width: 100px; */
@@ -398,7 +400,7 @@ body {
 
 .comment-outline {
     display: inline-block;
-    cursor: pointer;
+    /* cursor: pointer; */
     border-radius: 50%;
     transition: background 0.3s ease;
 }

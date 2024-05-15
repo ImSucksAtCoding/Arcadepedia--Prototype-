@@ -1,6 +1,7 @@
 /**
-Homepage (landing page) Css customize
-Author: Bui Thai Son (s4037172)
+View topics page Css customize
+Authors: - Bui Thai Son (s4037172)
+         - Nguyen Tuan Minh Khoi (s3995060)
 **/
 
 
@@ -483,7 +484,7 @@ dd {
 }
 
 .reply {
-    cursor: pointer;
+    /* cursor: pointer; */
     display: inline-flex;
     box-sizing: border-box;
     /* width: 100px; */
@@ -511,7 +512,7 @@ dd {
 
 .comment-outline {
     display: inline-block;
-    cursor: pointer;
+    /* cursor: pointer; */
     border-radius: 50%;
     transition: background 0.3s ease;
 }

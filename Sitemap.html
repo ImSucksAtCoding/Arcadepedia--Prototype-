@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadepedia | Homepage</title>
+    <!--Import fonts for icons-->
+    <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
+    <!--Css file-->
+    <link rel="stylesheet" href="Sitemap.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="menu">
+                <label class="hamburger-menu" for="check">
+                    <input type="checkbox" id="check" class="hamburger-menu-trigger">
+                </label>
+            </div>
+            <a href="Homepage.html">
+            <div class="logo">
+                <span>
+                    arcade<span class="pedia">pedia</span>
+                </span>
+            </div>
+           </a> 
+        </div>
+
+        <div class="right-section">
+            <a href="#">
+                <div class="search-button" role="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div> 
+            </a>   
+            <a href="login.html">
+                <div class="login-button" role="button">
+                    Login
+                </div>
+            </a>
+            <a href="register.html">
+                <div class="register-button" role="button">
+                    <i class="fa-regular fa-circle-user" id="profile"></i>
+                    Register
+                </div>
+            </a>
+            <div class="bg-toggle-button" role="button">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="sidebar">
+            <nav role="navigation">
+                <ul class="links">
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">All entries</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Users</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="AboutUs.html">About us</a></li>
+                            <li><a href="Rules.html">Rules</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>                    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="sidemap">
+        <h1>Sitemap</h1>
+        <ul>
+            <li class="large-section"><a href="/">Home</a></li>
+            <li class="large-section"><p>Forum</p>
+                <ul class="small-section">
+                    <li ><a href="/forum/topics">Topics</a>
+                        <ul class="small-section">
+                            <li><a href="/forum/topics/new">New Topic</a></li>
+                            <li><a href="/forum/topics/:topic_id/edit">Edit Topic</a></li>
+                            <li><a href="/forum/topics/:topic_id">View Topic</a>
+                                <ul class="small-section">
+                                    <li><a href="/forum/topics/:topic_id/posts">Posts</a>
+                                        <ul class="small-section"> 
+                                            <li><a href="/forum/topics/:topic_id/posts/new">New Post</a></li>
+                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/edit">Edit Post</a></li>
+                                            <li><a href="/forum/topics/:topic_id/posts/:post_id">View Post</a>
+                                                <ul class="small-section">
+                                                    <li><a href="/forum/topics/:topic_id/posts/:post_id/comments">Comments</a>
+                                                        <ul>
+                                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/comments/new">New Comment</a></li>
+                                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/comments/:comment_id/edit">Edit Comment</a></li>
+                                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/comments/:comment_id">View Comment</a></li>
+                                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/comments/:comment_id/reply/new">Reply to Comment</a></li>
+                                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/comments/:comment_id/images">Comment Images</a></li>
+                                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/comments/:comment_id/get-image">Get Comment Images</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/images">Post Images</a></li>
+                                            <li><a href="/forum/topics/:topic_id/posts/:post_id/get-image">Get Post Images</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="large-section"><a href="/register">Register</a></li>
+            <li class="large-section"><a href="/login">Login</a></li>
+            <li class="large-section"><a href="/logout">Logout</a></li>
+            <li class="large-section"><a href="/forgotPassword">Forgot Password</a></li>
+            <li class="large-section"><a href="/resetPassword/:token">Reset Password</a></li>
+            <li class="large-section"><a href="/users">Users</a>
+                <ul class="small-section">
+                    <li><a href="/users/search">Search Users</a></li>
+                    <li><a href="/users/:id">View User</a></li>
+                    <li><a href="/users/:id/settings">User Settings</a></li>
+                </ul>
+            </li>
+            <li class="large-section"><a href="/gallery">Gallery</a>
+                <ul class="small-section">
+                    <li><a href="/gallery/upload-image">Upload Image</a></li>
+                    <li><a href="/gallery/get-image">Get Image</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
