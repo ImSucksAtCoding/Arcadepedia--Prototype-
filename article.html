@@ -7,8 +7,7 @@
     <!--Import fonts for icons-->
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
     <!--Css file-->
-    <link rel="stylesheet" href="Homepage.css">
-    <script src="article.js" defer></script>
+    <link rel="stylesheet" href="article.css">
 
 </head>
 <body>
@@ -16,7 +15,7 @@
         <div class="left-section">
             <div class="menu">
                 <label class="hamburger-menu" for="check">
-                    <input type="checkbox" id="check" onclick="Menu()">
+                    <input type="checkbox" id="check" class="hamburger-menu-trigger">
                 </label>
             </div>
             <a href="Homepage.html">
@@ -77,61 +76,116 @@
                     </li>
                 </ul>
             </nav>
-        </div>
-        <div class="content">
-            
-            <div class="demo">
-                <h1>Space invaders</h1>
-                <p>Click to play demo</p>
-                <textarea rows="30" cols="100"></textarea>
-            </div>
-            <div class="stats">
-                <p>Average rating:</p>
-                <p>Tags:</p>
-            </div>
-            <div class="rating-box">
-                <span>Rate this:</span>
-                <i class="fa-solid fa-star stars"></i>
-                <i class="fa-solid fa-star stars"></i>
-                <i class="fa-solid fa-star stars"></i>
-                <i class="fa-solid fa-star stars"></i>
-                <i class="fa-solid fa-star stars"></i>
-            </div>
-            <div class="general">
-                <p>Space Invaders is a 1978 shoot 'em up arcade video game, developed and released by Taito in Japan and licensed to Midway Manufacturing for overseas distribution. Commonly considered to be one of the most influential video games of all time, Space Invaders was the first fixed shooter and set the template for the genre. The goal is to defeat wave after wave of descending aliens with a horizontally moving laser cannon to earn as many points as possible.</p>
-                <img src="assets/space-invaders.png">
-            </div>
             <div class="table">
                 <h2>Contents</h2>
-                <ul>
-                    <a href="#gameplay"><li>Gameplay</li></a>
-                    <a href="#development"><li>Development</li></a>
-                    <a href="#reception"><li>Reception</li></a>
-                    <a href="#legacy"><li>Legacy</li></a>
-                </ul>
+                <div class="gallery">
+                    <ul>
+                        <li><a href="#intro">Introduction</a></li>
+                        <li><a href="#gameplay">Gameplay</a></li>
+                        <li><a href="#development">Development</a></li>
+                        <li><a href="#reception">Reception</a></li>
+                        <li><a href="#legacy">Legacy</a></li>
+                    </ul>
+                </div>
             </div>
-            <div id="gameplay">
+        </div>
+        <div class="content">
+            <div class="demo">
+                <h1>Space invaders</h1>
+                <p>Click to play the demo</p>
+                <img src="assets/space-invaders.png" alt="Welcome to our page" width="800" height="500">
+            </div>
+            <div class="rating-box">
+                <span>Rate this demo:</span>
+                <i class="fa-solid fa-star stars"></i>
+                <i class="fa-solid fa-star stars"></i>
+                <i class="fa-solid fa-star stars"></i>
+                <i class="fa-solid fa-star stars"></i>
+                <i class="fa-solid fa-star stars"></i>
+            </div>
+
+
+            
+
+            <div class="trending-discussion" id="intro">
+                <h2>Introduction</h2>
+                <p>Space Invaders is a 1978 shoot 'em up arcade video game, developed and released by Taito in Japan and licensed to Midway Manufacturing for overseas distribution. Commonly considered to be one of the most influential video games of all time, Space Invaders was the first fixed shooter and set the template for the genre. The goal is to defeat wave after wave of descending aliens with a horizontally moving laser cannon to earn as many points as possible.</p>
+
+            </div>
+
+            <div class="trending-discussion" id="gameplay">
                 <h2>Gameplay</h2>
                 <p>Space Invaders is a fixed shooter in which the player moves a laser cannon horizontally across the bottom of the screen and fires at aliens overhead. The aliens begin as five rows of eleven that move left and right as a group, shifting downward (advancing on the shooter) each time they reach a screen edge. The goal is to eliminate all of the aliens by shooting them. While the player has three lives, the game ends immediately if the invaders reach the bottom of the screen. The aliens attempt to destroy the player's cannon by firing projectiles. The laser cannon is partially protected by stationary defense bunkers which are gradually destroyed from the top by the aliens and, if the player fires when beneath one, the bottom gets destroyed.</p>
                 <p>As aliens are defeated, their movement and the music both speed up. Defeating all the aliens brings another wave which starts lower, a loop which can continue endlessly. A special "mystery ship" will occasionally move across the top of the screen and award bonus points if destroyed.</p>
             </div>
-            <div id="development">
+
+            <div class="trending-discussion" id="development">
                 <h2>Development</h2>
                 <p>Space Invaders was developed by Japanese designer Tomohiro Nishikado, who spent a year designing it and developing the necessary hardware to produce it. The game was a response to Atari's arcade game Breakout (1976). Nishikado wanted to adapt the same sense of achievement and tension from destroying targets one at a time, combining it with elements of target shooting games. The game uses a similar layout to that of Breakout but with different game mechanics; rather than bounce a ball to attack static objects, players are given the ability to fire projectiles at moving enemies.</p>
                 <p>Nishikado added several interactive elements that he found lacking in earlier video games, such as the ability for enemies to react to the player's movement and fire back, and a game over triggered by the enemies killing the player (either by getting hit or enemies reaching the bottom of the screen) rather than simply a timer running out. He replaced the timer, typical of arcade games at the time, with descending aliens who effectively served a similar function, where the closer they came, the less time the player had left.</p>
             </div>
-            <div id="reception">
+
+            <div class="trending-discussion" id="reception">
                 <h2>Reception</h2>
                 <p>Space Invaders initially received mixed responses from within Taito and amusement arcade owners. Nishikado's colleagues praised it, applauding his achievement while queuing up to play, whereas his bosses predicted low sales as games often ended more quickly than other timer-based arcade games at the time. A number of amusement arcade owners initially rejected it, but some pachinko parlors and bowling alleys adopted it; it quickly caught on, with many parlors and alleys clearing space for more Space Invaders cabinets. In the first few months following its release in Japan, Space Invaders became popular, and specialty video arcades opened with nothing but Space Invaders cabinets.</p>
+                
             </div>
-            <div id="legacy">
+
+            <div class="trending-discussion" id="legacy">
                 <h2>Legacy</h2>
                 <p>As one of the earliest shooting games, Space Invaders set precedents and helped pave the way for future games and for the shooting genre. Space Invaders popularized a more interactive style of gameplay, with the enemies responding to the player-controlled cannon's movement, and was the first video game to popularize the concept of achieving a high score, being the first to save the player's score. While earlier shooting games allowed the player to shoot at targets, Space Invaders was the first in which multiple enemies could fire back at the player, and in contrast to earlier arcade games which often had a timer, Space Invaders introduced the "concept of going round after round."It was also the first game where players were given multiple lives, had to repel hordes of enemies, could take cover from enemy fire, and use destructible barriers, in addition to being the first game to use a continuous background soundtrack, with four simple diatonic descending bass notes repeating in a loop, which was dynamic and changed pace during stages, like a heartbeat sound that increases pace as enemies approached.</p>
+               
             </div>
+
             
-            
+           
+
+            <div class="text">
+                <div class="userInfo">
+                    <span><img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px"></span>
+                    <span class="username">Son Bui</span>
+                    <span class="timestampSeperator">•</span>
+                    <span class="timestamp">May 2nd, 2069</span>
+                </div>
+                <div class="options-container">
+                    <span class="option"><i class="fa-solid fa-ellipsis"></i></span>
+                    <div class="buttons-container invisible">
+                        <form action="#" method="get" class="userAction">
+                            <button type="submit"><i class="fa-solid fa-trash"></i>Delete</button>
+                        </form>
+                        <form action="#" method="get" class="userAction">
+                            <button type="submit"><i class="fa-solid fa-pen"></i>Edit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
+                </div>
+                <div class="row">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="row">
+                    <span>
+                        <span class="reaction">
+                            <span class="like-post-button">&#x25B2;</span>
+                            0
+                            <span class="dislike-post-button">&#x25BC;</span>    
+                        </span>
+                        <span class="reply">
+                            <span class="comment-outline">
+                                <i class="fa-regular fa-message"></i>
+                            </span>
+                            <span class="numberOfComments">
+                                123
+                            </span>
+                        </span>
+                    </span>
+                </div>
+            </div>
         </div>
         
+    </div>
+    <div class="footer">
     </div>
       
   <!-- Main Body Ends -->
