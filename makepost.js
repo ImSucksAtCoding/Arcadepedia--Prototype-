@@ -5,7 +5,7 @@
 // elements
 const elements = document.querySelectorAll('.edit-btn');
 const output = document.querySelector('.output');
-const textarea = document.querySelector('#bodyInput');
+const textarea = document.querySelector('#postContent');
 
 // events
 elements.forEach(element => {

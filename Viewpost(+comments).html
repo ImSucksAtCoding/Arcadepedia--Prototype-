@@ -391,8 +391,13 @@
 
                 // Create the textarea element
                 let textarea = document.createElement('textarea');
-                textarea.name = "comment";
+                textarea.name = "comment[content]";
+                textarea.id = "commentContent";
                 textarea.placeholder = "Write your comment here...";
+
+                // Create the textarea element
+                let output = document.createElement('div');
+                output.className = "output";
 
                 //Create the submit button
                 let submitBtn = document.createElement('button');
@@ -403,10 +408,65 @@
                 // Append the textarea to the form
                 form.appendChild(editor);
                 form.appendChild(textarea);
+                form.appendChild(output);
                 form.appendChild(submitBtn);
 
                 // Append the form to the e.currentTarget
                 e.currentTarget.appendChild(form);
+
+                // Add event listeners
+                editor.querySelectorAll('.edit-btn').forEach(element => {
+                    element.addEventListener('click', () => {
+                        let command = element.dataset['element'];
+                        let tag, textToInsert;
+
+                        switch (command) {
+                            case 'bold':
+                                tag = 'b';
+                                textToInsert = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+                                break;
+                            case 'italic':
+                                tag = 'i';
+                                textToInsert = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+                                break;
+                            case 'underline':
+                                tag = 'u';
+                                textToInsert = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+                                break;
+                            case 'insertUnorderedList':
+                                // tag = 'ul';
+                                textToInsert = `\n<li></li>\n<li></li>\n`;
+                                replaceSelectionWith(`\n<ul>\n<li></li>\n<li></li>\n</ul>`);
+                                break;
+                            case 'insertOrderedList':
+                                tag = 'ol';
+                                textToInsert = `\n<li></li>\n<li></li>\n`;
+                                break;
+                            case 'createLink':
+                                let url = prompt('Enter the link here: ');
+                                if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                                    url = 'http://' + url;
+                                }            
+                                let linkText = prompt('Enter the link text here: ');
+                                replaceSelectionWith(`<a href="${url}">${linkText}</a>`);
+                                break;
+                        }
+
+                        if (tag) {
+                            replaceSelectionWith(`<${tag}>${textToInsert}</${tag}>`);
+                        }
+
+                        output.innerHTML = textarea.value;
+                    });
+                });
+
+                textarea.addEventListener('input', () => {
+                    output.innerHTML = textarea.value;
+                });
+
+                function replaceSelectionWith(text) {
+                    textarea.value = textarea.value.substring(0, textarea.selectionStart) + text + textarea.value.substring(textarea.selectionEnd);
+                }
 
                 /*============================================================================================================
                 <div class="makeComment">
@@ -420,7 +480,8 @@
                             <button type="button" class="edit-btn" data-element="createLink"><i class="fa-solid fa-link fa-lg"></i></button>
                         </div>
 
-                        <textarea name="comment" placeholder="Write your comment here.."></textarea>
+                        <textarea name="comment[content]" id="commentContent" placeholder="Write your comment here.."></textarea>
+                        <div class="output"></div>
                         <button type="submit" class="submitBtnB">Post</button>
                     </form>
                 </div>
@@ -430,21 +491,44 @@
             i++;
 
             let commentArea = document.querySelector('.makeComment textarea');
+            let outputDiv = document.querySelector('.makeComment div.output');
 
             if (initialHeight !== commentArea.offsetHeight) {
                 initialHeight = commentArea.offsetHeight;
             }
 
-            makeCommentArea(commentArea);
+            // Add event listener for the input event
+            commentArea.addEventListener('input', (e) => {
+                makePostArea(commentArea, outputDiv);
+            });
+
+            makePostArea(commentArea, outputDiv);
         });
 
-        function makeCommentArea(dom_elem) {
-            if(dom_elem.offsetHeight > 200) {
-                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 200) + "px";
+        function makePostArea(dom_elem1, dom_elem2) {
+            if(dom_elem1.offsetHeight > 200) {
+                dom_elem1.parentElement.parentElement.style.height = (dom_elem1.offsetHeight + dom_elem2.offsetHeight + 250) + "px";
             } else {
-                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 150) + "px";
+                dom_elem1.parentElement.parentElement.style.height = (dom_elem1.offsetHeight + dom_elem2.offsetHeight + 200) + "px";
             }
         }
+
+        //             // Add event listener for the input event
+        //             textarea.addEventListener('input', function() {
+        //         makePostArea(textarea, output);
+        //     });
+
+        //     makePostArea(commentArea, outputDiv);
+        // });
+
+        // function makePostArea(dom_elem1, dom_elem2) {
+        //     if(dom_elem1.offsetHeight > 200) {
+        //         dom_elem1.parentElement.parentElement.style.height = (dom_elem1.offsetHeight + dom_elem2.offsetHeight + 250) + "px";
+        //     } else {
+        //         dom_elem1.parentElement.parentElement.style.height = (dom_elem1.offsetHeight + dom_elem2.offsetHeight + 200) + "px";
+        //     }
+        // }
+
     </script>
 </body>
 </html>

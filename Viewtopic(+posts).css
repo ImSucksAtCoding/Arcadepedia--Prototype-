@@ -219,6 +219,7 @@ body {
     height: 100px;
     width: 90%;
     z-index: 1;
+    /* resize: none; */
 }
 
 .submitBtnB {
