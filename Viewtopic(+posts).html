@@ -15,7 +15,7 @@
         <div class="left-section">
             <div class="menu">
                 <label class="hamburger-menu" for="check">
-                    <input type="checkbox" id="check">
+                    <input type="checkbox" id="check" class="hamburger-menu-trigger">
                 </label>
             </div>
             <a href="Homepage.html">
@@ -317,6 +317,33 @@
                 input.name = 'post[title]';
                 input.placeholder = "Post title";
 
+                // Create the input element
+                let editor = document.createElement('div');
+                editor.className = 'editor';
+
+                // Define the buttons and their data-elements
+                const buttons = [
+                    { element: 'bold', icon: 'fa-bold' },
+                    { element: 'italic', icon: 'fa-italic' },
+                    { element: 'underline', icon: 'fa-underline' },
+                    { element: 'insertUnorderedList', icon: 'fa-list-ul' },
+                    { element: 'insertOrderedList', icon: 'fa-list-ol' },
+                    { element: 'createLink', icon: 'fa-link' }
+                ];
+
+                // Create the buttons and append them to the editor
+                buttons.forEach(button => {
+                    let btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'edit-btn';
+                    btn.dataset.element = button.element;
+
+                    let i = document.createElement('i');
+                    i.className = `fa-solid ${button.icon} fa-lg`;
+
+                    btn.appendChild(i);
+                    editor.appendChild(btn);
+                });
                 // Create the textarea element
                 let textarea = document.createElement('textarea');
                 textarea.name = "post[content]";
@@ -330,6 +357,7 @@
 
                 // Append the textarea to the form
                 form.appendChild(input);
+                form.appendChild(editor);
                 form.appendChild(textarea);
                 form.appendChild(submitBtn);
 
@@ -339,6 +367,17 @@
                 /*============================================================================================================
                 <div class="makePost">
                     <form action="/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment" method="get" class="formAction">
+                        <input type="text" name="post[title]" placeholder="Post title"></input>
+
+                        <div class="editor">
+                            <button type="button" class="edit-btn" data-element="bold"><i class="fa-solid fa-bold fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="italic"><i class="fa-solid fa-italic fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="underline"><i class="fa-solid fa-underline fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="insertUnorderedList"><i class="fa-solid fa-list-ul fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="insertOrderedList"><i class="fa-solid fa-list-ol fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="createLink"><i class="fa-solid fa-link fa-lg"></i></button>
+                        </div>
+
                         <textarea name="comment" placeholder="Write your comment here.."></textarea>
                         <button type="submit" class="submitBtnB">Post</button>
                     </form>
@@ -361,7 +400,7 @@
             if(dom_elem.offsetHeight > 200) {
                 dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 200) + "px";
             } else {
-                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 100) + "px";
+                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 150) + "px";
             }
         }
 

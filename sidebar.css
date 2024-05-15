@@ -98,3 +98,7 @@
 .sublink li:last-child {
     border: none;
 }
+
+input.hamburger-menu-trigger {
+    display: none;
+}

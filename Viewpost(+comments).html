@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--Import some text font-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap" />
-    <link href="https://fonts.cdnfonts.com/css/karmatic-arcade" rel="stylesheet">
     <!--Import fonts for icons-->
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
     <!--Bootstrap-->
@@ -15,11 +11,11 @@
     <link rel="stylesheet" href="/Viewpost(+comments).css">
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="left-section">
             <div class="menu">
                 <label class="hamburger-menu" for="check">
-                    <input type="checkbox" id="check"">
+                    <input type="checkbox" id="check" class="hamburger-menu-trigger">
                 </label>
             </div>
             <a href="Homepage.html">
@@ -52,21 +48,31 @@
                 <i class="fa-solid fa-moon"></i>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="main">
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
                     <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
-                    <li><a href="#"><div class="items"><i class="fa-regular fa-compass"></i>Explore</div></a></li>
-                    <li><a href="#"><div class="items"><i class="fa-regular fa-comments"></i>Forums</div></a></li>
-                    <li id="sub-menu"><a href="#"><div class="items"><i class="fa-regular fa-circle-question"></i>About</div></a>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">All entries</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                        <ul class="sublink">
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Users</a></li>
+                        </ul>   
+                    </li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">About us</a></li>
                             <li><a href="#">Rules</a></li>
                             <li><a href="#">Disclaimer</a></li>
-                        </ul>
+                        </ul>                    
                     </li>
                 </ul>
             </nav>
@@ -348,8 +354,45 @@
 
                 e.currentTarget.innerHTML = '';
 
-                //Create 
+                
+                // Create the form element
+                let form = document.createElement('form');
+                form.action = "/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment";
+                form.method = "get";
+                form.className = "formAction";
+                
+                // Create the input element
+                let editor = document.createElement('div');
+                editor.className = 'editor';
 
+                // Define the buttons and their data-elements
+                const buttons = [
+                    { element: 'bold', icon: 'fa-bold' },
+                    { element: 'italic', icon: 'fa-italic' },
+                    { element: 'underline', icon: 'fa-underline' },
+                    { element: 'insertUnorderedList', icon: 'fa-list-ul' },
+                    { element: 'insertOrderedList', icon: 'fa-list-ol' },
+                    { element: 'createLink', icon: 'fa-link' }
+                ];
+
+                // Create the buttons and append them to the editor
+                buttons.forEach(button => {
+                    let btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'edit-btn';
+                    btn.dataset.element = button.element;
+
+                    let i = document.createElement('i');
+                    i.className = `fa-solid ${button.icon} fa-lg`;
+
+                    btn.appendChild(i);
+                    editor.appendChild(btn);
+                });
+
+                // Create the textarea element
+                let textarea = document.createElement('textarea');
+                textarea.name = "comment";
+                textarea.placeholder = "Write your comment here...";
 
                 //Create the submit button
                 let submitBtn = document.createElement('button');
@@ -357,18 +400,8 @@
                 submitBtn.textContent = 'Post';
                 submitBtn.className = "submitBtnB";
 
-                // Create the form element
-                let form = document.createElement('form');
-                form.action = "/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment";
-                form.method = "get";
-                form.className = "formAction";
-
-                // Create the textarea element
-                let textarea = document.createElement('textarea');
-                textarea.name = "comment";
-                textarea.placeholder = "Write your comment here...";
-
                 // Append the textarea to the form
+                form.appendChild(editor);
                 form.appendChild(textarea);
                 form.appendChild(submitBtn);
 
@@ -378,6 +411,15 @@
                 /*============================================================================================================
                 <div class="makeComment">
                     <form action="/forum/topics/<%= topicId %>/posts/<%= post._id %>/comment" method="get" class="formAction">
+                        <div class="editor">
+                            <button type="button" class="edit-btn" data-element="bold"><i class="fa-solid fa-bold fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="italic"><i class="fa-solid fa-italic fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="underline"><i class="fa-solid fa-underline fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="insertUnorderedList"><i class="fa-solid fa-list-ul fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="insertOrderedList"><i class="fa-solid fa-list-ol fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="createLink"><i class="fa-solid fa-link fa-lg"></i></button>
+                        </div>
+
                         <textarea name="comment" placeholder="Write your comment here.."></textarea>
                         <button type="submit" class="submitBtnB">Post</button>
                     </form>
@@ -400,7 +442,7 @@
             if(dom_elem.offsetHeight > 200) {
                 dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 200) + "px";
             } else {
-                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 100) + "px";
+                dom_elem.parentElement.parentElement.style.height = (dom_elem.offsetHeight + 150) + "px";
             }
         }
     </script>

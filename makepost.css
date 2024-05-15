@@ -20,7 +20,7 @@ Author: Bui Thai Son (s4037172)
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 :root {
     --background-color-light: #FFFFFF;
@@ -57,20 +57,47 @@ body {
 /** -----------------------------------------------------------------------------------------***/
 /** -----------------------------------------------------------------------------------------**/
 
-.log {
-    background-color: #53E8D4;
-    border-style: none;
-    border-radius: 8px;
-    display: inline-flex;
-    padding: 10px 20px 10px 20px;
-    justify-content: center;
-    align-items: center;
+.right-section a {
+    text-decoration: none;
+} 
+
+.search-button {
+    font-size: 25px;
+    margin-top: 2px;
+    color: var(--background-color-dark);
     cursor: pointer;
 }
 
-main {
+.login-button {
+    font-size: 13px;
+    color: var(--background-color-dark);
+    padding: 13px 30px;
+    background-color: var(--Turquoise);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.register-button {
+    font-size: 14px;
+    color: var(--background-color-light);
+    padding: 13px 40px;
+    background-color: var(--Grapes);
+    border-radius: 8px;
+}
+
+.bg-toggle-button {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 5px;
+    color: var(--background-color-dark);
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100% - 80px); /*Actually this is the real reason why the sidebar is wrong :) */
 }
 
 /*------------------------------ End of right button styles -------------------------------- ****/
@@ -80,8 +107,9 @@ main {
 .content {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin: 30px 0 30px 0;
 }
+
 .post {
     flex: 0 1 70%;
     padding-left: 50px;
@@ -91,17 +119,27 @@ main {
 }
 
 .post input {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 5px;
-    width: 700px;
+    width: 90%;
     height: 45px;
     margin-top: 10px;
     margin-bottom: 30px;
-    
 }
 
 #req {
     color: red;
+}
+
+div.editor {
+    margin: 10px 0 0 0;
+    border: 1px solid black;
+    width: 90%;
+}
+
+div.editor button.edit-btn {
+    width: 40px;
+    height: 40px;
 }
 
 .rules {
@@ -113,13 +151,16 @@ main {
     border-radius: 1px;
     margin-right: 50px;
 }
+
 .rules h2 {
     text-align: center;
     margin-bottom: 20px;
 }
+
 ol li {
     margin-bottom: 10px;
 }
+
 #tag {
     margin-bottom: 15px;
     background-color: #7B1DaE;
@@ -142,8 +183,18 @@ ol li {
 }
 
 textarea {
-    margin-bottom: 20px;
+    margin: 0 0 10px 0;
+    width: 90%;
+    height: 200px;
 }
+
 ul {
     list-style-type: none;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: #8921C2;
 }

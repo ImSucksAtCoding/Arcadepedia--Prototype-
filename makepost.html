@@ -6,8 +6,10 @@
     <title>Arcadepedia | Homepage</title>
     <!--Import fonts for icons-->
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!--Css file-->
-    <link rel="stylesheet" href="Homepage.css">
+    <link rel="stylesheet" href="makepost.css">
 
 </head>
 <body>
@@ -15,7 +17,7 @@
         <div class="left-section">
             <div class="menu">
                 <label class="hamburger-menu" for="check">
-                    <input type="checkbox" id="check" onclick="Menu()">
+                    <input type="checkbox" id="check" class="hamburger-menu-trigger">
                 </label>
             </div>
             <a href="Homepage.html">
@@ -77,58 +79,44 @@
                 </ul>
             </nav>
         </div>
-        <div class="content">
-            <div class="post">
-              <h2>Create post</h2>
-              <form action="">
-                <div class="title">
-                  <label for="title">Title<span id="req">*</span></label><br>
-                  <input type="text" id="title" placeholder="Up to 300 characters" required maxlength="300"><br>
-                </div>
-                <button id="tag" type="button">Add tag +</button><br>
-                <div class="editor">
-                  <button type="button" class="edit-btn" data-element="bold"><i class="material-icons">format_bold</i></button>
-                  <button type="button" class="edit-btn" data-element="italic"><i class="material-icons">format_italic</i></button>
-                  <button type="button" class="edit-btn" data-element="underline"><i class="material-icons">format_underline</i></button>
-                  <button type="button" class="edit-btn" data-element="insertUnorderedList"><i class="material-icons">list</i></button>
-                  <button type="button" class="edit-btn" data-element="insertOrderedList"><i class="material-icons">format_list_numbered</i></button>
-                  <button type="button" class="edit-btn" data-element="createLink"><i class="material-icons">add_link</i></button>
-                  <button type="button" class="edit-btn" data-element="insertImage"><i class="material-icons">image</i></button>
-                </div>
-                <div class="output" contenteditable="true" aria-required="true">
 
-                </div>
-                <script src="makepost.js"></script>
-                <button type="submit" id="submit">Post</button>
-              </form>
+        <div class="content col-6 mx-auto">
+            <div class="post">
+                <h2>Create post</h2>
+                <form action="">
+                    <div class="title">
+                        <label for="title">Title<span id="req">*</span></label><br>
+                        <input type="text" id="title" placeholder="Up to 300 characters" required maxlength="300"><br>
+                    </div>
+                    <div class="editor">
+                        <button type="button" class="edit-btn" data-element="bold"><i class="fa-solid fa-bold fa-lg"></i></button>
+                        <button type="button" class="edit-btn" data-element="italic"><i class="fa-solid fa-italic fa-lg"></i></button>
+                        <button type="button" class="edit-btn" data-element="underline"><i class="fa-solid fa-underline fa-lg"></i></button>
+                        <button type="button" class="edit-btn" data-element="insertUnorderedList"><i class="fa-solid fa-list-ul fa-lg"></i></button>
+                        <button type="button" class="edit-btn" data-element="insertOrderedList"><i class="fa-solid fa-list-ol fa-lg"></i></button>
+                        <button type="button" class="edit-btn" data-element="createLink"><i class="fa-solid fa-link fa-lg"></i></button>
+                    </div>
+                    <textarea name="bodyInput" id="bodyInput" style="resize: vertical;"></textarea>
+                    <div class="output"></div>
+                    <button type="submit" id="submit">Post</button>
+                </form>
             </div>
+
             <div class="rules">
-              <h2>Rules</h2>
-              <ol>
-                <li>Be nice and treat people with respect. Keep discussions civil and be open-minded about differing opinions.</li>
-                <li>Do not ask for or share links to pirated material.</li>
-                <li>Spamming, trolling, or impersonating other users will lead to your account being banned.</li>
-              </ol>
+                <h2>Rules</h2>
+                <ol>
+                    <li>Be nice and treat people with respect. Keep discussions civil and be open-minded about differing opinions.</li>
+                    <li>Do not ask for or share links to pirated material.</li>
+                    <li>Spamming, trolling, or impersonating other users will lead to your account being banned.</li>
+                </ol>
             </div>
-          </div>
-      </div>
-      <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
-        
-        for (i = 0; i < dropdown.length; i++) {
-          dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-            } else {
-              dropdownContent.style.display = "block";
-            }
-          });
-        }
-        </script>
-  <!-- Main Body Ends -->
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+    <script src="makepost.js"></script>
 </body>
 </html>
