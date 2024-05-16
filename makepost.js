@@ -27,12 +27,14 @@ elements.forEach(element => {
                 textToInsert = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
                 break;
             case 'insertUnorderedList':
-                tag = 'ul';
-                textToInsert = `\n<li></li>\n<li></li>\n`;
+                // tag = 'ul';
+                // textToInsert = `\n<li></li>\n<li></li>\n`;
+                replaceSelectionWith(`\n<ul>\n<li></li>  <!--Item 1 goes inside of the li tag-->\n<li></li>  <!--Item 2 goes inside of the li tag-->\n</ul>`);
                 break;
             case 'insertOrderedList':
-                tag = 'ol';
-                textToInsert = `\n<li></li>\n<li></li>\n`;
+                // tag = 'ol';
+                // textToInsert = `\n<li></li>\n<li></li>\n`;
+                replaceSelectionWith(`\n<ol>\n<li></li>  <!--Item 1 goes inside of the li tag-->\n<li></li>  <!--Item 2 goes inside of the li tag-->\n</ol>`);
                 break;
             case 'createLink':
                 let url = prompt('Enter the link here: ');
