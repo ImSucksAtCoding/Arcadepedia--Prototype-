@@ -281,6 +281,7 @@ span button:hover {
 /** -------------------- Footer styles  -----------------------**/
 
 .footer {
+  
     width: 100%;
     height: 300px;
     background-color: #8921C2;
@@ -294,7 +295,6 @@ span button:hover {
 }
 
 .socials {
-    margin-top: 20px;
     margin-left: 650px;
 }
 
@@ -343,4 +343,29 @@ span button:hover {
     color: white;
     background-color: transparent;
   }
+
+.footer p {
+    text-align: center;
+    color: white;
+}
+
+.link1 {
+    margin-left: 450px;
+}
+
+.link2 {
+    margin-left: 900px;
+}
+
+.footer-link {
+    color: white;
+    margin: 0 10px 0 10px;
+}
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+ .footer p {
+    margin-top: 150px;
+}
   
