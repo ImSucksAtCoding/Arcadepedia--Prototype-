@@ -37,7 +37,8 @@
     
         while (hasMore) {
             // Fetch data from the server
-            const response = await fetch(`https://www.speedrun.com/api/v1/series/z7830kne/games?offset=${offset}`, {
+            // const response = await fetch(`https://www.speedrun.com/api/v1/series/z7830kne/games?offset=${offset}`, {
+            const response = await fetch(`https://www.speedrun.com/api/v1/series/qnl3mln5/games?offset=${offset}`, {
                 method: "GET"
             });
             const data = await response.json();
@@ -61,16 +62,18 @@
         let div = document.createElement('div');
         div.className = 'game';
 
-        for (let key in allData[0]) {
+        let index = 5;
+
+        for (let key in allData[index]) {
             // // Create a new line for each key-value pair
             // div.innerHTML += `${key}: ${JSON.stringify(allData[0][key])}<br>`;
             // Check if the value is an object or an array
-            if (typeof allData[0][key] === 'object' && allData[0][key] !== null) {
+            if (typeof allData[index][key] === 'object' && allData[index][key] !== null) {
                 // Convert the object or array to a string and format it with indentation
-                div.innerHTML += `${key}: <pre>${JSON.stringify(allData[0][key], null, 2)}</pre><br>`;
+                div.innerHTML += `${key}: <pre>${JSON.stringify(allData[index][key], null, 2)}</pre><br>`;
             } else {
                 // Create a new line for each key-value pair
-                div.innerHTML += `${key}: ${allData[0][key]}<br>`;
+                div.innerHTML += `${key}: ${allData[index][key]}<br>`;
             }
         }
 
