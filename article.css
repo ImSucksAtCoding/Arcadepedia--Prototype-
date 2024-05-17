@@ -233,11 +233,6 @@ h2 {
     margin-top: -5px;
 }
 
-
-.section {
-    margin-bottom: 10px;
-}
-
 span button {
     font-size: 15px;
     margin-left: 5px;
@@ -251,7 +246,7 @@ span button:hover {
 }
 
 
-#legacy {
+#ref {
     margin-bottom: 50px;
 }
 
@@ -276,9 +271,9 @@ span button:hover {
     margin-bottom: 20px;
 }
 
-#intro p, #gameplay p, #development p, #reception p, #legacy p{
+#overview p, #gameplay p, #development p, #reception p, #legacy p, #ref p{
     margin-left: 100px;
-    margin-right: 150px;
+    margin-right: 300px;
 }
 
 
