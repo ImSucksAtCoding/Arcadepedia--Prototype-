@@ -271,12 +271,14 @@ span button:hover {
     margin-top: 10px;
 }
 
+
+.table ul li {
+    margin-bottom: 20px;
+}
+
 #intro p, #gameplay p, #development p, #reception p, #legacy p{
     margin-left: 100px;
     margin-right: 150px;
-}
-.table ul li {
-    margin-bottom: 20px;
 }
 
 
@@ -319,6 +321,10 @@ span button:hover {
 {
   color:#3366cc;
   text-decoration:none;
+}
+#position {
+    text-align: center;
+    margin-bottom: 40px;
 }
 .footer-links
 {
