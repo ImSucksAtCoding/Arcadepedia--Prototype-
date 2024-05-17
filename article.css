@@ -267,6 +267,10 @@ span button:hover {
     text-decoration: underline;
 }
 
+.table-content {
+    margin-top: 10px;
+}
+
 #intro p, #gameplay p, #development p, #reception p, #legacy p{
     margin-left: 100px;
     margin-right: 150px;
