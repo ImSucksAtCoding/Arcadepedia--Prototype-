@@ -38,6 +38,10 @@
     text-decoration: none;
 }
 
+.left-section a:hover {
+    text-decoration: none;
+}
+
 .pedia {
     color: var(--Turquoise);
     padding: 1px;

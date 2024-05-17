@@ -36,7 +36,8 @@ Author: Bui Thai Son (s4037172)
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    /* height: 100%;
+    width: 100%; */
 }
 
 body {
@@ -150,7 +151,7 @@ input {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: calc(100vh);
+    height: calc(100% - 80px);
 }
 
 /** -------------------------- End of right button styles ------------------------ ***/
@@ -177,6 +178,7 @@ input {
 .user-profile img {
     border-radius: 9999px;
     border: 3px solid var(--background-color-dark);
+    margin-top: 10px;
 }
 
 .name {
@@ -206,6 +208,7 @@ input {
     border: 2px solid var(--background-color-dark);
     border-radius: 6px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .edit i {
@@ -219,6 +222,7 @@ input {
     text-align: center;
     border-radius: 6px;
     color: red;
+    cursor: pointer;
 }
 
 .edit:hover {
@@ -237,13 +241,242 @@ input {
     margin-top: 80px;
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 30px;
     margin-left: 80px;
     width: fit-content;
 }
 
-hr {
-    width: 90%;
+ hr {
+    width: 87%;
+    margin-top: -1px;
+ }
+
+.about {
+    border-bottom: 5px solid var(--Turquoise);
+    padding: 10px;
+    color: var(--Turquoise);
+    cursor: pointer;
+    transition: var(--animation-timing);
+}
+
+.about-after {
+    color: var(--background-color-dark);
+    border: none;
+    transition: var(--animation-timing);
+}
+
+.activity {
+    padding: 10px;
+    color: var(--background-color-dark);
+    cursor: pointer;
+    transition: var(--animation-timing);
+}
+
+.activity-after {
+    border-bottom: 5px solid var(--Turquoise);
+    padding: 10px;
+    color: var(--Turquoise);
+    cursor: pointer;
+    transition: var(--animation-timing);
+}
+
+.story {
+    font-size: 15px;
+    font-weight: 600;
+    width: 80%;
+    margin-left: 70px;
+    margin-top: 80px;
+    display: block;
+    margin-bottom: 50%;
+}
+
+.recent-post {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    background: var(--post-background-light);
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 10px 2px var(--hover-background);
+}
+
+.profilePic {
+    border-radius: 9999px;
+    margin-right: 10px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    gap: 5px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.options-container {
+   margin-left: 95%;
+   margin-top: -6%;
+   font-size: 20px;
+   position: relative;
+   cursor: pointer;
+}
+
+.buttons-container {
+    display: none;
+    position: absolute;
+    right: 80px;
+    top: 0px;
+    height: 100px;
+    width: 100px;
+}
+
+.invisible {
+    display: block;
+}
+
+.userAction {
+    cursor: pointer;
+    display: block;
+}
+
+.userAction:first-of-type button {
+    border: 2px solid black;
+    border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+    transition: background 0.3s ease;
+}
+
+.userAction:last-of-type button {
+    border: 2px solid black;
+    border-top: 0;
+    border-radius: 0 0 20px 20px;
+    transition: background 0.3s ease;
+}
+
+.userAction button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-weight: 550;
+    font-size: 15px;
+    text-align: left;
+    border: none;
+    background: whitesmoke;
+}
+
+.row {
+    margin-left: 50px;
+}
+
+.row p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.userAction:hover {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.userAction:first-of-type button:hover {
+    background-color: #DADADA;
+    border-radius: 20px 20px 0 0;
+}
+
+.userAction:last-of-type button:hover {
+    background-color: #DADADA;
+}
+
+.noUnderlineLink {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.reaction {
+    display: inline-flex;
+    box-sizing: border-box;
+    /* width: 100px; */
+    border: 2px solid #000000;
+    border-radius: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.reaction span.like-post-button, .reaction span.dislike-post-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+    border-radius: 9999px;
+    transition: background 0.3s ease;
+}
+
+.reaction span.like-post-button:hover, .reaction span.dislike-post-button:hover {
+    background-color: whitesmoke;
+}
+
+.likedLike {
+    color: green;
+}
+
+.dislikedDislike {
+    color: red;    
+}
+
+.reply {
+    /* cursor: pointer; */
+    display: inline-flex;
+    box-sizing: border-box;
+    /* width: 100px; */
+    border: 2px solid #000000;
+    border-radius: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.reply a {
+    text-decoration: none;
+    color: black;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.reply a:hover {
+    background-color: whitesmoke;
+}
+
+.reply span {
+    display: inline-block;
+    padding: 2.5px 7px 2.5px 7px;
+}
+
+.comment-outline {
+    display: inline-block;
+    /* cursor: pointer; */
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.comment-outline:hover {
+    background-color: white;
+}
+
+.reaction, .reply {
+    margin-bottom: 20px;
 }
 
 /** --------------------------- End of main styles ------------------------------- **/
