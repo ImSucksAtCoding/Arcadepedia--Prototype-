@@ -17,34 +17,36 @@
     <title>Arcadepedia | Login</title>
 </head>
 <body>
-    <div class="exit">
-        <a href="Homepage.html"><i class="fa-regular fa-circle-xmark"></i></a>
-    </div>
+    <div class="container">
+        <div class="login-form">
+            <div class="exit">
+                <a href="Homepage.html"><i class="fa-regular fa-circle-xmark"></i></a>
+            </div>
+            <div class="login">Login</div>
+            <div class="register">Don't have an account? <a href="register.html">Register now!</a></div>
+            <form action="" method="post">
+                <div class="email">
+                    <label for="Email">Login</label>
+                    <input type="email" id="Login" name="Email" placeholder="Email or username">
+                </div>
     
-    <div class="login-form">
-        <div class="login">Login</div>
-        <div class="register">Don't have an account? <a href="register.html">Register now!</a></div>
-        <form action="" method="post">
-            <div class="email">
-                <label for="Email">Login</label>
-                <input type="email" id="Login" name="Email" placeholder="Email or username">
-            </div>
-
-            <div class="password">
-                <label for="Password">Password</label>
-                <input type="password" id="Password" name="Password" placeholder="Enter password">
-                <span>
-                    <i class="fa-solid fa-eye"></i> 
-                </span>  
-            </div>
-
-            <div class="forgot-password">Forgot password ?</div>
-            <input type="submit" value="Sign in" id="Submit" name="Submit">
-        </form>
-        <div class="line"></div>
-    </div>
-    <div class="bg-toggle-button">
-        <i class="fa-solid fa-moon"></i>
+                <div class="password">
+                    <label for="Password">Password</label>
+                    <input type="password" id="Password" name="Password" placeholder="Enter password">
+                    <span>
+                        <i class="fa-solid fa-eye"></i> 
+                    </span>  
+                </div>
+    
+                <div class="forgot-password">Forgot password ?</div>
+                <input type="submit" value="Sign in" id="Submit" name="Submit">
+            </form>
+            <div class="line"></div>
+        </div>
+        <div class="text">
+            <h1>WELCOME BACK TO OUR WEBSITE !</h1>
+            <h5>Login to continue your experience or <a href="register.html">sign up</a> if you don't have an account</h5>
+        </div>
     </div>
     <script>
         //Hide and show the password field by toggle the eye button using Javascript

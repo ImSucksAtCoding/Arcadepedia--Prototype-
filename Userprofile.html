@@ -333,6 +333,7 @@
             if (aboutBtn.classList.contains('about') && activityBtn.classList.contains('activity')) {
                 activityBtn.classList.add('activity-after')
                 aboutBtn.classList.add('about-after')
+                // Change from "story" to "latest post" of that user
                 story.style.display = 'none'
                 post.style.display = 'flex'
             }
@@ -343,6 +344,7 @@
            if (aboutBtn.classList.contains('about-after') && activityBtn.classList.contains('activity-after')) {
                activityBtn.classList.remove('activity-after')
                aboutBtn.classList.remove('about-after')
+               // Simply just change back the status
                story.style.display = 'block'
                post.style.display = 'none'
            }
