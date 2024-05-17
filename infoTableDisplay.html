@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="infoTableDisplay.css">
+</head>
+<body>
+    <div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+    </div>
+    
+    <script>
+    fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
+    .then(response => response.json())
+    .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data.parse.text['*'], 'text/html');
+        const table = doc.querySelector('.infobox');
+        const links = table.querySelectorAll('a');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href.startsWith('/wiki/')) {
+                link.href = 'https://en.wikipedia.org' + href;
+            }
+        });
+        const div = document.querySelector('.mw-content-ltr');
+        div.innerHTML += table.outerHTML;
+    })
+    .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
