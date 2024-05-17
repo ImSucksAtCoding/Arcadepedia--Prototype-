@@ -8,6 +8,9 @@
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
     <!--Css file-->
     <link rel="stylesheet" href="Rules.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -75,10 +78,25 @@
                     </li>
                 </ul>
             </nav>
+            <div class="table">
+                <h2>Contents</h2>
+                <div class="table-content">
+                    <ul>
+                        <li><a href="#copyright">Copyrights</a></li>
+                        <li><a href="#privacy-policy">Privacy Policy</a></li>
+                        <li><a href="#terms-of-use">Terms of Use</a></li>
+                        <li><a href="#cookie-usage">Cookie Usage</a>
+                            <ul id="subtable">
+                                <li><a href="#mode">Light/Dark Mode</a></li>
+                                <li><a href="#consent">Consent</a></li>
+                                <li><a href="#compliance">Compliance</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-
-
+        
         <div class="content">
             <div class="center-title">
                 <h1>Legal and Compliance</h1>
@@ -126,17 +144,17 @@
            <p>+ Automatic Saving of User Comments/Drafts and Theme Selection:</p>
            <p>+ This website employs cookies to enhance user experience by automatically saving comment drafts while users compose their messages. This feature ensures that users can return to unfinished drafts later without losing their progress. Additionally, the website utilizes cookies to store users' theme selection preferences, including choices between light mode and dark mode. By saving these preferences, users can enjoy a consistent browsing experience tailored to their visual preferences.</p>
         
-          <h3>Light Mode and Dark Mode:</h3>
+          <h3 id="mode">Light Mode and Dark Mode:</h3>
           <p>+ Light Mode: This mode features a traditional bright background with dark text, suitable for well-lit environments and daytime usage. Users may prefer light mode for its clarity and ease of reading.</p>
           <p>+ Dark Mode: Dark mode provides a darker background with light text, which is beneficial for users in low-light conditions or those seeking reduced eye strain during night-time browsing. This mode offers enhanced readability and visual comfort.</p>
         
-          <h3>Cookie Consent and Management:</h3>
+          <h3 id="consent">Cookie Consent and Management:</h3>
           <p>+ Upon visiting the website, users are presented with a cookie consent banner that informs them about the use of cookies for saving comment drafts and theme selections. </p>
           <p>+ Users have the option to accept or reject these cookies based on their preferences. </p>
           <p>+ The cookie consent banner also includes a link to the website's privacy policy, where users can find detailed information about the types of cookies used, their purposes, and how they can manage their cookie settings. </p>
           <p>+ Users can manage their cookie preferences at any time through the website's settings or their browser's cookie management tools. They have the freedom to adjust their consent preferences or revoke consent for specific cookie categories as desired.</p>
         
-          <h3>Compliance with Privacy Regulations:</h3>
+          <h3 id="compliance">Compliance with Privacy Regulations:</h3>
           <p>+ The website ensures compliance with relevant privacy regulations, such as the General Data Protection Regulation (GDPR), by providing transparent information about cookie usage and obtaining user consent before placing cookies on their devices. </p>
           <p>+ Privacy policies are regularly reviewed and updated to reflect changes in regulations or website practices, ensuring that users are informed about their rights and the website's data handling practices. </p>
           <p>+ User data collected through cookies is used solely for the specified purposes of saving comment drafts and theme selections. The website does not engage in any unauthorized data collection or sharing practices, maintaining the privacy and security of user information.</p>
@@ -144,7 +162,66 @@
         </div>
     </div>
 
-    <div class="footer"></div>
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <h6>Contact us</h6>
+             <form action="#" class="contact-form">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                  <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control submit px-3">Send</button>
+                                </div>
+                          </form>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+              <h6>Forum</h6>
+              <ul class="footer-links">
+                <li><a href="Viewtopics.html">Topics</a></li>
+                <li><a href="Viewtopic(+posts).html">Posts</a></li>
+                <li><a href="#">Gallery</a></li>
+                
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Rules.html">Legal & Compliance</a></li>
+                <li><a href="Sitemap.html">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                  
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
     <script>
         // //Variables declaration 
         // var check = document.getElementById("check");
