@@ -221,6 +221,18 @@ input {
     color: red;
 }
 
+.edit:hover {
+    color: var(--background-color-light);
+    background-color: var(--background-color-dark);
+    transition: var(--animation-timing);
+}
+
+.deactivate:hover {
+    color: var(--background-color-light);
+    background-color: red;
+    transition: var(--animation-timing);
+}
+
 .filter {
     margin-top: 80px;
     display: flex;
@@ -234,9 +246,6 @@ hr {
     width: 90%;
 }
 
-.about {
-    
-}
 /** --------------------------- End of main styles ------------------------------- **/
 /** ------------------------------------------------------------------------------- **/
 /** ------------------------------- Footer styles ----------------------------------- **/
