@@ -383,10 +383,3 @@ body {
 .comment-outline:hover {
     background-color: white;
 }
-
-/* Footer */
-.footer {
-    width: 100%;
-    height: 300px;
-    background-color: #8921C2;
-}

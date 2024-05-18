@@ -1,0 +1,165 @@
+/**
+Homepage (landing page) Css customize
+Author: Bui Thai Son (s4037172)
+**/
+
+
+/** 
+---------- Import header style for the webpage */ @import url('header.css'); /* ----------
+*/
+
+
+/**
+----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
+**/
+
+/** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
+**
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #000000;
+    --Electric-blue: #86EEEC;
+    --Amenthys: #AC63D4;
+    --Grapes: #7B1DaE;
+    --Turquoise: #53E8D4;
+    --hover-background: #d9d9d9;
+    --post-background-light: #d8d8d8;
+    --post-background-dark: #231F20;
+    --animation-timing: 200ms ease-in-out;
+    --cross-height: calc(5px * 3 + 5px * 2);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color-light);
+    font-family: 'Inter', sans-serif;
+}
+
+/* input {
+    display: none;
+} */
+
+
+/* .hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: 30px;
+    transform-origin: left center;
+    height: 5px;
+    background-color: var(--background-color-dark);
+    border-radius: 9999px;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing);
+}
+
+.hamburger-menu {
+    --x-width: calc(var(--cross-height) * 1.41421356237); 
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 40px;
+    cursor: pointer;
+    width: max-content;
+    margin-top: 7.5px;
+    margin-right: 20px;
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(5px / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(5px / 2);
+} */
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+/** ----------------------------------------------------------------------------------------------------- **/
+/*** ----------------------------------------------------------------------------------------------------***/
+/** ------------------------------------- Main styles ---------------------------------------------------- ***/
+
+.content {
+    width: calc(100% - 15%);
+    height: calc(100% - 80px);
+}
+
+.Userlist-Description {
+    background-color: #d9d9d9;
+    margin-top: 50px;
+    display: flex;
+    padding: 35px;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px var(--hover-background);
+    margin-bottom: 100px;
+}
+
+.Userlist-Description form {
+    padding-top: 20px;
+}
+
+.Userlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px;
+    background-color: #d9d9d9;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px var(--hover-background);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.info img {
+    border-radius: 9999px;
+}
+
+.info a {
+    text-decoration: none;
+    color: var(--Grapes);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 600;
+}
