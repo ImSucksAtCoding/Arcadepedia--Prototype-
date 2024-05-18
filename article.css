@@ -279,17 +279,18 @@ span button:hover {
 }
 
 .table-content {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 90px;
 }
 
 
-.table ul li {
-    margin-bottom: 20px;
-}
-
-#overview p, #gameplay p, #development p, #reception p, #legacy p, #ref p{
+#overview p, #gameplay p, #development p, #reception p, #legacy p, #references p{
     margin-left: 100px;
     margin-right: 300px;
+}
+
+#references p {
+    margin-bottom: 50px;
 }
 
 /*** ----------------------------------------------------------- **/
