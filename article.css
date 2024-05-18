@@ -159,9 +159,6 @@ h2 {
     text-decoration: underline;
 }
 
-.table h2 {
-    margin-left: 30px;
-}
 
 .rating {
 	display: flex;
@@ -223,11 +220,6 @@ span button:hover {
 
 #ref {
     margin-bottom: 50px;
-}
-
-.table {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .table a {
