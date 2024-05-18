@@ -13,6 +13,10 @@ Author: Bui Thai Son (s4037172)
 ----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
 **/
 
+/** ------- Import info table styles for the webpage **/ @import url("infoTableDisplay.css"); /* --------------
+**
+*/
+
 
 /** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
 **
@@ -161,10 +165,11 @@ body {
     margin-top: 50px;
 }
 
-.demo img {
+#invaders {
     box-shadow: 0px 0px 2px 2px #d9d9d9;
     background-size: cover;
     border-radius: 5px;
+    margin-left: 100px;
 }
 
 .demo p {
@@ -177,6 +182,10 @@ body {
 .rating-box {
     margin-top: -50px;
     margin-left: 100px;
+}
+
+.flextable {
+    display: flex;
 }
 
 h2 {
@@ -230,6 +239,10 @@ h2 {
     border-radius: 8px;
     margin-left: 10px;
     margin-top: -5px;
+}
+
+#infotable {
+    display: flex;
 }
 
 span button {

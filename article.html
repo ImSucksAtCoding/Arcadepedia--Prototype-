@@ -93,31 +93,60 @@
             </div>
         </div>
         <div class="content">
-            <div class="demo">
-                <h1>Space invaders</h1>
-                <p>Click to play the demo</p>
-                <img src="assets/space-invaders.png" alt="Welcome to our page" width="800" height="500">
-            </div>
-            <div class="rating-box section">
-                <form id="feedbackForm">
-                    <span>Rate this demo:</span>
-                    <div class="rating">
-                        <!-- Notice that the stars are in reverse order -->
-                        <input type="radio" id="star5" name="rating" value="5" required>
-                        <label for="star5">&#9733;</label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4">&#9733;</label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3">&#9733;</label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2">&#9733;</label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1">&#9733;</label>
+                    <div class="demo">
+                        <h1>Space invaders</h1>
+                        <p>Click to play the demo</p>                        
                     </div>
-                    <button type="submit" id="submit">Submit</button>
-                </form>
-            </div>
-
+                    <div class="flextable">
+                        <div class="demorating">
+                            <img id="invaders" src="assets/space-invaders.png" alt="Welcome to our page" width="800" height="500">
+                            <div class="rating-box section">
+                            
+                            <form id="feedbackForm">
+                                <span>Rate this demo:</span>
+                                <div class="rating">
+                                    <!-- Notice that the stars are in reverse order -->
+                                    <input type="radio" id="star5" name="rating" value="5" required>
+                                    <label for="star5">&#9733;</label>
+                                    <input type="radio" id="star4" name="rating" value="4">
+                                    <label for="star4">&#9733;</label>
+                                    <input type="radio" id="star3" name="rating" value="3">
+                                    <label for="star3">&#9733;</label>
+                                    <input type="radio" id="star2" name="rating" value="2">
+                                    <label for="star2">&#9733;</label>
+                                    <input type="radio" id="star1" name="rating" value="1">
+                                    <label for="star1">&#9733;</label>
+                                </div>
+                                <button type="submit" id="submit">Submit</button>
+                            </form>
+                        </div>
+                        </div>
+        
+                        <div class="mw-content-ltr mw-parser-output infodisplay" lang="en" dir="ltr">
+        
+                    </div>
+                </div>
+                
+                <script>
+                fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
+                .then(response => response.json())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data.parse.text['*'], 'text/html');
+                    const table = doc.querySelector('.infobox');
+                    const links = table.querySelectorAll('a');
+                    links.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href.startsWith('/wiki/')) {
+                            link.href = 'https://en.wikipedia.org' + href;
+                        }
+                    });
+                    const div = document.querySelector('.mw-content-ltr');
+                    div.innerHTML += table.outerHTML;
+                })
+                .catch(error => console.error('Error:', error));
+                </script>
+            
 
             
 
@@ -169,6 +198,7 @@
         </div>
         
     </div>
+
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -239,7 +269,7 @@
             </div>
           </div>
         </div>
-  </footer>
+    </footer>
 
   <script>
 
