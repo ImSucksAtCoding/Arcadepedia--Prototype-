@@ -238,6 +238,7 @@ span button:hover {
 #overview p, #gameplay p, #development p, #reception p, #legacy p, #references p{
     margin-left: 100px;
     margin-right: 300px;
+    margin-top: 15px;
 }
 
 #references p {
