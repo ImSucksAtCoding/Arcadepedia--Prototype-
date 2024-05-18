@@ -9,7 +9,9 @@
 ----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
 **/
 
-
+/** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
+**
+*/
 
 * {
     box-sizing: border-box;
@@ -94,47 +96,6 @@ body {
     translate: 0 calc(5px / 2);
 } */
 
-
-/* 
---------- Right button styles ----------
-*/
-
-.right-section a {
-    text-decoration: none;
-} 
-
-.search-button {
-    font-size: 25px;
-    margin-top: 2px;
-    color: var(--background-color-dark);
-    cursor: pointer;
-}
-
-.login-button {
-    font-size: 13px;
-    color: var(--background-color-dark);
-    padding: 13px 30px;
-    background-color: var(--Turquoise);
-    border-radius: 8px;
-    font-weight: 600;
-}
-
-.register-button {
-    font-size: 14px;
-    color: var(--background-color-light);
-    padding: 13px 40px;
-    background-color: var(--Grapes);
-    border-radius: 8px;
-}
-
-.bg-toggle-button {
-    font-size: 30px;
-    margin-right: 20px;
-    margin-left: 5px;
-    color: var(--background-color-dark);
-    cursor: pointer;
-}
-
 .main {
     display: flex;
     flex-direction: row;
@@ -148,15 +109,7 @@ body {
 **
 */
 
-.content {
-    width: calc(100% - 15%);
-    height: calc(100% - 80px);
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-h1 {
+.sidemap h1 {
     text-align: center;
     color: #53E8D4;
     margin-bottom: 20px;
@@ -187,6 +140,8 @@ a:hover {
     padding: 20px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .large-section {

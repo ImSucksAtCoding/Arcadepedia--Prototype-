@@ -14,6 +14,9 @@ Author: Bui Thai Son (s4037172)
 **/
 
 
+/** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
+**
+*/
 
 * {
     box-sizing: border-box;
@@ -100,59 +103,12 @@ input {
     translate: 0 calc(5px / 2);
 } */
 
-
-/* 
---------- Right button styles ----------
-*/
-
-.right-section a {
-    text-decoration: none;
-} 
-
-.search-button {
-    font-size: 25px;
-    margin-top: 2px;
-    color: var(--background-color-dark);
-    cursor: pointer;
-}
-
-.logout-button {
-    font-size: 13px;
-    color: var(--background-color-dark);
-    padding: 13px 30px;
-    background-color: var(--Turquoise);
-    border-radius: 8px;
-    font-weight: 600;
-}
-
-.username {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--background-color-dark);
-    font-weight: 600;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.username img {
-    border-radius: 9999px;
-}
-
-.bg-toggle-button {
-    font-size: 30px;
-    margin-right: 20px;
-    margin-left: 5px;
-    color: var(--background-color-dark);
-    cursor: pointer;
-}
-
 .main {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: calc(100% - 80px);
-}
+} 
 
 /** -------------------------- End of right button styles ------------------------ ***/
 /*** ------------------------------------------------------------------------------- **/
@@ -171,7 +127,10 @@ input {
 .user-profile {
     margin-left: 80px;
     margin-top: 80px;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    /* position: relative; */
     width: fit-content;
 }
 
@@ -181,17 +140,22 @@ input {
     margin-top: 10px;
 }
 
+.name-timestamp {
+    display: flex;
+    flex-direction: column;
+}
+
 .name {
-    position: absolute;
-    top: 15%;
+    font-size: 30px; 
+    font-weight: 600; 
     margin-left: 20px;
-    font-size: 30px;
-    font-weight: 600;
+    margin-top: 20px;
 }
 
 .timestamp {
     margin-left: 20px;
     font-size: 20px;
+    margin-top: 10px;
 }
 
 .user-settings {
@@ -246,10 +210,12 @@ input {
     width: fit-content;
 }
 
- hr {
-    width: 87%;
-    margin-top: -1px;
- }
+.line {
+    border-bottom: 2px solid #d9d9d9;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -2px;
+}
 
 .about {
     border-bottom: 5px solid var(--Turquoise);
@@ -308,6 +274,7 @@ input {
     margin: auto;
     margin-bottom: 100px;
     box-shadow: 0px 0px 10px 2px var(--hover-background);
+    position: relative;
 }
 
 .profilePic {
@@ -324,25 +291,34 @@ input {
     font-size: 20px;
 }
 
+.timestamp {
+    margin-bottom: 10px;
+}
+
 .options-container {
-   margin-left: 95%;
-   margin-top: -6%;
+   left: 95%;
+   top: 8%;
    font-size: 20px;
-   position: relative;
+   position: absolute;
    cursor: pointer;
+}
+
+.options-container:hover {
+    color: var(--background-color-light);
+    transition: var(--animation-timing);
 }
 
 .buttons-container {
     display: none;
     position: absolute;
-    right: 80px;
+    right: 50px;
     top: 0px;
     height: 100px;
     width: 100px;
 }
 
 .invisible {
-    display: block;
+    display: none;
 }
 
 .userAction {
@@ -377,11 +353,12 @@ input {
     background: whitesmoke;
 }
 
-.row {
+.text {
     margin-left: 50px;
+    width: fit-content;
 }
 
-.row p {
+.text p {
     font-weight: 600;
     font-size: 20px;
 }
