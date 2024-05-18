@@ -102,6 +102,13 @@ body {
 **
 */
 
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 80px); /* Actually this is the real reason why the sidebar is wrong :) */
+}
+
 .forumDescription {
     background-color: #DADADA;
     margin: 50px 0 10px 0;
