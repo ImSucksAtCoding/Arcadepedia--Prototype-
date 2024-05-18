@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
     <!--Css file-->
     <link rel="stylesheet" href="Userprofile.css">
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
     <header class="header">
@@ -81,8 +83,10 @@
            <div class="info">
                 <div class="user-profile">
                     <img src="assets/Welcome.png" alt="Hehe" width="100px" height="100px">
-                    <span class="name">Son Bui</span>
-                    <span class="timestamp">Joined 2nd May, 2024</span>
+                    <div class="name-timestamp">
+                        <span class="name">Son Bui</span>
+                        <span class="timestamp">Joined 2nd May, 2024</span>
+                    </div>
                 </div>
                 <div class="user-settings">
                     <div class="edit">
@@ -102,7 +106,7 @@
                     Activity
                 </div>
             </div>
-            <hr>
+            <div class="line"></div>
             <div class="story">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
@@ -125,13 +129,13 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
@@ -167,13 +171,13 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
@@ -209,13 +213,13 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
@@ -251,13 +255,13 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
@@ -293,13 +297,13 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <p>Hehehe</p>
                     </div>
-                    <div class="row">
+                    <div class="text">
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
@@ -320,7 +324,77 @@
             </div>
         </div>
     </div>
-    <div class="footer"></div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div id="position">
+                    <div class="logo">
+                        <span style="color: white;">
+                            arcade<span class="pedia">pedia</span>
+                    </span>
+            </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <h6>Contact us</h6>
+             <form action="#" class="contact-form">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                  <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control submit px-3">Send</button>
+                                </div>
+                          </form>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+              <h6>Forum</h6>
+              <ul class="footer-links">
+                <li><a href="Viewtopics.html">Topics</a></li>
+                <li><a href="Viewtopic(+posts).html">Posts</a></li>
+                <li><a href="#">Gallery</a></li>
+                
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Rules.html">Legal & Compliance</a></li>
+                <li><a href="Sitemap.html">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                  
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
     <script>
         // Variables declaration
         let aboutBtn = document.querySelector('.about')
@@ -356,12 +430,12 @@
         option.forEach((option) => {
             option.addEventListener("click", (e) => {
                 e.preventDefault()
-                let btnsContainer = option.parentElement.querySelectorAll(".buttons-container");
+                let btnsContainer = option.parentElement.querySelectorAll('.buttons-container');
                 btnsContainer.forEach((btn) => {
-                    if (!btn.classList.contains('invisible')) {
-                        btn.classList.add('invisible')
+                    if (btn.style.display == 'none') {
+                        btn.style.display = 'block'
                     } else {
-                        btn.classList.remove('invisible')
+                        btn.style.display = 'none'
                     }
                 })
             })
