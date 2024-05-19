@@ -19,6 +19,9 @@ Authors:  - Bui Thai Son (s4037172)
 **
 */
 
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
+**
+*/
 
 * {
     box-sizing: border-box;

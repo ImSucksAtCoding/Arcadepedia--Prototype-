@@ -21,6 +21,9 @@ Author: + Bui Thai Son (s4037172)
 **
 */
 
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
+**
+*/
 
 * {
     margin: 0;

@@ -18,6 +18,10 @@ Author: Bui Thai Son (s4037172)
 **
 */
 
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
+**
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -465,7 +469,3 @@ body {
     height: 300px;
     background-color: #8921C2;
 }
-
-
-
-

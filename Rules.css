@@ -17,6 +17,10 @@ Author: - Nguyen Anh Tung (s4045602)
 **
 */
 
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
+**
+*/
+
 * {
     box-sizing: border-box;
 }
