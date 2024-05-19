@@ -14,6 +14,7 @@ Authors: - Bui Thai Son (s4037172)
 ----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
 **/
 
+
 /** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
 **
 */
@@ -381,11 +382,4 @@ body {
 
 .reaction span.like-comment-button:hover, .reaction span.dislike-comment-button:hover {
     background-color: white;
-}
-
-/* Footer */
-.footer {
-    width: 100%;
-    height: 300px;
-    background-color: #8921C2;
 }

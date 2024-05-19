@@ -98,7 +98,7 @@
     font-weight: 600;
 }
 
-.username {
+header .username {
     display: flex;
     align-items: center;
     gap: 10px;
