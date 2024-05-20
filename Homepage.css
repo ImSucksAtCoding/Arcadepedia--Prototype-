@@ -544,8 +544,8 @@ body {
     .main {
         display: flex;
         flex-direction: column;
-        width: 110%;
-        overflow: hidden;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .content {
@@ -601,7 +601,35 @@ body {
         max-width: 95%;
     }
 
+    .username {
+        font-size: 15px;
+    }
+
     .buttons-container {
         right: 20px;
+    }
+}
+
+/** --------------------------------- Smaller mobile responsive -------------------------------- **/
+/** -------------------------------------------------------------------------------------------- **/
+/** ----------------------------------max-width: 400px----------------------------------------- **/
+
+@media (max-width: 400px) {
+    .welcome img {
+        width: 400px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .welcome p {
+        margin-left: -20px;
+    }
+
+    .latest-articles, .trending-discussion {
+        text-align: center;
+    }
+
+    .latest-articles a, .trending-discussion a {
+        font-size: 20px;
     }
 }

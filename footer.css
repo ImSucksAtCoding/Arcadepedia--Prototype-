@@ -187,6 +187,7 @@
 /* Avoiding overflow of elements **/
 @media (max-width: 576px) {
   .site-footer {
-    width: 110%;
+    width: 100%;
+    overflow-x: hidden;
   }
 }

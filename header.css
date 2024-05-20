@@ -132,20 +132,6 @@ header .username {
     .logo, .search-button {
         font-size: 20px;
     }
-
-    .login-button {
-        font-size: 12px;
-        padding: 10px 25px;
-    }
-
-    .register-button {
-        font-size: 12px;
-        padding: 10px 30px;
-    }
-
-    .bg-toggle-button {
-        font-size: 28px;
-    }
 }
 
 /** ------------------------- Smaller tablet responsive ------------------------ **/
@@ -180,7 +166,7 @@ fucntion will be displayed using JavaScript ------***/
 /** ----------------------------- max-width: 576px ----------------------------------------------------- ***/
 @media (max-width: 576px) {
     .header {
-        width: 110%;
+        width: 100%;
         overflow: hidden;
     }
     
@@ -188,7 +174,7 @@ fucntion will be displayed using JavaScript ------***/
     .hamburger-menu::after,
     .hamburger-menu input {
         content: "";
-        width: 25px;
+        width: 20px;
         transform-origin: left center;
         height: 4px;
         background-color: var(--background-color-dark);
@@ -238,7 +224,7 @@ fucntion will be displayed using JavaScript ------***/
     }
 
     .right-section {
-        gap: 8px;
+        gap: 5px;
     }
 
     .logo, .search-button {
@@ -255,8 +241,51 @@ fucntion will be displayed using JavaScript ------***/
         padding: 10px 15px;
     }
 
+    .username {
+        display: flex;
+        gap: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 10px;
+    }
+
+    .username img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logout-button {
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+
     .bg-toggle-button {
         font-size: 25px;
         margin-right: 10px;
+    }
+}
+
+/** --------------------------------- Smaller mobile responsive -------------------------------- **/
+/** -------------------------------------------------------------------------------------------- **/
+/** ----------------------------------max-width: 400px----------------------------------------- **/
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .login-button {
+        font-size: 9px;
+        padding: 8px 10px;
+    }
+
+    .register-button {
+        font-size: 9px;
+        padding: 8px 12px;
+    }
+
+    .bg-toggle-button {
+        font-size: 22px;
     }
 }
