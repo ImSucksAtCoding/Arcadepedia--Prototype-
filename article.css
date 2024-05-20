@@ -206,9 +206,7 @@ h2 {
     margin-top: -5px;
 }
 
-#infotable {
-    display: flex;
-}
+
 
 span button {
     font-size: 15px;
@@ -257,3 +255,23 @@ span button:hover {
 /*** ----------------------------------------------------------- **/
 /* ------------------ End of main styles -----------------------**/
 /* ------------------------------------------------------------- **/
+/*** ----------------------------------------------------------- **/
+/** ------------------------ Tablet responsive ------------------------------------ **/
+/** ---------------- (min-width: 768px and max-width: 1141px) ------------------------ **/
+
+@media (min-width: 768px) and (max-width: 1141px) {
+
+    #overview p, #gameplay p, #development p, #reception p, #legacy p, #references p{
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    #overview p, #gameplay p, #development p, #reception p, #legacy p, #references p{
+        margin-left: 100px;
+        margin-right: 50px;
+        margin-top: 15px;
+    }
+}
