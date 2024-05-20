@@ -83,9 +83,10 @@
                         <h1>Space invaders</h1>
                         <p aria-label="Click to play the demo">Click to play the demo</p>                        
                     </div>
-                    <div class="flextable">
-                        <div class="demorating">
-                            <img id="invaders" src="assets/space-invaders.png" alt="Space Invaders" width="800" height="500">
+                    <div class="container">
+                        <div class="row">
+                            <div  class="col-sm-12 col-md-4">
+                                <img id="invaders" src="assets/space-invaders.png" alt="Space Invaders" >
                             <div class="rating-box section">
                             
                             <form id="feedbackForm">
@@ -105,34 +106,36 @@
                                 </div>
                                 <button type="submit" id="submit">Submit</button>
                             </form>
+                            </div>
+                            
                         </div>
-                        </div>
-        
-                        <div class="mw-content-ltr mw-parser-output infodisplay" lang="en" dir="ltr">
-        
                     </div>
-                </div>
+        
+                        <div class="mw-content-ltr mw-parser-output infodisplay col-xs-12 col-md-8" lang="en" dir="ltr">
+                            <script>
+                                fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
+                                .then(response => response.json())
+                                .then(data => {
+                                    const parser = new DOMParser();
+                                    const doc = parser.parseFromString(data.parse.text['*'], 'text/html');
+                                    const table = doc.querySelector('.infobox');
+                                    const links = table.querySelectorAll('a');
+                                    links.forEach(link => {
+                                        const href = link.getAttribute('href');
+                                        if (href.startsWith('/wiki/')) {
+                                            link.href = 'https://en.wikipedia.org' + href;
+                                        }
+                                    });
+                                    const div = document.querySelector('.mw-content-ltr');
+                                    div.innerHTML += table.outerHTML;
+                                })
+                                .catch(error => console.error('Error:', error));
+                                </script>
+                            
+                    </div>
+        </div>
                 
-                <script>
-                fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
-                .then(response => response.json())
-                .then(data => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(data.parse.text['*'], 'text/html');
-                    const table = doc.querySelector('.infobox');
-                    const links = table.querySelectorAll('a');
-                    links.forEach(link => {
-                        const href = link.getAttribute('href');
-                        if (href.startsWith('/wiki/')) {
-                            link.href = 'https://en.wikipedia.org' + href;
-                        }
-                    });
-                    const div = document.querySelector('.mw-content-ltr');
-                    div.innerHTML += table.outerHTML;
-                })
-                .catch(error => console.error('Error:', error));
-                </script>
-            
+                
             <div class="section table">
                 <h2>Contents</h2>
                 <div class="table-content">
@@ -269,6 +272,7 @@
           </div>
         </div>
     </footer>
+
 
   <script>
 
