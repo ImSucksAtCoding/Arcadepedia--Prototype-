@@ -37,7 +37,7 @@ Author: Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -297,6 +297,7 @@ body {
 
 .timestamp {
     margin-bottom: 10px;
+    margin-left: 5px;
 }
 
 .options-container {
@@ -365,6 +366,7 @@ body {
 .text p {
     font-weight: 600;
     font-size: 20px;
+    max-width: 95%;
 }
 
 .userAction:hover {
@@ -462,10 +464,129 @@ body {
 
 /** --------------------------- End of main styles ------------------------------- **/
 /** ------------------------------------------------------------------------------- **/
-/** ------------------------------- Footer styles ----------------------------------- **/
+/** -------------------------------Tablet responsive ----------------------------------- **/
+/** -----------------------min-width: 768px and max-width: 1141px --------------- **/
 
-.footer {
-    width: 100%;
-    height: 300px;
-    background-color: #8921C2;
+@media (min-width: 768px) and (max-width: 1141px) {
+    .filter {
+        margin-left: 50px;
+    }
+
+    .user-profile {
+        margin-left: 50px;
+    }
+
+    .user-profile .timestamp {
+        margin-left: 17px;
+    }
+
+    .text p {
+        max-width: 95%;
+    }
+
+    .options-container {
+        top: 7%;
+        margin-left: -3%;
+    }
+}
+
+/** ------------------------Smaller tablet responsive ------------------------------- **/
+/** --------------------- min width: 576px and max-width: 768px -------------------- ***/
+
+@media (min-width: 576px) and (max-width: 768px) {
+    /** resize the profile image and the buttons layout */
+    .user-profile {
+        margin-left: 25px;
+    }
+
+    .user-profile img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .name {
+        font-size: 25px;
+        margin-left: 20px;
+        margin-top: 7px;
+    }
+
+    .timestamp {
+        font-size: 17px;
+        margin-left: 15px;
+    }
+
+    .user-settings {
+        margin-right: 15px;
+        gap: 20px;
+        margin-top: 70px;
+    }
+
+    .edit, .deactivate {
+        font-size: 15px;
+    }
+
+    .filter {
+        margin-left: 40px;
+    }
+
+    /* Make the post a little bit smaller */
+    .post {
+       width: 90%; 
+    }
+
+    .text p {
+        font-size: 16px;
+        max-width: 95%;
+    }
+
+    .options-container {
+        top: 7%;
+        margin-left: -3%;
+    }
+
+    .story {
+        margin-left: 50px;
+    }
+
+    .timestamp {
+        margin-left: 5px;
+    }
+}
+
+/** ------------------------------------------------------------------------------------ **\/
+/** ----------------------------------Mobile responsive--------------------------------- **/
+/** --------------------------------- max-width: 576px ---------------------------------- **/
+
+@media (max-width: 576px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .content {
+        width: 110%;
+    }
+
+    .user-profile {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    .user-profile img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .name {
+        font-size: 20px;
+        margin-left: 20px;
+        margin-top: 7px;
+    }
+
+    .timestamp {
+        font-size: 17px;
+        margin-left: 15px;
+    }
 }
