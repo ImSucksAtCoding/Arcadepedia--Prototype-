@@ -253,9 +253,11 @@
         // Mobile responsive (max-width: 576px)
         const adjustRulesVisibility = (e) => {
             if (window.matchMedia('(max-width: 576px)').matches) {
+                sidebar.style.display = 'none'
                 menuIcon.style.display = 'flex'
             } else {
                 menuIcon.style.display = 'none'
+                sidebar.style.display = 'flex'
             }
         }
 
@@ -273,16 +275,7 @@
                 console.log(menuIcon.checked);
                 sidebar.style.display = 'none';
             }
-        });
-
-        // Now we show the sidebar on the top of the website by clicking on the menu icon
-        function Menu(e) {
-            if (menuIcon.checked == true) {
-               sidebar.style.display = 'flex'
-            } else if (menuIcon.checked == false) {
-                sidebar.style.display = 'none'
-            }
-        }
+        })
     </script>
 </body>
 </html>

@@ -20,6 +20,7 @@
     width: 15%;
     border-right: 1px solid var(--hover-background);
     padding-top: 20px;
+    overflow: hidden;
 }
 
 .links, .sublink {
@@ -118,6 +119,10 @@ input.hamburger-menu-trigger {
 
 @media (min-width: 768px) and (max-width: 1141px) {
     /** Hide the chevron down icon (actuallly we dont need that as well :) **/
+    .sidebar {
+        display: flex;
+    }
+
     #expand {
         display: none;
     }
@@ -168,6 +173,10 @@ fucntion will be displayed using JavaScript ------***/
         display: none;
         width: 100%;
         transition: var(--animation-timing);
+    }
+
+    #expand {
+        display: none;
     }
     /* We will edit the sidebar to make it appear at the top of the website */
 }

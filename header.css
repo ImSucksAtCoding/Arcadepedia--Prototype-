@@ -18,6 +18,7 @@
     height: 80px;
     border-bottom: 1px solid #d9d9d9;
     box-shadow: 0px 0px 2px 2px #d9d9d9;
+    overflow: hidden;
 }
 
 .left-section {
@@ -178,6 +179,11 @@ fucntion will be displayed using JavaScript ------***/
 
 /** ----------------------------- max-width: 576px ----------------------------------------------------- ***/
 @media (max-width: 576px) {
+    .header {
+        width: 110%;
+        overflow: hidden;
+    }
+    
     .hamburger-menu::before,
     .hamburger-menu::after,
     .hamburger-menu input {

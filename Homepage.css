@@ -544,7 +544,8 @@ body {
     .main {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 110%;
+        overflow: hidden;
     }
 
     .content {
@@ -581,8 +582,8 @@ body {
         align-items: center;
     }
     .maimai img, .pac-man img, .space-invaders img, .crossy-road img, .street-fighter img, .pong img {
-        width: 360px;
-        height: 250px;
+        width: 300px;
+        height: 200px;
     }
 
     /* Make the post smaller **/ 

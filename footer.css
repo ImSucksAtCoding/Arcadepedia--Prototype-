@@ -183,3 +183,10 @@
     font-weight:600
   }
 }
+
+/* Avoiding overflow of elements **/
+@media (max-width: 576px) {
+  .site-footer {
+    width: 110%;
+  }
+}
