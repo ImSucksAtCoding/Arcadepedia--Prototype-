@@ -144,7 +144,7 @@ body {
     margin-top: 10px;
 }
 
-.name-timestamp {
+.name-date {
     display: flex;
     flex-direction: column;
 }
@@ -156,7 +156,7 @@ body {
     margin-top: 20px;
 }
 
-.timestamp {
+.date {
     margin-left: 20px;
     font-size: 20px;
     margin-top: 10px;
@@ -296,8 +296,8 @@ body {
 }
 
 .timestamp {
-    margin-bottom: 10px;
     margin-left: 5px;
+    font-size: 15px;
 }
 
 .options-container {
@@ -566,7 +566,7 @@ body {
     }
 
     .content {
-        width: 110%;
+        width: 100%;
     }
 
     .user-profile {
@@ -588,5 +588,55 @@ body {
     .timestamp {
         font-size: 17px;
         margin-left: 15px;
+    }
+
+    .user-settings {
+        margin-top: 30px;
+        gap: 10px;
+        margin-right: 10px;
+    }
+
+    .edit, .deactivate {
+        font-size: 13px;
+    }
+
+    .line {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .filter {
+        margin-left: 30px;
+    }
+
+    .story {
+        margin-left: 50px;
+    }
+
+    /** Make the post even smaller **/
+    .post {
+        border-radius: 0px;
+        width: 100%;
+    }
+
+    .username, .timestamp {
+        font-size: 15px;
+    }
+
+    .timestamp {
+        margin-left: 0px;
+    }
+
+    .options-container {
+        margin-left: -3%;
+    }
+
+    .buttons-container {
+        right: 25px;
+    }
+
+    .text p {
+        font-size: 15px;
+        max-width: 95%;
     }
 }
