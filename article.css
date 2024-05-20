@@ -318,6 +318,11 @@ span button:hover {
         margin-right: 100px;
         margin-top: 15px;
     }
+
+    #invaders {
+        width: 300px;
+        height: 200px;
+    }
 }
 
 /** ------------------- Smaller tablet responsive -----------------------------***/
@@ -330,6 +335,11 @@ span button:hover {
         margin-right: 50px;
         margin-top: 15px;
     }
+
+    #invaders {
+        width: 300px;
+        height: 200px;
+    }
 }
 
 /** ------------------------------------------------------------------------------------ **\/
@@ -337,6 +347,20 @@ span button:hover {
 /** --------------------------------- max-width: 576px ---------------------------------- **/
 
 @media (max-width: 576px) {
+
+    .demo {
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    #invaders {
+        width: 300px;
+        height: 200px;
+    }
+
+    #invaders, .rating-box {
+        margin-left: 50px;
+    }
 
     .main {
         display: flex;
