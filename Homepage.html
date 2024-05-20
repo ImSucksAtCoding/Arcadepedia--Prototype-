@@ -55,7 +55,7 @@
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
-                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
+                    <li><a href="Homepage.html" aria-label="Home"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
                     <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i><span>Explore</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">General</a></li>
@@ -218,15 +218,15 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+              <p class="copyright-text" aria-label="copyright>Copyright &copy; <script>document.write(new Date().getFullYear());</script>
               </p>
             </div>
   
             <div class="col-md-4 col-sm-6 col-xs-12">
               <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="facebook" href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
                   
               </ul>
             </div>
@@ -248,10 +248,12 @@
 
         // Now let show the menu icon (specifically for mobile responsive)
         let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        let sidebar = document.querySelector('.sidebar')
+        // let content = document.querySelector('.content')
         // Mobile responsive (max-width: 576px)
         const adjustRulesVisibility = (e) => {
             if (window.matchMedia('(max-width: 576px)').matches) {
-                menuIcon.style.display = 'block'
+                menuIcon.style.display = 'flex'
             } else {
                 menuIcon.style.display = 'none'
             }
@@ -262,6 +264,25 @@
 
         // Call the function when the window is resized
         window.addEventListener('resize', adjustRulesVisibility)
+
+        menuIcon.addEventListener('click', (e) => {
+            if (menuIcon.checked == true) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'flex';
+            } else if (menuIcon.checked == false) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'none';
+            }
+        });
+
+        // Now we show the sidebar on the top of the website by clicking on the menu icon
+        function Menu(e) {
+            if (menuIcon.checked == true) {
+               sidebar.style.display = 'flex'
+            } else if (menuIcon.checked == false) {
+                sidebar.style.display = 'none'
+            }
+        }
     </script>
 </body>
 </html>
