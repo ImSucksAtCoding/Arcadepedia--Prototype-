@@ -218,7 +218,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text" aria-label="copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+              <p class="copyright-text">Copyright &copy; <script>document.write(new Date().getFullYear());</script>
               </p>
             </div>
   
@@ -248,12 +248,16 @@
 
         // Now let show the menu icon (specifically for mobile responsive)
         let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        let sidebar = document.querySelector('.sidebar')
+        // let content = document.querySelector('.content')
         // Mobile responsive (max-width: 576px)
         const adjustRulesVisibility = (e) => {
             if (window.matchMedia('(max-width: 576px)').matches) {
-                menuIcon.style.display = 'block'
+                sidebar.style.display = 'none'
+                menuIcon.style.display = 'flex'
             } else {
                 menuIcon.style.display = 'none'
+                sidebar.style.display = 'flex'
             }
         }
 
@@ -262,6 +266,16 @@
 
         // Call the function when the window is resized
         window.addEventListener('resize', adjustRulesVisibility)
+
+        menuIcon.addEventListener('click', (e) => {
+            if (menuIcon.checked == true) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'flex';
+            } else if (menuIcon.checked == false) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'none';
+            }
+        })
     </script>
 </body>
 </html>

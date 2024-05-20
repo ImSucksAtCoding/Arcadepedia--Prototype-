@@ -20,6 +20,7 @@
     width: 15%;
     border-right: 1px solid var(--hover-background);
     padding-top: 20px;
+    overflow: hidden;
 }
 
 .links, .sublink {
@@ -118,6 +119,10 @@ input.hamburger-menu-trigger {
 
 @media (min-width: 768px) and (max-width: 1141px) {
     /** Hide the chevron down icon (actuallly we dont need that as well :) **/
+    .sidebar {
+        display: flex;
+    }
+
     #expand {
         display: none;
     }
@@ -152,4 +157,26 @@ input.hamburger-menu-trigger {
         font-size: 13px;
         margin-left: -30px;
     }
+}
+
+/** -----------------------------------------Mobile responsive --------------------------------------------------**/
+
+/** --- Only in mobile responsive, the menu icon button will be shown, and the sidebar will disappear
+, instead it will be shown when user click on the icon. The icon is actually a psuedo-icon using a checkbox and the 
+fucntion will be displayed using JavaScript ------***/
+
+/** ----------------------------- -----------max-width: 576px ----------------------------------------------------- ***/
+
+@media (max-width: 576px) {
+    /* just hide the sidebar (it wont be display on the left any more, instead it will be displayed on the top) */
+    .sidebar {
+        display: none;
+        width: 100%;
+        transition: var(--animation-timing);
+    }
+
+    #expand {
+        display: none;
+    }
+    /* We will edit the sidebar to make it appear at the top of the website */
 }

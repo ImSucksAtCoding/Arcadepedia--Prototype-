@@ -37,7 +37,7 @@ Author: Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -312,6 +312,7 @@ body {
 .text p {
     font-weight: 600;
     font-size: 20px;
+    max-width: 95%;
 }
 
 .userAction:hover {
@@ -461,6 +462,10 @@ body {
 /*** --------------------------------------------------------------------------- **/
 /** --------------------- min width: 576px and max-width: 768px -------------------- ***/
 @media (min-width: 576px) and (max-width: 768px) {
+    .content {
+        gap: 80px;
+    }
+
     .welcome img {
         width: 90%;
         height: 90%;
@@ -509,6 +514,10 @@ body {
         font-size: 15px;
     }
 
+    .text p {
+        max-width: 95%;
+    }
+
     .options-container {
         left: 92%;
         top: 7%;
@@ -519,6 +528,80 @@ body {
     }
 }
 
+/** Resize the gallery pics to be smaller more ( to not destroy its 2 x 3 layout ) ***/
+@media (min-width: 576px) and (max-width: 611px) {
+    .gallery img {
+        width: 180px;
+        height: 130px;
+    }
+}
+
 /** ------------------------------------------------------------------------------------ **\/
 /** ----------------------------------Mobile responsive--------------------------------- **/
 /** --------------------------------- max-width: 576px ---------------------------------- **/
+
+@media (max-width: 576px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 110%;
+        overflow: hidden;
+    }
+
+    .content {
+        gap: 50px;
+    }
+
+    .welcome img {
+        width: 100%;
+        height: 100%;
+        margin: 10px 35px;
+    }
+
+    .welcome p {
+        font-size: 13px;
+        padding: 20px 40px;
+        padding-right: 0px;
+    }
+
+    .latest-articles, .trending-discussion {
+        text-align: center;
+    }
+
+    .latest-articles a , .trending-discussion a {
+        font-size: 23px;
+        margin-top: -20px;
+        margin-left: 70px;
+    }
+
+    /** The gallery images now will span only one per column */
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .maimai img, .pac-man img, .space-invaders img, .crossy-road img, .street-fighter img, .pong img {
+        width: 300px;
+        height: 200px;
+    }
+
+    /* Make the post smaller **/ 
+    .post {
+        width: 117%;
+        border-radius: 0px;
+    }
+
+    .userInfo, .text p, .options-container {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .text p {
+        max-width: 95%;
+    }
+
+    .buttons-container {
+        right: 20px;
+    }
+}
