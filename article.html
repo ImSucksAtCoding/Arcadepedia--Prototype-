@@ -79,16 +79,15 @@
             </nav>
         </div>
         <div class="content">
-                    <div class="demo">
-                        <h1>Space invaders</h1>
-                        <p aria-label="Click to play the demo">Click to play the demo</p>                        
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div  class="col-sm-12 col-md-4">
-                                <img id="invaders" src="assets/space-invaders.png" alt="Space Invaders" >
-                            <div class="rating-box section">
-                            
+            <div class="demo">
+                <h1>Space Invaders</h1>
+                <p aria-label="Click to play the demo">Click to play the demo</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <img id="invaders" src="assets/space-invaders.png" alt="Space Invaders">
+                        <div class="rating-box section">
                             <form id="feedbackForm">
                                 <span>Rate this demo:</span>
                                 <div class="rating">
@@ -106,14 +105,12 @@
                                 </div>
                                 <button type="submit" id="submit">Submit</button>
                             </form>
-                            </div>
-                            
                         </div>
                     </div>
-        
-                        <div class="mw-content-ltr mw-parser-output infodisplay col-xs-12 col-md-8" lang="en" dir="ltr">
-                            <script>
-                                fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
+
+                    <div class="mw-content-ltr mw-parser-output infodisplay col-xs-12 col-md-8" lang="en" dir="ltr">
+                        <script>
+                            fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
                                 .then(response => response.json())
                                 .then(data => {
                                     const parser = new DOMParser();
@@ -130,10 +127,9 @@
                                     div.innerHTML += table.outerHTML;
                                 })
                                 .catch(error => console.error('Error:', error));
-                                </script>
-                            
+                        </script>
                     </div>
-        </div>
+                </div>
                 
                 
             <div class="section table">
@@ -197,7 +193,7 @@
                     <a href="https://en.wikipedia.org/wiki/Space_Invaders"><p>https://en.wikipedia.org/wiki/Space_Invaders</p></a>
                 </div>
             </div>
-        </div>
+
         
     </div>
 

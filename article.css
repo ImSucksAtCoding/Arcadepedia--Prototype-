@@ -13,19 +13,16 @@ Author: Bui Thai Son (s4037172)
 ----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
 **/
 
-/** ------- Import info table styles for the webpage **/ @import url("infoTableDisplay.css"); /* --------------
-**
-*/
-
 
 /** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
 **
 */
 
-
 /** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
 **
 */
+
+
 
 * {
     box-sizing: border-box;
@@ -42,18 +39,21 @@ Author: Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 body {
     background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
 }
+
+
 
 /* input {
     display: none;
@@ -237,7 +237,7 @@ span button:hover {
     margin-left: 90px;
 }
 
-.table-content ul li {
+.table-content li {
     margin-bottom: -10px;
 }
 
@@ -251,6 +251,7 @@ span button:hover {
 #references p {
     margin-bottom: 50px;
 }
+
 
 /*** ----------------------------------------------------------- **/
 /* ------------------ End of main styles -----------------------**/
@@ -285,6 +286,18 @@ span button:hover {
 /** --------------------------------- max-width: 576px ---------------------------------- **/
 
 @media (max-width: 576px) {
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 110%;
+        overflow: hidden;
+    }
+
+    .content {
+        gap: 50px;
+    }
+
     h2 {
         color: var(--background-color-dark);
         font-size: 30px;
