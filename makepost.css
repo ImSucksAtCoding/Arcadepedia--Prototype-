@@ -1,6 +1,8 @@
 /**
-Homepage (landing page) Css customize
-Author: Bui Thai Son (s4037172)
+Make post page  Css customize
+Author: + Bui Thai Son (s4037172)
+        + Nguyen Phuong Linh (s4034535)
+        + Nguyen Tuan Minh Khoi (s3995060)
 **/
 
 /** ------------------- Import fonts specifically for this page ------------------- ***/
@@ -19,6 +21,9 @@ Author: Bui Thai Son (s4037172)
 **
 */
 
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
+**
+*/
 
 * {
     margin: 0;

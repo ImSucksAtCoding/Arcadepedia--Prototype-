@@ -19,6 +19,9 @@ Authors:  - Bui Thai Son (s4037172)
 **
 */
 
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
+**
+*/
 
 * {
     box-sizing: border-box;
@@ -143,6 +146,7 @@ body {
 }
 
 .makePost {
+    padding-left: 10px;
     cursor: pointer;
     border-radius: 20px 20px 20px 20px;
     background-color: white;
@@ -217,7 +221,7 @@ body {
     position: absolute;
 }
 
-@media only screen and (max-width: 991px) and (min-width: 576px) {
+@media only screen and (max-width: 991px) {
     .rulesBtn {
         background-color: #1C3AA9;
         color: white;

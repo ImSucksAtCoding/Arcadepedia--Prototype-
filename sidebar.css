@@ -68,7 +68,7 @@
 
 .sublink {
     display: none;
-    font-size: 16px;
+    font-size: 15px;
     padding-left: 60px;
     padding-top: 10px;
 }
@@ -111,4 +111,45 @@
 
 input.hamburger-menu-trigger {
     display: none;
+}
+
+/** ------------------------ Tablet responsive ------------------------------------ **/
+/** ---------------- (min-width: 768px and max-width: 1141px) ------------------------ **/
+
+@media (min-width: 768px) and (max-width: 1141px) {
+    /** Hide the chevron down icon (actuallly we dont need that as well :) **/
+    #expand {
+        display: none;
+    }
+
+    .items {
+        font-size: 13px;
+    }
+
+    .sublink {
+        font-size: 13px;
+    }
+}
+
+/** ------------------------ Smaller tablet responsive --------------------------------- ***/
+/** ----------------- ( The sidebar now just listed by icons ) -------------------------- ***/
+/** ------------------------ min-width: 576px and max-width: 768px -------------------------- ***/
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .items span {
+        display: none;
+    }
+
+    .items {
+        justify-content: center;
+    }
+
+    #expand {
+        display: none;
+    }
+
+    .sublink a {
+        font-size: 13px;
+        margin-left: -30px;
+    }
 }

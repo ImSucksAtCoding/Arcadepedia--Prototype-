@@ -1,4 +1,5 @@
-
+/** Sitemap page Css customize 
+Author: Nguyen Anh Tung (s4045602)
 
 /** 
 ---------- Import header style for the webpage */ @import url('header.css'); /* ----------
@@ -10,6 +11,10 @@
 **/
 
 /** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
+**
+*/
+
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
 **
 */
 

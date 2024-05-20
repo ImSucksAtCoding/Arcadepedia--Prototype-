@@ -1,5 +1,5 @@
 /**
-Homepage (landing page) Css customize
+User view page Css customize
 Author: Bui Thai Son (s4037172)
 **/
 
@@ -14,6 +14,10 @@ Author: Bui Thai Son (s4037172)
 **/
 
 /** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
+**
+*/
+
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
 **
 */
 

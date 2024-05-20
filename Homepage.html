@@ -55,20 +55,20 @@
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
-                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i><span>Explore</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">General</a></li>
                             <li><a href="#">All entries</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i><span>Forums</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">Discussions</a></li>
                             <li><a href="#">Users</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i><span>About</span><i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="AboutUs.html">About us</a></li>
                             <li><a href="Rules.html">Rules</a></li>
@@ -89,27 +89,27 @@
             </div>
             <div class="gallery">
                 <div class="maimai">
-                    <img src="assets/maimai.png" alt="maimai" width="250" height="180"><br>
+                    <img src="assets/maimai.png" alt="maimai" width="250" height="180">
                     <a href="#">Mai Mai</a>
                 </div>
                 <div class="space-invaders">
-                    <img src="assets/space-invaders.png" alt="space-invaders" width="250" height="180"><br>
+                    <img src="assets/space-invaders.png" alt="space-invaders" width="250" height="180">
                     <a href="#">Space Invaders</a>
                 </div>
                 <div class="pac-man">
-                    <img src="assets/pacman.png" alt="Pacman" width="250" height="180"><br>
+                    <img src="assets/pacman.png" alt="Pacman" width="250" height="180">
                     <a href="#">Pac-man</a>
                 </div>
                 <div class="crossy-road">
-                    <img src="assets/Crossy Road.png" alt="crossy-road" width="250" height="180"><br>
+                    <img src="assets/Crossy Road.png" alt="crossy-road" width="250" height="180">
                     <a href="#">Crossy Road</a>
                 </div>
                 <div class="street-fighter">
-                    <img src="assets/Street fighter.png" alt="street-fighter" width="250" height="180"><br>
+                    <img src="assets/Street fighter.png" alt="street-fighter" width="250" height="180">
                     <a href="#">Street Fighter 6</a>
                 </div>
                 <div class="pong">
-                    <img src="assets/Pong.png" alt="Ping pong" width="250" height="180"><br>
+                    <img src="assets/Pong.png" alt="Ping pong" width="250" height="180">  
                     <a href="#">Pong</a>
                 </div>
             </div>
@@ -234,27 +234,7 @@
         </div>
     </footer>
     <script>
-        // //Variables declaration 
-
-        // var check = document.getElementById("check");
-        // var sidebar = document.querySelector('.sidebar');
-        // var content = document.querySelector('.content');
-        // var links = document.querySelector('.links');
-        // //Menu() fuction (to display the sidebar on the left and slide the content to the right)
-        // function Menu() {
-        //     if (check.checked == true) {
-        //         sidebar.style.width = "15%";
-        //         content.style.marginLeft = "15%";
-        //         links.style.opacity = "100%";
-        //     }
-
-        //     else if (check.checked == false) {
-        //         sidebar.style.width = "0";
-        //         content.style.marginLeft = "0";
-        //         links.style.opacity = "0";
-        //     }
-        // }
-
+        // Variables declararion
         let BtnOption = document.querySelector('.option')
         let BtnContainer = document.querySelector('.buttons-container')
         BtnOption.addEventListener("click", (e) => {
@@ -265,6 +245,23 @@
                 BtnContainer.style.display = 'none'
             }
         })
+
+        // Now let show the menu icon (specifically for mobile responsive)
+        let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        // Mobile responsive (max-width: 576px)
+        const adjustRulesVisibility = (e) => {
+            if (window.matchMedia('(max-width: 576px)').matches) {
+                menuIcon.style.display = 'block'
+            } else {
+                menuIcon.style.display = 'none'
+            }
+        }
+
+        // Call the function when the page loads
+        adjustRulesVisibility();
+
+        // Call the function when the window is resized
+        window.addEventListener('resize', adjustRulesVisibility)
     </script>
 </body>
 </html>
