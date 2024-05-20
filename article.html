@@ -55,20 +55,20 @@
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
-                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                    <li><a href="Homepage.html" aria-label="Home"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i><span>Explore</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">General</a></li>
                             <li><a href="#">All entries</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i><span>Forums</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">Discussions</a></li>
                             <li><a href="#">Users</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i><span>About</span><i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="AboutUs.html">About us</a></li>
                             <li><a href="Rules.html">Rules</a></li>
@@ -77,16 +77,15 @@
                     </li>
                 </ul>
             </nav>
-            
         </div>
         <div class="content">
                     <div class="demo">
                         <h1>Space invaders</h1>
-                        <p>Click to play the demo</p>                        
+                        <p aria-label="Click to play the demo">Click to play the demo</p>                        
                     </div>
                     <div class="flextable">
                         <div class="demorating">
-                            <img id="invaders" src="assets/space-invaders.png" alt="Welcome to our page" width="800" height="500">
+                            <img id="invaders" src="assets/space-invaders.png" alt="Space Invaders" width="800" height="500">
                             <div class="rating-box section">
                             
                             <form id="feedbackForm">
