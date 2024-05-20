@@ -268,10 +268,38 @@ span button:hover {
     }
 }
 
+/** ------------------- Smaller tablet responsive -----------------------------***/
+/*** --------------------------------------------------------------------------- **/
+/** --------------------- min width: 576px and max-width: 768px -------------------- ***/
+
 @media (min-width: 576px) and (max-width: 768px) {
     #overview p, #gameplay p, #development p, #reception p, #legacy p, #references p{
         margin-left: 100px;
         margin-right: 50px;
         margin-top: 15px;
+    }
+}
+
+/** ------------------------------------------------------------------------------------ **\/
+/** ----------------------------------Mobile responsive--------------------------------- **/
+/** --------------------------------- max-width: 576px ---------------------------------- **/
+
+@media (max-width: 576px) {
+    h2 {
+        color: var(--background-color-dark);
+        font-size: 30px;
+        font-weight: 600;
+        margin-left: 10px;
+        text-decoration: underline;
+    }
+
+    #overview p, #gameplay p, #development p, #reception p, #legacy p, #references p{
+        margin-left: 10px;
+        margin-right: 30px;
+        margin-top: 15px;
+    }
+
+    .table-content {
+        margin-left: 10px;
     }
 }
