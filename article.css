@@ -353,9 +353,14 @@ span button:hover {
         margin-top: 50px;
     }
 
+    .rating-box {
+        padding-bottom: 20px;
+    }
+
     #invaders {
         width: 300px;
         height: 200px;
+        margin-top: -50px;
     }
 
     #invaders, .rating-box {
@@ -381,7 +386,14 @@ span button:hover {
         text-decoration: underline;
     }
 
-    #overview p, #gameplay p, #development p, #reception p, #legacy p, #references p{
+    #overview p, #gameplay p, #development p, #reception p, #legacy p {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 15px;
+        margin-bottom: -20px;
+    }
+
+    #references p {
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 15px;
