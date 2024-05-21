@@ -118,6 +118,13 @@ body {
 **
 */
 
+.content {
+    padding: 50px;
+}
+
+.accordion {
+    margin-top: 20px;
+}
 
 .table {
     display: flex;
