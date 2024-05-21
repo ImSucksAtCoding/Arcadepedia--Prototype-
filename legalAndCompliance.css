@@ -36,7 +36,7 @@ Author: - Nguyen Anh Tung (s4045602)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -160,6 +160,7 @@ body {
 .content h1 {
     color: #7B1DaE;
     font-size: 50px;
+    font-weight: 600;
 }
 .content h3 {
     color: #7B1DaE;
@@ -199,4 +200,26 @@ body {
 
 /** ---------------------------- End of main styles ------------------------------------- **/
 /** -------------------------------------------------------------------------------------- **/
-/** --------------------------------------------------------------------------------------- **/
+
+/** ------------------------------------------------------------------------------------ **\/
+/** ----------------------------------Mobile responsive--------------------------------- **/
+/** --------------------------------- max-width: 576px ---------------------------------- **/
+
+@media (max-width: 576px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .content {
+        margin: auto;
+    }
+
+    .center-title h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .accordion-item {
+        width: 100%;
+    }
+}
