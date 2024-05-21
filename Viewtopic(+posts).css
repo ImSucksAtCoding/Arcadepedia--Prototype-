@@ -38,7 +38,7 @@ Authors:  - Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 300ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -122,6 +122,10 @@ body {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
 }
 
+.topicDescription h1 {
+    font-weight: 600;
+}
+
 .feed {
     /* transition: margin-left 300ms; */
     margin: 20px auto 100px auto;
@@ -141,6 +145,10 @@ body {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
 }
 
+.rules h2 {
+    font-weight: 600;
+}
+
 .profilePic {
     border-radius: 50%;
 }
@@ -149,11 +157,12 @@ body {
     padding-left: 10px;
     cursor: pointer;
     border-radius: 20px 20px 20px 20px;
-    background-color: white;
-    height: 100px;
+    background-color: whitesmoke;
+    height: 60px;
     margin-bottom: 30px;
     align-content: center;
     transition: height 0.5s ease;
+    position: relative;
 }
 
 .makePost.expanded {
@@ -168,6 +177,12 @@ body {
     display: grid;
     align-items: center;
     padding: 10px;
+}
+
+#filterPosts, #searchTitle, #searchContent, button {
+    background: whitesmoke;
+    border-radius: 6px;
+    border: none;
 }
 
 .makePost input {
@@ -196,7 +211,7 @@ body {
     display: flex;
     align-items: center;
     font-weight: 600;
-    gap: 5px;
+    gap: 7px;
     font-size: 20px;
 }
 
@@ -207,13 +222,36 @@ body {
     font-weight: bold;
     border: 0;
     margin-top: 20px;
-    width: 10%;
+    width: fit-content;
+    padding: 5px 10px;
+}
+
+.submitBtnB:hover {
+    color: var(--background-color-dark);
+    background-color: var(--Turquoise);
+    transition: var(--animation-timing);
+}
+
+.exitBtn {
+    font-size: 15px;
+    color: #fff;
+    padding: 5px 10px;
+    background-color: var(--Grapes);
+    border-radius: 10px;
+    position: absolute;
+    right: 5%;
+    top: 79%;
+}
+
+.exitBtn:hover {
+    background-color: rgb(82, 7, 123);
+    transition: var(--animation-timing);
 }
 
 .makePost span {
     display: inline-block;
-    margin-left: 20px;
-    font-size: 36px;
+    margin-left: 10px;
+    font-size: 20px;
     color: gray;
 }
 
@@ -246,6 +284,12 @@ body {
 
 .postSection {
     margin-left: 30px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .infoRow {
@@ -298,12 +342,13 @@ body {
     width: 100%;
     text-align: left;
     border: none;
-    background: #FFFFFF;
+    background: whitesmoke;
 }
 
-.userAction:hover {
+/* .userAction:hover {
     background-color: white;
-}
+    border-radius: 20px;
+} */
 
 .userAction:first-of-type button:hover {
     background-color: #DADADA;
@@ -316,6 +361,8 @@ body {
 
 .noUnderlineLink {
     text-decoration: none;
+    color: var(--Grapes);
+    font-weight: 600;
 }
 
 .reaction {
@@ -386,4 +433,117 @@ body {
 
 .comment-outline:hover {
     background-color: white;
+}
+
+/** ------------------------ Tablet responsive ------------------------------------ **/
+/** ---------------- (min-width: 768px and max-width: 1141px) ------------------------ **/
+
+@media (min-width: 768px) and (max-width: 1141px) {
+    /** Fixed the overflow bug in the search filter due to smaller screen **/
+    #searchFilter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    select, button {
+        width: fit-content;
+    }
+}
+
+/** ----------------------- 991px responsive --------------------------------- **/
+/** ------------------ Just fixing the search filter again to make it smaller -------------- **/
+/** ------------------------- max-width: 991px --------------------------------------- **/
+
+@media (max-width: 991px) {
+    #searchTitle, #searchContent {
+        width: 50%;
+    }
+
+    /** Fixing the overflow bug also (and this bug is annoying me so much :) ) **/
+    .main {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .rules-embed h2 {
+        font-weight: 600;
+    }
+}
+
+/** ------------------- Smaller tablet responsive -----------------------------***/
+/*** --------------------------------------------------------------------------- **/
+/** --------------------- min width: 576px and max-width: 768px -------------------- ***/
+
+@media (min-width: 576px) and (max-width: 768px) {
+    /** Fixing the layout **/
+    .topicDescription, .feed {
+        width: 80%;
+    }
+
+    /** Fixing the search filter **/
+    #searchFilter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    select, button {
+        width: fit-content;
+    }
+
+    /** Move the breadcrumb to the center (and honestly does this thing matter ? ) **/
+    .breadcrumb {
+        margin-left: 15%;
+        margin-top: 10px;
+    }
+}
+
+/** ------------------------------------------------------------------------------------ **\/
+/** ----------------------------------Mobile responsive--------------------------------- **/
+/** --------------------------------- max-width: 576px ---------------------------------- **/
+
+@media (max-width: 576px) {
+    /** Forgot that we have to place the sidebar on top of the webpage :) **/
+    .main {
+        flex-direction: column;
+    }
+    /** Resize the box again, but now with 100% width **/
+    .topicDescription, .feed {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    /* Let the bg color of topic Description out, it look so horrible **/
+    .topicDescription {
+        background-color: var(--background-color-light);
+        box-shadow: none;
+        /* Or maybe just hide it :) */
+        display: none;
+    }
+
+    /** Resize the filter **/
+    #searchFilter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    select, button {
+        width: fit-content;
+    }
+
+    .breadcrumb {
+        margin-left: 15%;
+        margin-top: 20px;
+    }
+
+    .breadcrumb li {
+        font-size: 13px;
+    }
+
+    /** The name and timestamp should be smaller **/
+    .username, .timestamp {
+        font-size: 15px;
+    }
 }

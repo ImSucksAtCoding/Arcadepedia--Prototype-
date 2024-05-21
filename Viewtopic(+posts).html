@@ -54,20 +54,20 @@
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
-                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i><span>Explore</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">General</a></li>
                             <li><a href="#">All entries</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i><span>Forums</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">Discussions</a></li>
                             <li><a href="#">Users</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i><span>About</span><i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">About us</a></li>
                             <li><a href="#">Rules</a></li>
@@ -100,7 +100,7 @@
                 <div class="feed col-xl-6 col-lg-6 col-md-10 mx-auto">
                     <div class="makePost">
                         <div class="userClick">
-                            <img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="60px" height="60px">
+                            <img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px">
                             <span>What's on your mind?</span>
                         </div>
                     </div>
@@ -114,14 +114,14 @@
                         </div>
                     </div>
                     <hr>
-                    <form action="#" method="get">
+                    <form action="#" method="get" id="searchFilter">
                         <select id="filterPosts" name="filterPosts">
                             <option value="oldest" selected>Oldest</option>
                             <option value="latest">Latest</option>
                         </select>
                         <input type="text" name="searchTitle" id="searchTitle" placeholder="Search posts' title">
                         <input type="text" name="searchContent" id="searchContent" placeholder="Search posts' content">
-                        <button type="submit">Submit</button>
+                        <button type="submit">Search</button>
                     </form>
                     <hr>
                     <div class="postSection">
@@ -149,7 +149,7 @@
                                 <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                             </div>
                             <div class="row">
-                                <p>Body</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                             <div class="row">
                                 <span>
@@ -194,7 +194,7 @@
                                 <a href="#" class="noUnderlineLink"><h2>Title</h2></a>
                             </div>
                             <div class="row">
-                                <p>Body</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>
                             <div class="row">
                                 <span>
@@ -360,6 +360,10 @@
         let rules = document.querySelector('.rules');
         let rulesDetails = document.querySelector('.rules-embed-show');
 
+        //For hamburger menu action
+        let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        let sidebar = document.querySelector('.sidebar')
+
         makePostWidget.addEventListener("click", (e) => {
             if(i === 0) {
                 i++;
@@ -425,6 +429,19 @@
                 submitBtn.textContent = 'Post';
                 submitBtn.className = "submitBtnB";
 
+                //Create the "escape hatch" button, to put the textarea off
+                let exitBtn = document.createElement('div')
+                exitBtn.className = 'exitBtn'
+                exitBtn.textContent = 'Exit'
+
+                //Click event on the 'exit' button to move out the form
+                // exitBtn.addEventListener('click', (event) => {
+                //     // event.stopPropagation()
+                //     makePostWidget.classList.remove('expanded')
+                //     makePostWidget.classList.add('makePost')
+                //     i = 0
+                // })
+
                 // Append the textarea to the form
                 form.appendChild(input);
                 form.appendChild(editor);
@@ -434,6 +451,7 @@
 
                 // Append the form to the e.currentTarget
                 e.currentTarget.appendChild(form);
+                e.currentTarget.appendChild(exitBtn)
 
                 if (!document.querySelector('#myScript')) {
                     let script = document.createElement('script');
@@ -496,12 +514,23 @@
                 // if (rulesEmbed.classList.contains('invisible')) {
                     rulesEmbed.classList.remove('invisible');
                     rules.classList.add('invisible');
+                    //Avoiding overflow since the 'rules' class still have display
+                    rules.style.display = 'none'
                 // }
             } else {
                 // if (!rulesEmbed.classList.contains('invisible')) {
                     rulesEmbed.classList.add('invisible');
                     rules.classList.remove('invisible');
+                    rules.style.display = 'block' 
                 // }
+            }
+            // Mobile responsive
+            if (window.matchMedia('(max-width: 576px)').matches) {
+                sidebar.style.display = 'none'
+                menuIcon.style.display = 'flex'
+            } else {
+                menuIcon.style.display = 'none'
+                sidebar.style.display = 'flex'
             }
         };
 
@@ -548,6 +577,17 @@
                 }
             });
         });
+
+        //Function to display the sidebar in mobile responsive
+        menuIcon.addEventListener('click', (e) => {
+            if (menuIcon.checked == true) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'flex';
+            } else if (menuIcon.checked == false) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'none';
+            }
+        })
     </script>
 </body>
 </html>
