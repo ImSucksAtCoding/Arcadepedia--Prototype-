@@ -57,20 +57,20 @@
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
-                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i><span>Explore</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">General</a></li>
                             <li><a href="#">All entries</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i><span>Forums</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">Discussions</a></li>
                             <li><a href="#">Users</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i><span>About</span><i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">About us</a></li>
                             <li><a href="#">Rules</a></li>
@@ -95,7 +95,7 @@
 
             <div class="content-margin">
                 <div class="row">
-                    <a class="noUnderlineLink" href="#">&larr;All posts</a>
+                    <a class="noUnderlineLink" href="#">&larr; All posts</a>
                 </div>
                 <div class="post">
                     <div class="infoRow justify-content-between">
@@ -121,7 +121,7 @@
                         <h1>Title</h1>
                     </div>
                     <div class="row">
-                        <p>Body</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="row">
                         <span>
@@ -143,7 +143,7 @@
                 <hr>
                 <div class="makeComment">
                     <div class="userClick">
-                        <img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="60px" height="60px">
+                        <img class="profilePic" src="./assets/Viewpost/placeholder-pic.png" alt="profilePic" width="40px" height="40px">
                         <span>Leave a comment</span>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p>Body</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                         <div class="row">
                             <span>
@@ -214,7 +214,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p>Body</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                         <div class="row">
                             <span>
@@ -258,7 +258,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p>Body</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                         <div class="row">
                             <span>
@@ -603,6 +603,36 @@
         //     }
         // }
 
+        // For responsive parts
+        // Mobile responsive (max-width: 576px)
+        let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        let sidebar = document.querySelector('.sidebar')
+
+        const adjustRulesVisibility = (e) => {
+            if (window.matchMedia('(max-width: 576px)').matches) {
+                sidebar.style.display = 'none'
+                menuIcon.style.display = 'flex'
+            } else {
+                menuIcon.style.display = 'none'
+                sidebar.style.display = 'flex'
+            }
+        }
+
+        // Call the function when the page loads
+        adjustRulesVisibility();
+
+        // Call the function when the window is resized
+        window.addEventListener('resize', adjustRulesVisibility)
+
+        menuIcon.addEventListener('click', (e) => {
+            if (menuIcon.checked == true) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'flex';
+            } else if (menuIcon.checked == false) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'none';
+            }
+        })
     </script>
 </body>
 </html>

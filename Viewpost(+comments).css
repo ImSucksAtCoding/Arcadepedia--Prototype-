@@ -38,7 +38,7 @@ Authors: - Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 300ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -136,10 +136,21 @@ body {
     display: inline-block;
     text-decoration: none;
     margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--Grapes);
+    font-weight: 600;
 }
 
 .post {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.row h1 {
+    color: var(--Grapes);
+    font-weight: 600;
 }
 
 .profilePic {
@@ -151,8 +162,12 @@ body {
     align-items: center;
     font-weight: 600;
     gap: 5px;
-    padding-bottom: 50px;
+    /* padding-bottom: 20px; */
     font-size: 20px;
+}
+
+.userInfo img {
+    margin-right: 5px;
 }
 
 .infoRow {
@@ -209,11 +224,10 @@ body {
     width: 100%;
     text-align: left;
     border: none;
-    background: #FFFFFF;
+    background: whitesmoke;
 }
 
 .row p {
-    font-weight: 600;
     font-size: 20px;
 }
 
@@ -306,13 +320,15 @@ body {
 }
 
 .makeComment {
+    padding-left: 10px;
     cursor: pointer;
     border-radius: 20px 20px 20px 20px;
-    background-color: white;
-    height: 100px;
+    background-color: whitesmoke;
+    height: 60px;
     margin-bottom: 30px;
     align-content: center;
     transition: height 0.5s ease;
+    position: relative;
 }
 
 .makeComment.expanded {
@@ -358,12 +374,9 @@ body {
 
 .makeComment span {
     display: inline-block;
-    /* vertical-align: top; */
-    margin-left: 20px;
-    font-size: 36px;
+    margin-left: 10px;
+    font-size: 20px;
     color: gray;
-    /* align-items: center;
-    vertical-align: top; */
 }
 
 .commentSection {
@@ -371,6 +384,9 @@ body {
 }
 
 .comment {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-bottom: 30px;
 }
 
@@ -386,4 +402,68 @@ body {
 
 .reaction span.like-comment-button:hover, .reaction span.dislike-comment-button:hover {
     background-color: white;
+}
+
+/** ------------------------ Tablet responsive ------------------------------------ **/
+/** ---------------- (min-width: 576px and max-width: 768px) ------------------------ **/
+@media (min-width: 576px) and (max-width: 768px) {
+    /** Resize the post box **/
+    .content {
+        width: 75%;
+    }
+
+    .userInfo {
+        font-size: 15px;
+    }
+
+    .row p {
+        font-size: 17px;
+    }
+
+    .breadcrumb li {
+        font-size: 13px;
+    }
+}
+
+/** ------------------------------------------------------------------------------------ **\/
+/** ----------------------------------Mobile responsive--------------------------------- **/
+/** --------------------------------- max-width: 576px ---------------------------------- **/
+@media (max-width: 576px) {
+    /** Now make the post box full width **/
+    .content {
+        width: 100%;
+        /* full height also */
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .content-margin {
+        width: 95%;
+        margin-left: 10px;
+    }
+    /* But first, let's make the sidebar on the top of the webpage **/ 
+    .main {
+        flex-direction: column;
+    }
+
+    .breadcrumb li {
+        font-size: 10px;
+    }
+
+    .userInfo {
+        font-size: 13px;
+    }
+
+    .username {
+        font-size: 13px;
+    }
+
+    .row p {
+        font-size: 15px;
+    }
+
+    .reaction, .reply {
+        margin-right: 10px;
+    }
 }
