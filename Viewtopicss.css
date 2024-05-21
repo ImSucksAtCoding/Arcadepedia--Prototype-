@@ -33,7 +33,7 @@ Authors: - Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 300ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -506,7 +506,18 @@ dd {
 /** -------------------------min-width: 576px and max-width: 768px --------------------- **/
 
 @media (min-width: 576px) and (max-width: 768px) {
-    .forumDescription {
-        
+}
+
+
+/** ---------------------------------- Mobile responsive ----------------------------------- **/
+/** ------------------------------------------------------------------------------------------- **/
+/** ----------------------------------- max-width: 576px --------------------------------------- ***/
+
+@media (max-width: 576px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
     }
 }

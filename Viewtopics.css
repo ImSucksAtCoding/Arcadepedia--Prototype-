@@ -37,7 +37,7 @@ Authors: - Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 300ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -157,6 +157,10 @@ body {
     font-weight: 600;
 }
 
+.ribbon a {
+    color: var(--Grapes);
+}
+
 .infoRow {
     grid-area: aside;
 }
@@ -203,6 +207,11 @@ body {
 .newestPostInfo a {
     text-decoration: none;
     display: inline-block;
+    color: var(--Grapes);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .infoRow a {
@@ -223,6 +232,17 @@ body {
     border-radius: 20px 20px 20px 20px;
     padding: 20px;
     /* border: 3px solid black; */
+}
+
+.noUnderlineLink, .title, .username {
+    text-decoration: none;
+    color: var(--Grapes);
+    font-weight: 600;
+}
+
+.timestampSeperator {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .stats {
@@ -521,4 +541,55 @@ dd>a {
 
 .comment-outline:hover {
     background-color: white;
+}
+
+/** ----------------------------- Tablet responsive ----------------------------------------- **/
+/** ----------------------------------------------------------------------------------------- **/
+/** -------------------------min-width: 576px and max-width: 768px --------------------- **/
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .main {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .forumDescription, .feed {
+        width: 80%;
+    }
+
+    /** Move the breadcrums to the center of the container **/
+    .breadcrumb {
+        margin-left: 10%;
+        margin-top: 10px;
+    }
+}
+
+
+/** ---------------------------------- Mobile responsive ----------------------------------- **/
+/** ------------------------------------------------------------------------------------------- **/
+/** ----------------------------------- max-width: 576px --------------------------------------- ***/
+
+@media (max-width: 576px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .forumDescription, .feed {
+        width: 80%;
+    }
+
+    /** Make the breadcrumb smaller and let it at the center of the page **/
+    .breadcrumb li{
+        font-size: 13px;
+    }
+
+    .breadcrumb {
+        margin-left: 10%;
+        margin-top: 10px;
+    }
+
+    /** Other components stay the same **/
 }

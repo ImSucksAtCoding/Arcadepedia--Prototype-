@@ -97,7 +97,7 @@
             </div>
             <hr>
             <div class="row">
-                <div class="feed col-xl-6 col-lg-6 col-md-6 col-8 mx-auto">
+                <div class="feed col-xl-6 col-lg-6 col-md-7 col-8 mx-auto">
                     <div class="forumGroup">
                         <div class="ribbon">
                             <h2>Arcadepedia</h2>
@@ -478,6 +478,8 @@
         let icons = document.querySelectorAll('.icon');
         let statistic = document.querySelector('.stats');
         let postInfos = document.querySelectorAll('.postInfo');
+        let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        let sidebar = document.querySelector('.sidebar')
 
         // threadsRows.forEach((threadsRow) => {
         //     threadsRow.addEventListener("")
@@ -531,6 +533,14 @@
                     postInfo.style.position = 'relative';
                 })
             }
+            // Mobile responsive
+            if (window.matchMedia('(max-width: 576px)').matches) {
+                sidebar.style.display = 'none'
+                menuIcon.style.display = 'flex'
+            } else {
+                menuIcon.style.display = 'none'
+                sidebar.style.display = 'flex'
+            }
         };
 
         // Call the function when the page loads
@@ -538,6 +548,16 @@
 
         // Call the function when the window is resized
         window.addEventListener('resize', adjustRulesVisibility);
+        // Function to display the sidebar below the header
+        menuIcon.addEventListener('click', (e) => {
+            if (menuIcon.checked == true) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'flex';
+            } else if (menuIcon.checked == false) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'none';
+            }
+        })
         </script>
 </body>
 </html>
