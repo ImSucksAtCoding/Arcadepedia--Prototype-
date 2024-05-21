@@ -36,7 +36,7 @@ Author: Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -135,6 +135,12 @@ body {
     padding-top: 20px;
 }
 
+input {
+    border: none;
+    border-radius: 6px;
+    background-color: whitesmoke;
+}
+
 .Userlist {
     display: flex;
     flex-direction: column;
@@ -166,4 +172,44 @@ body {
 
 p {
     font-weight: 600;
+}
+
+/** ------------------- Smaller tablet responsive -----------------------------***/
+/*** --------------------------------------------------------------------------- **/
+/** --------------------- min width: 576px and max-width: 768px -------------------- ***/
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .Userlist-Description, .Userlist {
+        width: 90%;
+    }
+
+    .Userlist-Description {
+        flex-direction: column;
+    }
+}
+
+/** ------------------------------------------------------------------------------------ **\/
+/** ----------------------------------Mobile responsive--------------------------------- **/
+/** --------------------------------- max-width: 576px ---------------------------------- **/
+
+@media (max-width: 576px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .Userlist-Description, .Userlist {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 50px;
+    }
+
+    .Userlist-Description {
+        flex-direction: column;
+    } 
 }
