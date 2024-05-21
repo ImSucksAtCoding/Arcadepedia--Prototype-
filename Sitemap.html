@@ -54,20 +54,20 @@
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
-                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i><span>Explore</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">General</a></li>
                             <li><a href="#">All entries</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i><span>Forums</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">Discussions</a></li>
                             <li><a href="#">Users</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i><span>About</span><i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="AboutUs.html">About us</a></li>
                             <li><a href="Rules.html">Rules</a></li>
@@ -210,4 +210,36 @@
       </div>
     </div>
 </footer>
+<script>
+     // Now let show the menu icon (specifically for mobile responsive)
+     let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        let sidebar = document.querySelector('.sidebar')
+        // let content = document.querySelector('.content')
+        // Mobile responsive (max-width: 576px)
+        const adjustRulesVisibility = (e) => {
+            if (window.matchMedia('(max-width: 576px)').matches) {
+                sidebar.style.display = 'none'
+                menuIcon.style.display = 'flex'
+            } else {
+                menuIcon.style.display = 'none'
+                sidebar.style.display = 'flex'
+            }
+        }
+
+        // Call the function when the page loads
+        adjustRulesVisibility();
+
+        // Call the function when the window is resized
+        window.addEventListener('resize', adjustRulesVisibility)
+
+        menuIcon.addEventListener('click', (e) => {
+            if (menuIcon.checked == true) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'flex';
+            } else if (menuIcon.checked == false) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'none';
+            }
+        })
+</script>
 </body>
