@@ -35,7 +35,7 @@ Author: - Nguyen Anh Tung (s4045602)
     --post-background-dark: #231F20;
     --footer-text-color: white;
     --animation-timing: 200ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -164,7 +164,18 @@ body {
     font-size: 16px;
 }
 
+.container header h1 {
+    margin-top: 20px;
+}
+
 
 /** ---------------------------- End of main styles ------------------------------------- **/
 /** -------------------------------------------------------------------------------------- **/
-/** --------------------------------------------------------------------------------------- **/
+/** -------------------------------- Mobile responsive --------------------------------------- **/
+/** -------------------------------- max-width: 576px ---------------------------------------- **/
+
+@media (max-width: 576px) {
+    .main {
+        flex-direction: column;
+    }
+}
