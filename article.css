@@ -212,6 +212,14 @@ span button:hover {
     text-decoration: underline;
 }
 
+span button:after {
+    content: '[hide]';
+  }
+  
+  .active:after {
+    content: '[show]';
+  }
+
 
 #ref {
     margin-bottom: 50px;
@@ -393,5 +401,9 @@ span button:hover {
 
     .table-content {
         margin-left: 10px;
+    }
+
+    #infotable {
+        margin-left: 40px;
     }
 }
