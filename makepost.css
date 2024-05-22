@@ -99,12 +99,11 @@ div.editor button.edit-btn {
 .rules {
     flex: 0 1 30%;
     background-color: #e5e5e5;
-    padding: 30px;
+    padding: 20px;
     width: fit-content;
     height: fit-content;
     border-radius: 1px;
     margin: 50px auto;
-    margin-left: 100px;
 }
 
 .rules h2 {
@@ -128,7 +127,7 @@ ol li {
 }
 
 #submit {
-    margin-top: 15px;
+    margin-top: 10px;
     background-color: #53E8D4;
     padding: 10px 15px 10px 15px;
     border-style: none ;
@@ -136,6 +135,7 @@ ol li {
     cursor: pointer;
     float: right;
     margin-right: 120px;
+    margin-bottom: 5px;
 }
 
 textarea {
