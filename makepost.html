@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcadepedia | Make post</title>
+    <title>Arcadepedia | Homepage</title>
     <!--Import fonts for icons-->
     <script src="https://kit.fontawesome.com/d535fdea96.js" crossorigin="anonymous"></script>
-    <!--Boostrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!--Css file-->
     <link rel="stylesheet" href="makepost.css">
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
     <header class="header">
@@ -55,20 +55,20 @@
         <div class="sidebar">
             <nav role="navigation">
                 <ul class="links">
-                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i>Home</div></a></li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i>Explore<i class="fa-solid fa-chevron-down expand"></i></div>
+                    <li><a href="Homepage.html" aria-label="Home"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-compass"></i><span>Explore</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">General</a></li>
                             <li><a href="#">All entries</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i>Forums<i class="fa-solid fa-chevron-down" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-comments"></i><span>Forums</span><i class="fa-solid fa-chevron-down" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="#">Discussions</a></li>
                             <li><a href="#">Users</a></li>
                         </ul>   
                     </li>
-                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i>About<i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
+                    <li id="sub-menu"><div class="items"><i class="fa-regular fa-circle-question"></i><span>About</span><i class="fa-solid fa-chevron-down expand" id="expand"></i></div>
                         <ul class="sublink">
                             <li><a href="AboutUs.html">About us</a></li>
                             <li><a href="legalAndCompliance.html">Legal And Compliance</a></li>
@@ -79,37 +79,42 @@
             </nav>
         </div>
 
-        <div class="content col-9 mx-auto">
-            <div class="post">
-                <h2>Create post</h2>
-                <form action="">
-                    <div class="title">
-                        <label for="title">Title<span id="req">*</span></label><br>
-                        <input type="text" id="title" placeholder="Up to 300 characters" required maxlength="300"><br>
-                    </div>
-                    <div class="editor">
-                        <button type="button" class="edit-btn" data-element="bold"><i class="fa-solid fa-bold fa-lg"></i></button>
-                        <button type="button" class="edit-btn" data-element="italic"><i class="fa-solid fa-italic fa-lg"></i></button>
-                        <button type="button" class="edit-btn" data-element="underline"><i class="fa-solid fa-underline fa-lg"></i></button>
-                        <button type="button" class="edit-btn" data-element="insertUnorderedList"><i class="fa-solid fa-list-ul fa-lg"></i></button>
-                        <button type="button" class="edit-btn" data-element="insertOrderedList"><i class="fa-solid fa-list-ol fa-lg"></i></button>
-                        <button type="button" class="edit-btn" data-element="createLink"><i class="fa-solid fa-link fa-lg"></i></button>
-                    </div>
-                    <textarea name="post[content]" id="postContent" style="resize: vertical;"></textarea>
-                    <div class="output"></div>
-                    <button type="submit" id="submit">Post</button>
-                </form>
+    
+    
+            <div class="content col-9 mx-auto">
+                <div class="post">
+                    <h2>Create post</h2>
+                    <form action="">
+                        <div class="title">
+                            <label for="title">Title<span id="req">*</span></label><br>
+                            <input type="text" id="title" placeholder="Up to 300 characters" required maxlength="300"><br>
+                        </div>
+                        <div class="editor">
+                            <button type="button" class="edit-btn" data-element="bold"><i class="fa-solid fa-bold fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="italic"><i class="fa-solid fa-italic fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="underline"><i class="fa-solid fa-underline fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="insertUnorderedList"><i class="fa-solid fa-list-ul fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="insertOrderedList"><i class="fa-solid fa-list-ol fa-lg"></i></button>
+                            <button type="button" class="edit-btn" data-element="createLink"><i class="fa-solid fa-link fa-lg"></i></button>
+                        </div>
+                        <textarea name="post[content]" id="postContent" style="resize: vertical;"></textarea>
+                        <div class="output"></div>
+                        <button type="submit" id="submit">Post</button>
+                    </form>
+                </div>
+    
+    
+                <div class="rules">
+                    <h2>Rules</h2>
+                    <ol>
+                        <li>Be nice and treat people with respect. Keep discussions civil and be open-minded about differing opinions.</li>
+                        <li>Do not ask for or share links to pirated material.</li>
+                        <li>Spamming, trolling, or impersonating other users will lead to your account being banned.</li>
+                    </ol>
+                </div>
             </div>
-
-            <div class="rules">
-                <h2>Rules</h2>
-                <ol>
-                    <li>Be nice and treat people with respect. Keep discussions civil and be open-minded about differing opinions.</li>
-                    <li>Do not ask for or share links to pirated material.</li>
-                    <li>Spamming, trolling, or impersonating other users will lead to your account being banned.</li>
-                </ol>
-            </div>
-        </div>
+    
+    
     </div>
 
     <footer class="site-footer">
@@ -174,15 +179,47 @@
   
             <div class="col-md-4 col-sm-6 col-xs-12">
               <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="facebook" href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
                   
               </ul>
             </div>
           </div>
         </div>
-  </footer>
-  <script src="makepost.js"></script>
+    </footer>
+    <script src="makepost.js">
+
+        // Now let show the menu icon (specifically for mobile responsive)
+        let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        let sidebar = document.querySelector('.sidebar')
+        // let content = document.querySelector('.content')
+        // Mobile responsive (max-width: 576px)
+        const adjustRulesVisibility = (e) => {
+            if (window.matchMedia('(max-width: 576px)').matches) {
+                sidebar.style.display = 'none'
+                menuIcon.style.display = 'flex'
+            } else {
+                menuIcon.style.display = 'none'
+                sidebar.style.display = 'flex'
+            }
+        }
+
+        // Call the function when the page loads
+        adjustRulesVisibility();
+
+        // Call the function when the window is resized
+        window.addEventListener('resize', adjustRulesVisibility)
+
+        menuIcon.addEventListener('click', (e) => {
+            if (menuIcon.checked == true) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'flex';
+            } else if (menuIcon.checked == false) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'none';
+            }
+        })
+    </script>
 </body>
 </html>
