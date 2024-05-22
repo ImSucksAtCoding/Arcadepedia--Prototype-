@@ -1,0 +1,170 @@
+/**
+Rules page Css customize
+Author: - Nguyen Anh Tung (s4045602)
+**/
+
+/** 
+---------- Import header style for the webpage */ @import url('header.css'); /* ----------
+*/
+
+/**
+----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
+**/
+
+/** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
+**
+*/
+
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
+**
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #000000;
+    --Electric-blue: #86EEEC;
+    --Amenthys: #AC63D4;
+    --Grapes: #7B1DaE;
+    --Turquoise: #53E8D4;
+    --hover-background: #d9d9d9;
+    --post-background-light: #d8d8d8;
+    --post-background-dark: #231F20;
+    --footer-text-color: white;
+    --animation-timing: 200ms ease-in-out;
+    --cross-height: calc(5px * 3 + 5px * 2);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color-light);
+    font-family: 'Inter', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 80px); /*Actually this is the real reason why the sidebar is wrong :) */
+}
+
+/*-------------- End of right button styles -------------
+---------------------------------------------------------
+---------------- Main content styles --------------------
+**
+*/
+
+.content {
+    padding: 50px;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+
+.table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table a {
+    text-decoration: none;
+}
+.table a:hover {
+    text-decoration: underline;
+}
+
+.table-content {
+    margin-top: 10px;
+}
+
+.table ul li {
+    margin-bottom: 20px;
+}
+
+#subtable {
+    margin-top: 10px;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 40px;
+    color: #7B1DaE;
+}
+.content {
+    width: calc(100% - 15%);
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+}
+.content h1 {
+    color: #7B1DaE;
+    font-size: 50px;
+}
+.content h3 {
+    color: #7B1DaE;
+}
+
+.center-title {
+    text-align: center;
+    margin-top: 30px; 
+}
+
+.legal-button {
+    cursor: pointer;
+    color: #53E8D4; 
+    display: block;
+    width: fit-content;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 50px; 
+    margin-top: 10px;
+    align-items: center;
+}
+
+.legal-button:hover {
+    color: cyan;
+    transition: var(--animation-timing);
+}
+
+.legal-info {
+    display: none;
+    margin-left: 50px;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 600;
+    transition: var(--animation-timing);
+}
+
+/* Rules content styles */
+.container main .rule {
+    background-color: var(--post-background-light);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container main .rule h2 {
+    color: var(--Amenthys);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.container main .rule p {
+    color: black;
+    font-size: 16px;
+}
+
+
+/** ---------------------------- End of main styles ------------------------------------- **/
+/** -------------------------------------------------------------------------------------- **/
+/** --------------------------------------------------------------------------------------- **/
