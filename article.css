@@ -402,4 +402,8 @@ span button:after {
     .table-content {
         margin-left: 10px;
     }
+
+    #infotable {
+        margin-left: 40px;
+    }
 }
