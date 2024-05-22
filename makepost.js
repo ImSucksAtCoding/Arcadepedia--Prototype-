@@ -61,3 +61,34 @@ textarea.addEventListener('input', () => {
 function replaceSelectionWith(text) {
     textarea.value = textarea.value.substring(0, textarea.selectionStart) + text + textarea.value.substring(textarea.selectionEnd);
 }
+
+// Now let show the menu icon (specifically for mobile responsive)
+let menuIcon = document.querySelector('.hamburger-menu-trigger')
+let sidebar = document.querySelector('.sidebar')
+// let content = document.querySelector('.content')
+// Mobile responsive (max-width: 576px)
+const adjustRulesVisibility = (e) => {
+    if (window.matchMedia('(max-width: 576px)').matches) {
+        sidebar.style.display = 'none'
+        menuIcon.style.display = 'flex'
+    } else {
+        menuIcon.style.display = 'none'
+        sidebar.style.display = 'flex'
+    }
+}
+
+// Call the function when the page loads
+adjustRulesVisibility();
+
+// Call the function when the window is resized
+window.addEventListener('resize', adjustRulesVisibility)
+
+menuIcon.addEventListener('click', (e) => {
+    if (menuIcon.checked == true) {
+        console.log(menuIcon.checked);
+        sidebar.style.display = 'flex';
+    } else if (menuIcon.checked == false) {
+        console.log(menuIcon.checked);
+        sidebar.style.display = 'none';
+    }
+})
