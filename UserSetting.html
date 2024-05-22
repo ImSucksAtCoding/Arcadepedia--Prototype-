@@ -80,7 +80,7 @@
         </div>
 
         <div class="content">
-            <div class="update-form">
+            <div class="update-form"> 
                 <h1>Update Profile</h1>
                 <div class="current-profile">
                     <img src="assets/Arcadepedia.png" alt="arcade" width="100px" height="100px">
@@ -90,7 +90,36 @@
                     </div>
                 </div>
                 <form action="#" method="GET">
-                    
+                    <!--Update new profile image-->
+                    <div class="update-new-image">
+                        <label for="image">Update your new profile image</label>
+                        <input type="file" id="image" name="image">
+                    </div>
+                    <!--Current username-->
+                    <div class="current-username">
+                        <label for="CurrentUsername">Current Username</label>
+                        <input type="text" id="CurrentUsername" name="CurrentUsername" placeholder="Son Bui" disabled="disabled">
+                    </div>
+                    <!--New username-->
+                    <div class="new-username">
+                        <label for="newUsername">New Username</label>
+                        <input type="text" id="newUsername" name="newUsername" placeholder="Enter your new username">
+                    </div>
+                    <!--Old password-->
+                    <div class="old-passwrd">
+                        <label for="Oldpassword">Old Password</label>
+                        <input type="password" id="Oldpassword" name="Oldpassword" placeholder="Enter your old password">
+                        <i class="fa-solid fa-eye" id="showOld"></i>
+                    </div>
+                    <!--New password-->
+                    <div class="new-passwrd">
+                        <label for="Newpassword">New Password</label>
+                        <input type="password" id="Newpassword" name="Newpassword" placeholder="Enter your new password">
+                        <i class="fa-solid fa-eye" id="showNew"></i>
+                    </div>
+                    <hr>
+                    <!--submit button-->
+                    <input type="submit" id="submit" value="Update">
                 </form>
             </div>
         </div>
@@ -196,6 +225,35 @@
             } else if (menuIcon.checked == false) {
                 console.log(menuIcon.checked);
                 sidebar.style.display = 'none';
+            }
+        })
+
+        //Toggle password input
+        let Oldpasswrd = document.getElementById('Oldpassword')
+        let Newpassword = document.getElementById('Newpassword')
+        let showOld = document.getElementById('showOld')
+        let showNew = document.getElementById('showNew')
+
+        //Click event 
+        showOld.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (Oldpasswrd.type === 'password') {
+                Oldpasswrd.type = 'text'
+                showOld.classList.replace('fa-eye', 'fa-eye-slash')
+            } else {
+                Oldpasswrd.type = 'password'
+                showOld.classList.replace('fa-eye-slash', 'fa-eye')
+            }
+        })
+
+        showNew.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (Newpassword.type === 'password') {
+                Newpassword.type = 'text'
+                showNew.classList.replace('fa-eye', 'fa-eye-slash')
+            } else {
+                Newpassword.type = 'password'
+                showNew.classList.replace('fa-eye-slash', 'fa-eye')
             }
         })
 </script>
