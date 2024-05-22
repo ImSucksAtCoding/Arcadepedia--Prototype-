@@ -297,7 +297,6 @@ body {
 
 .timestamp {
     margin-left: 5px;
-    font-size: 15px;
 }
 
 .options-container {
@@ -364,7 +363,7 @@ body {
 }
 
 .text p {
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 20px;
     max-width: 95%;
 }
@@ -386,6 +385,11 @@ body {
 .noUnderlineLink {
     text-decoration: none;
     font-size: 25px;
+}
+
+.noUnderlineLink h2 {
+    color: var(--Grapes);
+    font-weight: 600;
 }
 
 .reaction {

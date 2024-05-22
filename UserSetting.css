@@ -1,0 +1,229 @@
+/** 
+---------- Import header style for the webpage */ @import url('header.css'); /* ----------
+*/
+
+
+/**
+----------- Import sidebar style for the webpage */ @import url('sidebar.css'); /* --------------
+**/
+
+/** ------- Import footer styles for the webpage **/ @import url("footer.css"); /* --------------
+**
+*/
+
+/** ------- Import tooltip styles for the webpage **/ @import url("tooltip.css"); /* --------------
+**
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --animation-timing: 200ms ease-in-out;
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #000000;
+    --Electric-blue: #86EEEC;
+    --Amenthys: #AC63D4;
+    --Grapes: #7B1DaE;
+    --Turquoise: #53E8D4;
+    --hover-background: #d9d9d9;
+    --post-background-light: #d8d8d8;
+    --post-background-dark: #231F20;
+    --cross-height: calc(4px * 3 + 4px * 2);
+}
+
+body {
+    background-color: var(--background-color-light);
+    font-family: 'Inter', sans-serif;
+}
+
+/** ------------------------------- Main styles -------------------------------------- ***/
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    width: calc(100% - 15%);
+}
+
+.update-form {
+    padding: 50px;
+    background-color: var(--background-color-light);
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px var(--hover-background);
+}
+
+.update-form h1 {
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.current-profile {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.current-profile img {
+    border-radius: 9999px;
+}
+
+.name-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.update-new-image, .update-new-bio, .current-username, .new-username, .old-passwrd, .new-passwrd {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.old-passwrd, .new-passwrd {
+    position: relative;
+}
+
+
+label {
+    font-family:'Roboto', sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: 550;
+}
+
+#CurrentUsername ,#newUsername, #Oldpassword, #Newpassword {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+#submit {
+    height: 50px;
+    color: var(--background-color-light);
+    background-color: var(--Grapes);
+    border-radius: 10px;
+    border: none;
+}
+
+#submit:hover {
+    background-color: rgb(82, 7, 123);
+    transition: var(--animation-timing);
+}
+
+.fa-eye, .fa-eye-slash {
+    position: absolute;
+    top: 60%;
+    left: 95%;
+    cursor: pointer;
+}
+
+/** ---------------------------- Tablet resppnsive ---------------------------------**/
+/** ----------------------------- min-width: 991px and max-width: 1141px -------------- **/
+
+@media (min-width: 991px) and (max-width: 1141px) {
+    .update-form {
+        width: 70%;
+    }
+
+    .current-profile {
+        margin-left: 30px;
+    }
+
+    .fa-eye, .fa-eye-slash {
+        position: absolute;
+        top: 60%;
+        left: 92%;
+        cursor: pointer;
+    }
+    
+    label {
+        font-size: 13px;
+        font-weight: 550;
+    }
+}
+
+/** -------------------------- Smaller tablet responsive -------------------------------- **/
+/*** --------------------------- min-width: 576px and max-width: 768px -------------------- **/
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .update-form {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .update-form h1 {
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    .fa-eye, .fa-eye-slash {
+        left: 92%;
+    }
+}
+
+
+/** ---------------------------- Mobile responsive ----------------------------------- **/
+/** ---------------------------- max-wdith: 576px --------------------------------------- **/
+
+@media (max-width: 576px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .update-form {
+        width: 100%;
+        margin: 0;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    .fa-eye, .fa-eye-slash {
+        left: 92%;
+    }
+}
