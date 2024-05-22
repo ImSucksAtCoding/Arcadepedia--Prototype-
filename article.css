@@ -22,8 +22,6 @@ Author: Bui Thai Son (s4037172)
 **
 */
 
-
-
 * {
     box-sizing: border-box;
 }
@@ -52,13 +50,6 @@ body {
     background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
 }
-
-
-
-/* input {
-    display: none;
-} */
-
 
 /* .hamburger-menu::before,
 .hamburger-menu::after,
@@ -109,6 +100,7 @@ body {
     width: var(--x-width);
     translate: 0 calc(5px / 2);
 } */
+
 
 .main {
     display: flex;

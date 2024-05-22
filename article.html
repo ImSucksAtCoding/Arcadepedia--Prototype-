@@ -109,25 +109,7 @@
                     </div>
 
                     <div class="mw-content-ltr mw-parser-output infodisplay col-xs-12 col-md-4" lang="en" dir="ltr">
-                        <script>
-                            fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
-                                .then(response => response.json())
-                                .then(data => {
-                                    const parser = new DOMParser();
-                                    const doc = parser.parseFromString(data.parse.text['*'], 'text/html');
-                                    const table = doc.querySelector('.infobox');
-                                    const links = table.querySelectorAll('a');
-                                    links.forEach(link => {
-                                        const href = link.getAttribute('href');
-                                        if (href.startsWith('/wiki/')) {
-                                            link.href = 'https://en.wikipedia.org' + href;
-                                        }
-                                    });
-                                    const div = document.querySelector('.mw-content-ltr');
-                                    div.innerHTML += table.outerHTML;
-                                })
-                                .catch(error => console.error('Error:', error));
-                        </script>
+                        
                     </div>
                 </div>
             </div>
@@ -272,6 +254,25 @@
 
 
   <script>
+    // Get infobox
+    fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
+                                .then(response => response.json())
+                                .then(data => {
+                                    const parser = new DOMParser();
+                                    const doc = parser.parseFromString(data.parse.text['*'], 'text/html');
+                                    const table = doc.querySelector('.infobox');
+                                    const links = table.querySelectorAll('a');
+                                    links.forEach(link => {
+                                        const href = link.getAttribute('href');
+                                        if (href.startsWith('/wiki/')) {
+                                            link.href = 'https://en.wikipedia.org' + href;
+                                        }
+                                    });
+                                    const div = document.querySelector('.mw-content-ltr');
+                                    div.innerHTML += table.outerHTML;
+                                })
+                                .catch(error => console.error('Error:', error));
+    
 
     document.querySelectorAll('.display-btn').forEach(function(button) {
         button.addEventListener('click', function(event) {
@@ -289,7 +290,38 @@
             }
         });
     });
-</script>
+
+        // Now let show the menu icon (specifically for mobile responsive)
+        let menuIcon = document.querySelector('.hamburger-menu-trigger')
+        let sidebar = document.querySelector('.sidebar')
+        // let content = document.querySelector('.content')
+        // Mobile responsive (max-width: 576px)
+        const adjustRulesVisibility = (e) => {
+            if (window.matchMedia('(max-width: 576px)').matches) {
+                sidebar.style.display = 'none'
+                menuIcon.style.display = 'flex'
+            } else {
+                menuIcon.style.display = 'none'
+                sidebar.style.display = 'flex'
+            }
+        }
+
+        // Call the function when the page loads
+        adjustRulesVisibility();
+
+        // Call the function when the window is resized
+        window.addEventListener('resize', adjustRulesVisibility)
+
+        menuIcon.addEventListener('click', (e) => {
+            if (menuIcon.checked == true) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'flex';
+            } else if (menuIcon.checked == false) {
+                console.log(menuIcon.checked);
+                sidebar.style.display = 'none';
+            }
+        })
+    </script>
       
   <!-- Main Body Ends -->
   
