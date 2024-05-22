@@ -172,7 +172,7 @@ fucntion will be displayed using JavaScript ------***/
     .sidebar {
         display: none;
         width: 100%;
-        transition: opacity var(--animation-timing);
+        transition: height var(--animation-timing);
     }
 
     #expand {

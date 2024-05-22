@@ -334,6 +334,11 @@ body {
     font-size: 25px;
 }
 
+.noUnderlineLink h2 {
+    font-weight: 600;
+    color: var(--Grapes);
+}
+
 .reaction {
     display: inline-flex;
     box-sizing: border-box;
