@@ -19,7 +19,7 @@
 <body>
     <div class="container">
         <div class="register-form">
-            <div class="exit">
+            <div class="exit" aria-label="exit to Homepage">
                 <a href="Homepage.html"><i class="fa-regular fa-circle-xmark"></i></a>
             </div>
             <div class="register">Register</div>
@@ -27,23 +27,23 @@
             <form action="" method="post">
                 <div class="Username">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Username">
+                    <input type="text" id="username" name="username" placeholder="Username" autocomplete="username">
                 </div>
                 <div class="email">
-                    <label for="Email">Login</label>
-                    <input type="text" id="Email" name="Email" placeholder="Email or phone number">
+                    <label for="Email">Email or phone number</label>
+                    <input type="text" id="Email" name="Email" placeholder="Email or phone number" >
                 </div>
                 <div class="password">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter password">
-                    <span>
+                    <input type="password" id="password" name="password" placeholder="Enter password" >
+                    <span aria-label="show password">
                         <i class="fa-solid fa-eye" id="showPassword"></i>
                     </span>
                 </div>
                 <div class="re-enter-password">
                     <label for="re-enter">Confirm password</label>
                     <input type="password" id="re-enter" name="re-enter" placeholder="Re-enter password">
-                    <span>
+                    <span aria-label="show password">
                         <i class="fa-solid fa-eye" id="showConfirmedPassword"></i>
                     </span>
                 </div>
