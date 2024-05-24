@@ -18,10 +18,10 @@
         <div class="left-section">
             <div class="menu">
                 <label class="hamburger-menu" for="check">
-                    <input type="checkbox" id="check" class="hamburger-menu-trigger">
+                    <input type="checkbox" id="check" class="hamburger-menu-trigger" aria-label="Toggle menu">
                 </label>
             </div>
-            <a href="Homepage.html">
+            <a href="Homepage.html" aria-label="Homepage">
                 <div class="logo">
                     <span>
                         arcade<span class="pedia">pedia</span>
@@ -32,22 +32,22 @@
 
         <div class="right-section">
             <a href="#">
-                <div class="search-button" role="button">
+                <div class="search-button" role="button" tabindex="0" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </a>
             <a href="login.html">
-                <div class="login-button" role="button">
+                <div class="login-button" role="button" tabindex="0">
                     Login
                 </div>
             </a>
             <a href="register.html">
-                <div class="register-button" role="button">
+                <div class="register-button" role="button" tabindex="0">
                     <i class="fa-regular fa-circle-user" id="profile"></i>
                     Register
                 </div>
             </a>
-            <div class="bg-toggle-button" role="button">
+            <div class="bg-toggle-button" role="button" tabindex="0" aria-label="Toggle background">
                 <i class="fa-solid fa-moon"></i>
             </div>
         </div>
@@ -55,34 +55,35 @@
 
     <div class="main">
         <div class="sidebar">
-            <nav role="navigation">
+            <nav role="navigation" aria-label="Main navigation">
                 <ul class="links">
-                    <li><a href="Homepage.html">
-                            <div class="items"><i class="fa fa-house"></i><span>Home</span></div>
-                        </a></li>
-                    <li id="sub-menu">
-                        <div class="items"><i class="fa-regular fa-compass"></i><span>Explore</span><i
-                                class="fa-solid fa-chevron-down" id="expand"></i></div>
-                        <ul class="sublink">
+                    <li><a href="Homepage.html"><div class="items"><i class="fa fa-house"></i><span>Home</span></div></a></li>
+                    <li class="sub-menu" id="sub-menu1">
+                        <div class="items" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Expand Explore menu">
+                            <i class="fa-regular fa-compass"></i><span>Explore</span><i class="fa-solid fa-chevron-down" id="expand"></i>
+                        </div>
+                        <ul class="sublink" id="sublink1">
                             <li><a href="#">General</a></li>
                             <li><a href="#">All entries</a></li>
                         </ul>
                     </li>
-                    <li id="sub-menu">
-                        <div class="items"><i class="fa-regular fa-comments"></i><span>Forums</span><i
-                                class="fa-solid fa-chevron-down" id="expand"></i></div>
-                        <ul class="sublink">
+                    <li class="sub-menu" id="sub-menu2">
+                        <div class="items" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Expand Forums menu">
+                            <i class="fa-regular fa-comments"></i><span>Forums</span><i class="fa-solid fa-chevron-down" id="expand"></i>
+                        </div>
+                        <ul class="sublink" id="sublink2">
                             <li><a href="#">Discussions</a></li>
                             <li><a href="#">Users</a></li>
                         </ul>
                     </li>
-                    <li id="sub-menu">
-                        <div class="items"><i class="fa-regular fa-circle-question"></i><span>About</span><i
-                                class="fa-solid fa-chevron-down expand" id="expand"></i></div>
-                        <ul class="sublink">
+                    <li class="sub-menu" id="sub-menu3">
+                        <div class="items" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Expand About menu">
+                            <i class="fa-regular fa-circle-question"></i><span>About</span><i class="fa-solid fa-chevron-down" id="expand"></i>
+                        </div>
+                        <ul class="sublink" id="sublink3">
                             <li><a href="AboutUs.html">About us</a></li>
                             <li><a href="legalAndCompliance.html">Legal And Compliance</a></li>
-                            <li><a href="#">Disclaimer</a></li>
+                            <li><a href="Rules.html">Rules</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -238,14 +239,13 @@
                     <h6>Contact us</h6>
                     <form action="#" class="contact-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" id="contact-name" class="form-control" placeholder="Name" aria-label="Name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" id="contact-email" class="form-control" placeholder="Email" aria-label="Email">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="3" class="form-control"
-                                placeholder="Message"></textarea>
+                            <textarea id="contact-message" name="" cols="30" rows="3" class="form-control" placeholder="Message" aria-label="Message"></textarea>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="form-control submit px-3">Send</button>
@@ -259,7 +259,6 @@
                         <li><a href="Viewtopics.html">Topics</a></li>
                         <li><a href="Viewtopic(+posts).html">Posts</a></li>
                         <li><a href="#">Gallery</a></li>
-
                     </ul>
                 </div>
 
@@ -277,17 +276,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script>
+                    <p class="copyright-text">Copyright &copy; <script>document.write(new Date().getFullYear());</script>
                     </p>
                 </div>
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
-
+                        <li><a class="facebook" href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="instagram" href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>

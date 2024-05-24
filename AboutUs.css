@@ -37,7 +37,7 @@ Authors: - Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
-    --cross-height: calc(5px * 3 + 5px * 2);
+    --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
@@ -220,21 +220,20 @@ body {
 .team-container {
     display: flex; 
     justify-content: space-between; 
-    flex-wrap: wrap; 
+    flex-direction: column;
 }
 .content h1{
    color: #7B1DaE;
 }
 
 .teammate {
-    flex-basis: calc(25% - 20px); 
     margin-bottom: 40px;
     display: flex;
     align-items: center;
 
 }
 
-#teammate1{
+#teammate1, #teammate2, #teammate3, #teammate4{
     margin-left: 80px;
 }
 
@@ -288,6 +287,42 @@ body {
     color: #37bdab;
 }
 
+.content h1 {
+    margin-top: 30px;
+}
+
 /** ------------------------------------- End of main styles --------------------------------- ****/
 /**** ------------------------------------------------------------------------------------------ ***/
-/**** ----------------------------------------------------------------------------------------- ***/
+/*** ------------------------------------ Responsiveness ------------------------------------------ **/
+
+ @media (max-width: 576px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .teammate img {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+    }
+
+    #teammate1, #teammate2, #teammate3, #teammate4 {
+        margin-left: 20px;
+    }
+
+    .teammate-info p {
+        font-size: 15px;
+    }
+
+    .teammate-info h3 {
+        font-size: 20px;
+    }
+
+    .title {
+        margin-left: 70px;
+    }
+
+    .content h1 {
+        margin-top: 30px;
+    }
+ }
