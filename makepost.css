@@ -97,6 +97,14 @@ div.editor button.edit-btn {
     height: 40px;
 }
 
+.edit-btn {
+    background-color: transparent;
+    border-color: transparent;
+}
+.edit-btn:hover {
+    background-color: #e5e5e5;
+}
+
 .rules {
     flex: 0 1 30%;
     background-color: #e5e5e5;

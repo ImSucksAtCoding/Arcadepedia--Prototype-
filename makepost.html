@@ -79,34 +79,30 @@
             </nav>
         </div>
 
-    
-    
-            
-            <div class="container">
-                <div class="row">
+        <div class="container">
+            <div class="row">
                   <div class="col-sm-12 col-md-8">
                     <div class="post">
                         <h2>Create post</h2>
                         <form action="">
                             <div class="title">
                                 <label for="title">Title<span id="req">*</span></label><br>
-                                <input type="text" id="title" placeholder="Up to 300 characters" required maxlength="300"><br>
+                                <input type="text" id="title" placeholder="Up to 300 characters" required maxlength="300" aria-required="true" aria-labelledby="title"><br>
                             </div>
                             <div class="editor">
-                                <button type="button" class="edit-btn" data-element="bold"><i class="fa-solid fa-bold fa-lg"></i></button>
-                                <button type="button" class="edit-btn" data-element="italic"><i class="fa-solid fa-italic fa-lg"></i></button>
-                                <button type="button" class="edit-btn" data-element="underline"><i class="fa-solid fa-underline fa-lg"></i></button>
-                                <button type="button" class="edit-btn" data-element="insertUnorderedList"><i class="fa-solid fa-list-ul fa-lg"></i></button>
-                                <button type="button" class="edit-btn" data-element="insertOrderedList"><i class="fa-solid fa-list-ol fa-lg"></i></button>
-                                <button type="button" class="edit-btn" data-element="createLink"><i class="fa-solid fa-link fa-lg"></i></button>
+                                <button type="button" class="edit-btn" data-element="bold" aria-label="Bold"><i class="fa-solid fa-bold fa-lg"></i></button>
+                                <button type="button" class="edit-btn" data-element="italic" aria-label="Italic"><i class="fa-solid fa-italic fa-lg"></i></button>
+                                <button type="button" class="edit-btn" data-element="underline" aria-label="Underline"><i class="fa-solid fa-underline fa-lg"></i></button>
+                                <button type="button" class="edit-btn" data-element="insertUnorderedList" aria-label="Insert unordered list"><i class="fa-solid fa-list-ul fa-lg"></i></button>
+                                <button type="button" class="edit-btn" data-element="insertOrderedList" aria-label="Insert ordered list"><i class="fa-solid fa-list-ol fa-lg"></i></button>
+                                <button type="button" class="edit-btn" data-element="createLink" aria-label="Insert link"><i class="fa-solid fa-link fa-lg"></i></button>
                             </div>
-                            <textarea name="post[content]" id="postContent" style="resize: vertical;"></textarea>
-                            <div class="output"></div>
-                            <button type="submit" id="submit">Post</button>
+                            <textarea name="post[content]" id="postContent" style="resize: vertical;" aria-label="content input"></textarea>
+                            <div class="output" aria-live="polite"></div>
+                            <button type="submit" id="submit" aria-label="Submit post">Post</button>
                         </form>
                     </div>
                   </div>
-        
                   <div class="col-sm-12 col-md-4">
                     <div class="rules">
                         <h2>Rules</h2>
@@ -117,10 +113,8 @@
                         </ol>
                     </div>
                   </div>
-        
-                 
-                </div>
-              </div>
+            </div>
+        </div>
     
     </div>
 
