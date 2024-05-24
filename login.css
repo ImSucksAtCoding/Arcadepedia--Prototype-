@@ -29,6 +29,8 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
     background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
 }
@@ -172,3 +174,93 @@ span {
     font-size: 20px;
 }
 
+/** ---------------------------------------------------------------------------------- **/
+/** ---------------------------- Responsiveness -------------------------------------------- **/
+/** -------------------------------------------------------------------------------------- **/
+
+@media (max-width: 1270px) {
+    .text {
+        font-size: 35px;
+    }
+
+    .login-form {
+        padding: 50px;
+    }
+
+    .login {
+        font-size: 50px;
+    }
+
+    .register {
+        font-size: 22px;
+    }
+
+    .exit {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1160px) {
+    .text {
+        font-size: 30px;
+    }
+
+    .login-form {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 981px) {
+    .text {
+        font-size: 25px;
+    }
+
+    .login-form {
+        padding: 30px;
+        margin: 50px;
+    }
+
+    .login {
+        font-size: 40px;
+    }
+
+    .register {
+        font-size: 20px;
+    }
+
+    form {
+        align-items: center;
+    }
+
+    .email, .password, #Submit {
+        width: 90%;
+    }
+}
+
+@media (max-width: 860px) {
+    /* hide the text on the right */
+    .text {
+        display: none;
+    }
+
+    .login-form {
+        margin: auto;
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-form {
+        width: 100%;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .login {
+        margin-top: 150px;
+    }
+
+    .line {
+        width: 90%;
+    }
+}
