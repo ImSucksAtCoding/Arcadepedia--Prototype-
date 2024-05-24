@@ -84,7 +84,7 @@
     font-weight: 500;
 }
 
-#sub-menu:hover .sublink {
+.sub-menu:hover .sublink {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -93,7 +93,7 @@
     transition: var(--animation-timing);
 }
 
-#sub-menu:last-child:hover .sublink {
+.sub-menu:last-child:hover .sublink {
     display: flex;
     flex-direction: column;
     gap: 10px;
