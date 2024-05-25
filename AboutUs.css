@@ -248,6 +248,7 @@ body {
 
 .teammate-info {
     flex: 1;
+    margin-right: 100px;
 }
 
 .teammate-info h3 {
