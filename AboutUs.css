@@ -213,7 +213,7 @@ body {
 }
  
 .readmore:hover {
-    background-color: #399c8f;
+    background-color: #3aa294;
     transition: var(--animation-timing);
 }
  
@@ -285,7 +285,7 @@ body {
 }
 
 .teammate-info p{
-    color: #37bdab;
+    color: #215C54;
 }
 
 .content h1 {
