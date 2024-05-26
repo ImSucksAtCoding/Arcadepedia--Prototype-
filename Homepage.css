@@ -28,8 +28,8 @@ Author: Bui Thai Son (s4037172)
 }
 
 :root {
-    --color-light: #FFFFFF;
-    --color-dark: #121212;
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #000000;
     --Electric-blue: #86EEEC;
     --Amenthys: #AC63D4;
     --Grapes: #7B1DaE;
@@ -50,7 +50,7 @@ html, body {
 }
 
 body {
-    background-color: var(--background);
+    transition: var(--background-timing);
     font-family: 'Inter', sans-serif;
 }
 
