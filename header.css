@@ -75,7 +75,7 @@
 
 .login-button {
     font-size: 13px;
-    color: var(--color-dark);
+    color: var(--background-color-dark);
     padding: 13px 30px;
     background-color: var(--Turquoise);
     border-radius: 8px;
@@ -84,7 +84,7 @@
 
 .register-button {
     font-size: 14px;
-    color: var(--color-light);
+    color: var(--background-color-light);
     padding: 13px 40px;
     background-color: var(--Grapes);
     border-radius: 8px;
@@ -92,7 +92,7 @@
 
 .logout-button {
     font-size: 13px;
-    color: var(--color-dark);
+    color: var(--background-color-dark);
     padding: 13px 30px;
     background-color: var(--Turquoise);
     border-radius: 8px;

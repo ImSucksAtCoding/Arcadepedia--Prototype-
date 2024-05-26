@@ -28,8 +28,8 @@ Author: Bui Thai Son (s4037172)
 }
 
 :root {
-    --color-light: #FFFFFF;
-    --color-dark: #121212;
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #121212;
     --Electric-blue: #86EEEC;
     --Amenthys: #AC63D4;
     --Grapes: #7B1DaE;
@@ -39,7 +39,6 @@ Author: Bui Thai Son (s4037172)
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
-    --background: var(--color-light);
 }
 
 
@@ -50,7 +49,7 @@ html, body {
 }
 
 body {
-    background-color: var(--background);
+    background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
 }
 
