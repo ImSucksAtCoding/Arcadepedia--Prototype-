@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@
                     Register
                 </div>
             </a>
-            <div class="bg-toggle-button" role="button" tabindex="0" aria-label="Toggle background">
+            <div class="bg-toggle-button" tabindex="0" aria-label="Toggle background">
                 <i class="fa-solid fa-moon"></i>
             </div>
         </div>
@@ -266,15 +266,21 @@
                 sidebar.style.display = 'none';
             }
         })
-        // Function to display the hidden text 
-        var readmore = document.querySelector('.readmore')
-        var moreInfo = document.querySelector('.more-info')
-        // Click event 
-        readmore.addEventListener('click', () => {
-            if (moreInfo.style.display == 'none') {
-                moreInfo.style.display = 'block'
+        
+        //Toggle background function
+        let toggle = document.querySelector('.bg-toggle-button')
+        let icon = document.querySelector('.fa-moon')
+        // Add click event 
+        icon.addEventListener('click', (e) => {
+            if (document.documentElement.getAttribute('data-bs-theme') == 'light') {
+                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
+                //change the icon switch as well
+                icon.classList.remove('fa-moon')
+                icon.classList.add('fa-sun')
             } else {
-                moreInfo.style.display = 'none'
+                document.documentElement.setAttribute('data-bs-theme' , 'light') 
+                icon.classList.remove('fa-sun')
+                icon.classList.add('fa-moon') 
             }
         })
 

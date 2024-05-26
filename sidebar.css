@@ -55,10 +55,14 @@
     justify-content: left;
     flex-direction: row;
     gap: 20px;
-    color: var(--color-dark);
+    color: var(--background-color-dark);
     align-items: center;
     padding: 12px 25px;
     font-size: 15px;
+}
+
+html[data-bs-theme="dark"] .items {
+    color: var(--background-color-light);
 }
 
 .items:hover {
@@ -66,6 +70,9 @@
     transition: var(--animation-timing);
 }
 
+html[data-bs-theme="dark"] .items:hover {
+    color: var(--background-color-dark);
+}
 
 .sublink {
     display: none;
@@ -76,6 +83,10 @@
 
 .sublink a {
     color: var(--background-color-dark);
+}
+
+html[data-bs-theme='dark'] .sublink a {
+    color: var(--background-color-light);
 }
 
 .sublink li {

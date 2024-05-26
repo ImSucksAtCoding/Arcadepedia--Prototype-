@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="Homepage.css">
     <!--Boostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="darkmode.js"></script>
+    <!-- <script src="darkmode.js"></script> -->
 </head>
 <body>
     <header class="header">
@@ -46,7 +46,7 @@
                     Register
                 </div>
             </a>
-            <div class="bg-toggle-button" role="button" tabindex="0" aria-label="Toggle background" >
+            <div class="bg-toggle-button" tabindex="0" aria-label="Toggle background" >
                 <i class="fa-solid fa-moon"></i>
             </div>
         </div>
@@ -155,7 +155,7 @@
                     <span>
                         <span class="reaction">
                             <span class="like-post-button"  aria-label="Like post">&#x25B2;</span>
-                            0
+                            <span>0</span>
                             <span class="dislike-post-button"  aria-label="Dislike post">&#x25BC;</span>    
                         </span>
                         <span class="reply">
@@ -282,6 +282,22 @@
             } else if (menuIcon.checked == false) {
                 console.log(menuIcon.checked);
                 sidebar.style.display = 'none';
+            }
+        })
+
+        //Toggle background function
+        let icon = document.querySelector('.fa-moon')
+        // Add click event 
+        icon.addEventListener('click', (e) => {
+            if (document.documentElement.getAttribute('data-bs-theme') == 'light') {
+                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
+                //change the icon switch as well
+                icon.classList.remove('fa-moon')
+                icon.classList.add('fa-sun')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme' , 'light') 
+                icon.classList.remove('fa-sun')
+                icon.classList.add('fa-moon') 
             }
         })
     </script>

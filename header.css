@@ -66,16 +66,21 @@
     text-decoration: none;
 }
 
-.search-button {
+.fa-magnifying-glass {
     font-size: 25px;
     margin-top: 2px;
-    color: var(--color-dark);
+    color: var(--background-color-dark);
     cursor: pointer;
+}
+
+html[data-bs-theme='dark'] .fa-magnifying-glass {
+    color: var(--background-color-light);
+    transition: 400ms ease-in-out;
 }
 
 .login-button {
     font-size: 13px;
-    color: var(--color-dark);
+    color: var(--background-color-dark);
     padding: 13px 30px;
     background-color: var(--Turquoise);
     border-radius: 8px;
@@ -84,7 +89,7 @@
 
 .register-button {
     font-size: 14px;
-    color: var(--color-light);
+    color: var(--background-color-light);
     padding: 13px 40px;
     background-color: var(--Grapes);
     border-radius: 8px;
@@ -92,7 +97,7 @@
 
 .logout-button {
     font-size: 13px;
-    color: var(--color-dark);
+    color: var(--background-color-dark);
     padding: 13px 30px;
     background-color: var(--Turquoise);
     border-radius: 8px;
@@ -103,7 +108,7 @@ header .username {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--color-dark);
+    color: var(--background-color-dark);
     font-weight: 600;
     margin-left: 10px;
     margin-right: 10px;
@@ -113,11 +118,19 @@ header .username {
     border-radius: 9999px;
 }
 
-.bg-toggle-button {
+.fa-moon {
     font-size: 30px;
     margin-right: 20px;
     margin-left: 5px;
-    color: var(--color-dark);
+    color: var(--background-color-dark);
+    cursor: pointer;
+}
+
+.fa-sun {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 5px;
+    color: var(--background-color-light);
     cursor: pointer;
 }
 
@@ -129,7 +142,7 @@ header .username {
         width: 100%;
     }
 
-    .logo, .search-button {
+    .logo, .fa-magnifying-glass {
         font-size: 20px;
     }
 }
@@ -138,7 +151,7 @@ header .username {
 /** -------------------------- min-width: 576px and max-width: 768px --------------- **/
 
 @media (min-width: 576px) and (max-width: 768px) {
-    .logo , .search-button{
+    .logo , .fa-magnifying-glass{
         font-size: 20px;
     }
 
@@ -152,7 +165,7 @@ header .username {
         padding: 10px 27px;
     }
 
-    .bg-toggle-button {
+    .fa-moon, .fa-sun {
         font-size: 28px;
     }
 }
@@ -169,7 +182,7 @@ fucntion will be displayed using JavaScript ------***/
         width: 100%;
         overflow: hidden;
     }
-    
+
     .hamburger-menu::before,
     .hamburger-menu::after,
     .hamburger-menu input {
@@ -182,13 +195,25 @@ fucntion will be displayed using JavaScript ------***/
         transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing);
     }
 
+    html[data-bs-theme="dark"] .hamburger-menu input {
+        background-color: var(--background-color-light);
+    }
+
+    html[data-bs-theme='dark'] .hamburger-menu::before {
+        background-color: var(--background-color-light);
+    }
+
+    html[data-bs-theme='dark'] .hamburger-menu::after {
+        background-color: var(--background-color-light);
+    }
+
     .hamburger-menu {
         --x-width: calc(var(--cross-height) * 1.41421356237); 
 
         display: flex;
         flex-direction: column;
         gap: 4px;
-        padding-left: 10px;
+        padding-left: 5px;
         cursor: pointer;
         width: max-content;
         margin-top: 6px;
@@ -219,6 +244,10 @@ fucntion will be displayed using JavaScript ------***/
         translate: 0 calc(4px / 2);
     }
 
+    /* html[data-bs-theme='dark'] .hamburger-menu:has(input:checked)::before {
+        background-color: var(--color-light);
+    } */
+
     .left-section {
         gap: 0px;
     }
@@ -227,13 +256,13 @@ fucntion will be displayed using JavaScript ------***/
         gap: 5px;
     }
 
-    .logo, .search-button {
+    .logo, .fa-magnifying-glass {
         margin-left: 10px;
         font-size: 18px;
     }
 
     .logo {
-        margin-top: 2px;
+        margin-top: 2px; 
     }
 
     .login-button, .register-button {
@@ -259,9 +288,9 @@ fucntion will be displayed using JavaScript ------***/
         padding: 10px 15px;
     }
 
-    .bg-toggle-button {
+    .fa-moon, .fa-sun {
         font-size: 25px;
-        margin-right: 10px;
+        margin-right: 6px;
     }
 }
 
@@ -285,7 +314,7 @@ fucntion will be displayed using JavaScript ------***/
         padding: 8px 12px;
     }
 
-    .bg-toggle-button {
+    .fa-moon, .fa-sun {
         font-size: 22px;
     }
 }
