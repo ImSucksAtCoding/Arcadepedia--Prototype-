@@ -24,7 +24,7 @@
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 300ms ease-in-out;
-    --backgrounf-timing: 400ms ease-in-out;
+    --background-timing: 400ms ease-in-out;
 }
 
 html, body {
@@ -35,7 +35,7 @@ html, body {
     overflow-x: hidden;
     background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
-    transition: var(--backgrounf-timing);
+    transition: var(--background-timing);
 }
 
 .container {

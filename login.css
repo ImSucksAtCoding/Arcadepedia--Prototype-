@@ -27,7 +27,7 @@
     --animation-timing: 300ms ease-in-out;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;

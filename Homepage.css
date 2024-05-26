@@ -47,9 +47,6 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-}
-
-body {
     transition: var(--background-timing);
     font-family: 'Inter', sans-serif;
 }
