@@ -37,20 +37,21 @@ Author: Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
+    --background-timing: 400ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
 }
 
-html, body {
+body {
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
+    transition: var(--background-timing);
     /* height: 100%;
     width: 100%; */
 }
 
-body {
-    background-color: var(--background-color-light);
-    font-family: 'Inter', sans-serif;
-}
+
+    
 
 /* input {
     display: none;
@@ -179,6 +180,10 @@ body {
     cursor: pointer;
 }
 
+html[data-bs-theme='dark'] .edit {
+    border: 2px solid var(--background-color-light);
+}
+
 .edit i {
     padding-right: 5px;
 }
@@ -197,6 +202,11 @@ body {
     color: var(--background-color-light);
     background-color: var(--background-color-dark);
     transition: var(--animation-timing);
+}
+
+html[data-bs-theme='dark'] .edit:hover {
+    color: var(--background-color-dark);
+    background-color: var(--background-color-light);   
 }
 
 .deactivate:hover {
@@ -229,20 +239,39 @@ body {
     transition: var(--animation-timing);
 }
 
-.about-after {
+html[data-bs-theme='light'] .about-after {
     color: var(--background-color-dark);
     border: none;
     transition: var(--animation-timing);
 }
 
-.activity {
+html[data-bs-theme='dark'] .about-after {
+    color: var(--background-color-light);
+    border: none;
+}
+
+html[data-bs-theme='light'] .activity {
     padding: 10px;
     color: var(--background-color-dark);
     cursor: pointer;
     transition: var(--animation-timing);
 }
 
-.activity-after {
+html[data-bs-theme='dark'] .activity {
+    padding: 10px;
+    color: var(--background-color-light);
+    padding: 10px;
+}
+
+html[data-bs-theme='light'] .activity-after {
+    border-bottom: 5px solid var(--Turquoise);
+    padding: 10px;
+    color: var(--Turquoise);
+    cursor: pointer;
+    transition: var(--animation-timing);
+}
+
+html[data-bs-theme='dark'] .activity-after {
     border-bottom: 5px solid var(--Turquoise);
     padding: 10px;
     color: var(--Turquoise);
@@ -289,6 +318,7 @@ body {
 .userInfo {
     display: flex;
     align-items: center;
+    color: var(--background-color-dark);
     font-weight: 600;
     gap: 5px;
     padding: 20px;
@@ -303,6 +333,7 @@ body {
    left: 95%;
    top: 8%;
    font-size: 20px;
+   color: var(--background-color-dark);
    position: absolute;
    cursor: pointer;
 }
@@ -364,6 +395,7 @@ body {
 
 .text p {
     /* font-weight: 600; */
+    color: var(--background-color-dark);
     font-size: 20px;
     max-width: 95%;
 }
@@ -402,10 +434,11 @@ body {
     align-items: center;
 }
 
-.reaction span.like-post-button, .reaction span.dislike-post-button {
+.reaction span.like-post-button, .reaction span.dislike-post-button, .reaction span {
     background: none;
     border: none;
     font-size: 20px;
+    color: var(--background-color-dark);
     cursor: pointer;
     padding: 0 5px 0 5px;
     border-radius: 9999px;
@@ -433,6 +466,7 @@ body {
     border-radius: 30px;
     margin-right: 30px;
     align-items: center;
+    color: var(--background-color-dark);
 }
 
 .reply a {
