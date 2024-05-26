@@ -24,6 +24,7 @@
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 300ms ease-in-out;
+    --backgrounf-timing: 400ms ease-in-out;
 }
 
 html, body {
@@ -34,6 +35,7 @@ html, body {
     overflow-x: hidden;
     background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
+    transition: var(--backgrounf-timing);
 }
 
 .container {
@@ -155,14 +157,42 @@ span {
 
 .text {
     text-align: center;
-    font-size: 40px;
+    /* font-size: 100px; */
     font-family: 'Mina', sans-serif;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 20%;
+    padding-left: 1%;
 }
 
 .text h5 {
     font-size: 20px;
+}
+
+.background {
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.text h5 a {
+    color: var(--Grapes);
+}
+
+.fa-moon {
+    color: var(--background-color-dark);
+}
+
+.fa-sun {
+    color: var(--background-color-light);
+}
+
+html[data-bs-theme='dark'] .fa-circle-xmark {
+    color: var(--background-color-light);
+}
+
+html[data-bs-theme='dark'] .fa-circle-xmark:hover {
+    color: var(--Electric-blue);
+    transition: var(--animation-timing);
 }
 
 /** ---------------------------------------------------------------------------------- **/
