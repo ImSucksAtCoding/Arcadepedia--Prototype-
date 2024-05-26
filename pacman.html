@@ -28,11 +28,6 @@
         </div>
 
         <div class="right-section">
-            <a href="#">
-                <div class="search-button" role="button" tabindex="0" aria-label="Search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </a>
             <a href="login.html">
                 <div class="login-button" role="button" tabindex="0">
                     Login
@@ -92,38 +87,39 @@
                         <h1>Pac-Man</h1>
                         <p>Click to play the demo</p>                        
                     </div>
-                    <div class="flextable">
-                        <div class="demorating">
-                            <img id="invaders" src="assets/pacman.png" alt="Welcome to our page" width="800" height="500">
-                            <div class="rating-box section">
-                            
-                            <form id="feedbackForm">
-                                <span>Rate this demo:</span>
-                                <div class="rating">
-                                    <!-- Notice that the stars are in reverse order -->
-                                    <input type="radio" id="star5" name="rating" value="5" required>
-                                    <label for="star5">&#9733;</label>
-                                    <input type="radio" id="star4" name="rating" value="4">
-                                    <label for="star4">&#9733;</label>
-                                    <input type="radio" id="star3" name="rating" value="3">
-                                    <label for="star3">&#9733;</label>
-                                    <input type="radio" id="star2" name="rating" value="2">
-                                    <label for="star2">&#9733;</label>
-                                    <input type="radio" id="star1" name="rating" value="1">
-                                    <label for="star1">&#9733;</label>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-8">
+                                <img id="invaders" src="assets/pacman.png" alt="Pac-Man" width="600"
+                                    height="400">
+                                <div class="rating-box section">
+                                    <form id="feedbackForm">
+                                        <span>Rate this demo:</span>
+                                        <div class="rating">
+                                            <!-- Notice that the stars are in reverse order -->
+                                            <input type="radio" id="star5" name="rating" value="5" required>
+                                            <label for="star5">&#9733;</label>
+                                            <input type="radio" id="star4" name="rating" value="4">
+                                            <label for="star4">&#9733;</label>
+                                            <input type="radio" id="star3" name="rating" value="3">
+                                            <label for="star3">&#9733;</label>
+                                            <input type="radio" id="star2" name="rating" value="2">
+                                            <label for="star2">&#9733;</label>
+                                            <input type="radio" id="star1" name="rating" value="1">
+                                            <label for="star1">&#9733;</label>
+                                        </div>
+                                        <button type="submit" id="submit">Submit</button>
+                                    </form>
                                 </div>
-                                <button type="submit" id="submit">Submit</button>
-                            </form>
-                        </div>
-                        </div>
+                            </div>
         
-                        <div class="mw-content-ltr mw-parser-output infodisplay" lang="en" dir="ltr">
-        
+                            <div id="infotable" class="mw-content-ltr mw-parser-output infodisplay col-xs-12 col-md-4" lang="en" dir="ltr">
+                                
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
                 <script>
-                fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
+                fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Pac-Man&format=json&origin=*')
                 .then(response => response.json())
                 .then(data => {
                     const parser = new DOMParser();
