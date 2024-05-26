@@ -69,13 +69,13 @@
 .search-button {
     font-size: 25px;
     margin-top: 2px;
-    color: var(--background-color-dark);
+    color: var(--color-dark);
     cursor: pointer;
 }
 
 .login-button {
     font-size: 13px;
-    color: var(--background-color-dark);
+    color: var(--color-dark);
     padding: 13px 30px;
     background-color: var(--Turquoise);
     border-radius: 8px;
@@ -84,7 +84,7 @@
 
 .register-button {
     font-size: 14px;
-    color: var(--background-color-light);
+    color: var(--color-light);
     padding: 13px 40px;
     background-color: var(--Grapes);
     border-radius: 8px;
@@ -92,7 +92,7 @@
 
 .logout-button {
     font-size: 13px;
-    color: var(--background-color-dark);
+    color: var(--color-dark);
     padding: 13px 30px;
     background-color: var(--Turquoise);
     border-radius: 8px;
@@ -103,7 +103,7 @@ header .username {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--background-color-dark);
+    color: var(--color-dark);
     font-weight: 600;
     margin-left: 10px;
     margin-right: 10px;
@@ -117,7 +117,7 @@ header .username {
     font-size: 30px;
     margin-right: 20px;
     margin-left: 5px;
-    color: var(--background-color-dark);
+    color: var(--color-dark);
     cursor: pointer;
 }
 

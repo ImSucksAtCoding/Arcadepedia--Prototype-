@@ -1,0 +1,12 @@
+.darkmode {
+    --color-light: #FFFFFF;
+    --color-dark: #121212;
+    --Electric-blue: #86EEEC;
+    --Amenthys: #AC63D4;
+    --hover-background: #d9d9d9;
+    --post-background-light: #d8d8d8;
+    --post-background-dark: #231F20;
+    --animation-timing: 200ms ease-in-out;
+    --cross-height: calc(4px * 3 + 4px * 2);
+    --background: var(--color-dark);
+}

@@ -22,13 +22,14 @@ Author: Bui Thai Son (s4037172)
 **
 */
 
+
 * {
     box-sizing: border-box;
 }
 
 :root {
-    --background-color-light: #FFFFFF;
-    --background-color-dark: #121212;
+    --color-light: #FFFFFF;
+    --color-dark: #121212;
     --Electric-blue: #86EEEC;
     --Amenthys: #AC63D4;
     --Grapes: #7B1DaE;
@@ -38,7 +39,9 @@ Author: Bui Thai Son (s4037172)
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
+    --background: var(--color-light);
 }
+
 
 html, body {
     margin: 0;
@@ -47,7 +50,7 @@ html, body {
 }
 
 body {
-    background-color: var(--background-color-light);
+    background-color: var(--background);
     font-family: 'Inter', sans-serif;
 }
 
@@ -140,7 +143,7 @@ body {
 }
 
 .latest-articles a {
-    color: var(--background-color-dark);
+    color: var(--background);
     font-size: 30px;
     font-weight: 600;
     margin-left: 100px;
