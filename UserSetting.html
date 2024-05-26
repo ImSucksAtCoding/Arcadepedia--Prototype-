@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@
                     Register
                 </div>
             </a>
-            <div class="bg-toggle-button" role="button" tabindex="0" aria-label="Toggle background">
+            <div class="bg-toggle-button" tabindex="0" aria-label="Toggle background">
                 <i class="fa-solid fa-moon"></i>
             </div>
         </div>
@@ -261,6 +261,22 @@
             } else {
                 Newpassword.type = 'password'
                 showNew.classList.replace('fa-eye-slash', 'fa-eye')
+            }
+        })
+
+        //Toggle background function
+        let icon = document.querySelector('.fa-moon')
+        // Add click event 
+        icon.addEventListener('click', (e) => {
+            if (document.documentElement.getAttribute('data-bs-theme') == 'light') {
+                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
+                //change the icon switch as well
+                icon.classList.remove('fa-moon')
+                icon.classList.add('fa-sun')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme' , 'light') 
+                icon.classList.remove('fa-sun')
+                icon.classList.add('fa-moon') 
             }
         })
 </script>
