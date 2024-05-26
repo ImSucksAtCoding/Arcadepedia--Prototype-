@@ -333,6 +333,22 @@
                 }
             });
         });
+
+        //Toggle background function
+        let icon = document.querySelector('.fa-moon')
+        // Add click event 
+        icon.addEventListener('click', (e) => {
+            if (document.documentElement.getAttribute('data-bs-theme') == 'light') {
+                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
+                //change the icon switch as well
+                icon.classList.remove('fa-moon')
+                icon.classList.add('fa-sun')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme' , 'light') 
+                icon.classList.remove('fa-sun')
+                icon.classList.add('fa-moon') 
+            }
+        })
     </script>
 </body>
 

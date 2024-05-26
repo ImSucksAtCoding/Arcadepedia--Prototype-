@@ -35,6 +35,7 @@ Author: - Nguyen Anh Tung (s4045602)
     --hover-background: #d9d9d9;
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
+    --background-timing: 400ms ease-in-out;
     --animation-timing: 200ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
 }
@@ -45,8 +46,8 @@ html, body {
 }
 
 body {
-    background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
+    transition: var(--background-timing);
 }
 
 /* input {
@@ -162,6 +163,11 @@ body {
     font-size: 50px;
     font-weight: 600;
 }
+
+html[data-bs-theme='dark'] .content h1 {
+    color: var(--Electric-blue);    
+}
+
 .content h3 {
     color: #7B1DaE;
 }
