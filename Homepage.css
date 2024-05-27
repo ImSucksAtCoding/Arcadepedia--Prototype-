@@ -206,6 +206,24 @@ html[data-bs-theme='dark'] .trending-discussion a {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
     position: relative;
 }
+html[data-bs-theme="dark"] .post{
+    background-color: #121212;
+    transition: var(--background-timing);
+}
+
+html[data-bs-theme="dark"] .post span{
+    color: white;
+    transition: var(--background-timing);
+}
+
+html[data-bs-theme="dark"] .text h2{
+    color: var(--Amenthys);
+    transition: var(--background-timing);
+}
+
+html[data-bs-theme="dark"] p{
+    color: white;
+}
 
 .profilePic {
     border-radius: 9999px;

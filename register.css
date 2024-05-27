@@ -72,6 +72,10 @@ html, body {
     font-style: underline;
 }
 
+html[data-bs-theme="dark"] .login a{
+    color: var(--Amenthys)
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -112,6 +116,9 @@ input {
     background-color: var(--Grapes);
     color: var(--background-color-light);
     cursor: pointer;
+}
+html[data-bs-theme="dark"] #submit{
+    background-color: var(--Amenthys);
 }
 
 .exit {
@@ -176,6 +183,10 @@ span {
 
 .text h5 a {
     color: var(--Grapes);
+}
+
+html[data-bs-theme="dark"] .text h5 a{
+    color: var(--Amenthys)
 }
 
 .fa-moon {

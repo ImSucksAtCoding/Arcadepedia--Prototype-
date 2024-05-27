@@ -23,6 +23,7 @@
   color:#737373;
 }
 
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -72,7 +73,7 @@
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#53E8D4;
+  color: var(--Electric-blue);
   text-decoration:none;
 }
 .footer-links.inline li
