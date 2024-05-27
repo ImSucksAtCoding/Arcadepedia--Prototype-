@@ -61,11 +61,18 @@
     font-size: 15px;
 }
 
+html[data-bs-theme="dark"] .items {
+    color: var(--background-color-light);
+}
+
 .items:hover {
     background-color: #d9d9d9;
     transition: var(--animation-timing);
 }
 
+html[data-bs-theme="dark"] .items:hover {
+    color: var(--background-color-dark);
+}
 
 .sublink {
     display: none;
@@ -76,6 +83,10 @@
 
 .sublink a {
     color: var(--background-color-dark);
+}
+
+html[data-bs-theme='dark'] .sublink a {
+    color: var(--background-color-light);
 }
 
 .sublink li {

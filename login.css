@@ -23,6 +23,7 @@
     --hover-background: #d9d9d9;
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
+    --background-timing: 400ms ease-in-out;
     --animation-timing: 300ms ease-in-out;
 }
 
@@ -32,8 +33,8 @@ html, body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
+    transition: var(--background-timing);
 }
 
 .container {
@@ -129,6 +130,13 @@ input {
     left: 15px;
 }
 
+.background {
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
 .exit a:hover {
     color: var(--Turquoise);
     transition: var(--animation-timing);
@@ -163,16 +171,37 @@ span {
     background-color: var(--post-background-light);
 }
 
-.text {
+.welcome {
     text-align: center;
-    font-size: 40px;
+    /* font-size: 100px; */
     font-family: 'Mina', sans-serif;
-    padding-top: 50px;
-    padding-right: 50px;
+    padding-top: 20%;
+    padding-right: 1%;
 }
 
-.text h5 {
+.welcome h5 {
     font-size: 20px;
+}
+
+.welcome a {
+    color: var(--Grapes);
+}
+
+.fa-moon {
+    color: var(--background-color-dark);
+}
+
+.fa-sun {
+    color: var(--background-color-light);
+}
+
+html[data-bs-theme='dark'] .fa-circle-xmark {
+    color: var(--background-color-light);
+}
+
+html[data-bs-theme='dark'] .fa-circle-xmark:hover {
+    color: var(--Electric-blue);
+    transition: var(--animation-timing);
 }
 
 /** ---------------------------------------------------------------------------------- **/
@@ -180,7 +209,7 @@ span {
 /** -------------------------------------------------------------------------------------- **/
 
 @media (max-width: 1270px) {
-    .text {
+    .welcome {
         font-size: 35px;
     }
 
@@ -202,7 +231,7 @@ span {
 }
 
 @media (max-width: 1160px) {
-    .text {
+    .welcome {
         font-size: 30px;
     }
 
@@ -212,7 +241,7 @@ span {
 }
 
 @media (max-width: 981px) {
-    .text {
+    .welcome {
         font-size: 25px;
     }
 
@@ -240,7 +269,7 @@ span {
 
 @media (max-width: 860px) {
     /* hide the text on the right */
-    .text {
+    .welcome {
         display: none;
     }
 

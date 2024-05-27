@@ -38,6 +38,7 @@ Authors: - Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 300ms ease-in-out;
+    --background-timing: 400ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
 }
 
@@ -47,8 +48,8 @@ html, body {
 }
 
 body {
-    background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
+    transition: var(--background-timing);
 }
 
 /* .hamburger-menu::before,
@@ -127,6 +128,19 @@ body {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
 }
 
+html[data-bs-theme='light'] .breadcrumb-item a {
+    color: var(--Grapes);
+}
+
+html[data-bs-theme='dark'] .breadcrumb-item, .breadcrumb-item a {
+    color: var(--Turquoise);
+}
+
+html[data-bs-theme='dark'] .content {
+    background-color: gray;
+    transition: var(--background-timing);
+}
+
 .content-margin {
     flex-grow: 1; /* to fill available space */
     margin: 0 50px 0 50px;
@@ -139,6 +153,14 @@ body {
     margin-bottom: 30px;
     color: var(--Grapes);
     font-weight: 600;
+}
+
+html[data-bs-theme='dark'] .noUnderlineLink {
+    color: var(--Turquoise);
+}
+
+html[data-bs-theme='dark'] .row h1 {
+    color: var(--Turquoise);
 }
 
 .post {
@@ -255,7 +277,11 @@ body {
     align-items: center;
 }
 
-.reaction span.like-post-button, .reaction span.dislike-post-button {
+html[data-bs-theme='dark'] .reaction {
+    border: 2px solid var(--background-color-light);
+}
+
+.reaction span.like-post-button, .reaction span.dislike-post-button, .reaction span {
     background: none;
     border: none;
     font-size: 20px;
@@ -288,15 +314,23 @@ body {
     align-items: center;
 }
 
+html[data-bs-theme='dark'] .reply {
+    border: 2px solid var(--background-color-light);
+}
+
 .reply:hover {
     background-color: white;
 }
 
 .reply a {
     text-decoration: none;
-    color: black;
+    color: var(--background-color-dark);
     border-radius: 50%;
     transition: background 0.3s ease;
+}
+
+html[data-bs-theme] .reply a {
+    color: var(--background-color-light);
 }
 
 .reply a:hover {

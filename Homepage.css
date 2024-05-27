@@ -29,7 +29,7 @@ Author: Bui Thai Son (s4037172)
 
 :root {
     --background-color-light: #FFFFFF;
-    --background-color-dark: #121212;
+    --background-color-dark: #000000;
     --Electric-blue: #86EEEC;
     --Amenthys: #AC63D4;
     --Grapes: #7B1DaE;
@@ -38,6 +38,7 @@ Author: Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
+    --background-timing: 400ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
 }
 
@@ -46,62 +47,9 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-}
-
-body {
-    background-color: var(--background-color-light);
+    transition: var(--background-timing);
     font-family: 'Inter', sans-serif;
 }
-
-/* .hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
-    content: "";
-    width: 30px;
-    transform-origin: left center;
-    height: 5px;
-    background-color: var(--background-color-dark);
-    border-radius: 9999px;
-    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing);
-}
-
-.hamburger-menu {
-    --x-width: calc(var(--cross-height) * 1.41421356237); 
-
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding-left: 40px;
-    cursor: pointer;
-    width: max-content;
-    margin-top: 7.5px;
-    margin-right: 20px;
-}
-
-.hamburger-menu input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;
-}
-
-.hamburger-menu input:checked {
-    opacity: 0;
-    width: 0;
-}
-
-.hamburger-menu:has(input:checked)::before {
-    rotate: 45deg;
-    width: var(--x-width);
-    translate: 0 calc(5px / -2);
-}
-
-.hamburger-menu:has(input:checked)::after {
-    rotate: -45deg;
-    width: var(--x-width);
-    translate: 0 calc(5px / 2);
-} */
 
 .main {
     display: flex;
@@ -142,11 +90,16 @@ body {
 }
 
 .latest-articles a {
-    color: var(--background);
+    color: var(--background-color-dark);
     font-size: 30px;
     font-weight: 600;
     margin-left: 100px;
     text-decoration: underline;
+}
+
+html[data-bs-theme='dark'] .latest-articles a {
+    color: var(--background-color-light);
+    transition: var(--background-timing);
 }
 
 .gallery {
@@ -217,10 +170,15 @@ body {
 .gallery a {
     position: absolute;
     top: 98%;
-    padding-top: 10px;
+    padding-top: 15px;
     color: blue;
     text-decoration: none;
     font-weight: 600;
+}
+
+html[data-bs-theme="dark"] .gallery a {
+    color: var(--Electric-blue);
+    transition: var(--background-timing);
 }
 
 .trending-discussion a {
@@ -229,6 +187,11 @@ body {
     font-weight: 600;
     margin-left: 100px;
     text-decoration: underline;
+}
+
+html[data-bs-theme='dark'] .trending-discussion a {
+    color: var(--background-color-light);
+    transition: var(--background-timing);
 }
 
 .post {
@@ -258,6 +221,10 @@ body {
     font-size: 20px;
 }
 
+html[data-bs-theme="dark"] .userInfo {
+    color: var(--background-color-dark);
+}
+
 .options-container {
    top: 5%;
    left: 95%;
@@ -273,6 +240,10 @@ body {
     top: 0px;
     height: 100px;
     width: 100px;
+}
+
+html[data-bs-theme="dark"] .options-container {
+    color: var(--background-color-dark);
 }
 
 .userAction {
@@ -314,6 +285,10 @@ body {
 .text p {
     font-size: 20px;
     max-width: 95%;
+}
+
+html[data-bs-theme="dark"] .text p { 
+    color: var(--background-color-dark);
 }
 
 .userAction:hover {
@@ -412,6 +387,10 @@ body {
 
 .reaction, .reply {
     margin-bottom: 20px;
+}
+
+html[data-bs-theme="dark"], .reaction span, .reply span {
+    color: var(--background-color-dark);
 }
 
 /*** ----------------------------------------------------------- **/

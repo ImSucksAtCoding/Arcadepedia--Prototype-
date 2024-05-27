@@ -40,7 +40,7 @@
                     Register
                 </div>
             </a>
-            <div class="bg-toggle-button" role="button" tabindex="0" aria-label="Toggle background">
+            <div class="bg-toggle-button" tabindex="0" aria-label="Toggle background">
                 <i class="fa-solid fa-moon"></i>
             </div>
         </div>
@@ -192,5 +192,23 @@
         </div>
     </footer>
     <script src="makepost.js"></script>
+    <script>
+        //Toggle background function
+        let toggle = document.querySelector('.background')
+        let icon = document.querySelector('.fa-moon')
+        // Add click event 
+        icon.addEventListener('click', (e) => {
+            if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
+                document.documentElement.setAttribute('data-bs-theme' , 'light') 
+                //change the icon switch as well
+                icon.classList.remove('fa-sun')
+                icon.classList.add('fa-moon')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
+                icon.classList.remove('fa-moon')
+                icon.classList.add('fa-sun') 
+            }
+        })
+    </script>
 </body>
 </html>

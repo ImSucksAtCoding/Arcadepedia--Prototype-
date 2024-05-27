@@ -23,6 +23,7 @@
 
 :root {
     --animation-timing: 200ms ease-in-out;
+    --background-timing: 400ms ease-in-out;
     --background-color-light: #FFFFFF;
     --background-color-dark: #000000;
     --Electric-blue: #86EEEC;
@@ -36,7 +37,7 @@
 }
 
 body {
-    background-color: var(--background-color-light);
+    transition: var(--background-timing);
     font-family: 'Inter', sans-serif;
 }
 
@@ -64,6 +65,7 @@ body {
 
 .update-form h1 {
     font-weight: 600;
+    color: var(--background-color-dark);
     font-size: 50px;
     text-align: center;
     margin-top: 0px;
@@ -88,12 +90,14 @@ body {
 
 .name {
     font-size: 30px;
+    color: var(--background-color-dark);
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .date {
     font-size: 20px;
+    color: var(--background-color-dark);
 }
 
 form {
@@ -106,6 +110,11 @@ form {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: var(--background-color-dark);
+}
+
+html[data-bs-theme='dark'] input, textarea {
+    color: var(--background-color-dark);
 }
 
 .old-passwrd, .new-passwrd {
@@ -115,6 +124,7 @@ form {
 
 label {
     font-family:'Roboto', sans-serif;
+    color: var(--background-color-dark);
     font-size: 15px;
     margin-left: 10px;
     font-weight: 550;
@@ -156,6 +166,7 @@ textarea {
     top: 60%;
     left: 95%;
     cursor: pointer;
+    color: var(--post-background-dark);
 }
 
 /** ---------------------------- Tablet resppnsive ---------------------------------**/
@@ -221,6 +232,33 @@ textarea {
         margin: 0;
         border-radius: 0px;
         box-shadow: none;
+        transition: var(--background-timing);
+    }
+
+    html[data-bs-theme='dark'] .update-form {
+        background-color: var(--post-background-dark);
+        transition: var(--background-timing);
+    }
+
+    html[data-bs-theme='dark'] label, .update-form h1, .name, .date {
+        color: var(--background-color-light);
+    }
+
+    html[data-bs-theme='light'] .update-form h1 {
+        color: var(--background-color-dark);
+    }
+
+    html[data-bs-theme='light'] .name {
+        color: var(--background-color-dark);
+    }
+
+    html[data-bs-theme='light'] .date {
+        color: var(--background-color-dark);
+    }
+
+    html[data-bs-theme='dark'] .update-new-image input {
+        color: var(--background-color-light);
+        transition: var(--background-timing);
     }
 
     .fa-eye, .fa-eye-slash {

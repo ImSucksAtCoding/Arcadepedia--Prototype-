@@ -38,6 +38,7 @@ Authors:  - Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 500ms ease-in-out;
+    --background-timing: 400ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
 }
 
@@ -47,8 +48,8 @@ html, body {
 }
 
 body {
-    background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
+    transition: var(--background-timing);
 }
 
 /* .hamburger-menu::before,
@@ -122,6 +123,11 @@ body {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
 }
 
+html[data-bs-theme='dark'] .topicDescription {
+    background-color: gray;
+    transition: var(--background-timing);
+}
+
 .topicDescription h1 {
     font-weight: 600;
 }
@@ -136,6 +142,15 @@ body {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
 }
 
+html[data-bs-theme='dark'] .feed {
+    background-color: gray;
+    transition: var(--background-timing);
+}
+
+html[data-bs-theme='dark'] .title {
+    color: var(--background-color-light);
+}
+
 .rules {
     /* transition: margin-left 300ms; */
     margin: 20px auto 100px 0;
@@ -144,6 +159,15 @@ body {
     padding: 30px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0px 0px 10px 2px var(--hover-background);
+}
+
+html[data-bs-theme='dark'] .rules {
+    background-color: gray;
+    transition: var(--background-timing);
+}
+
+html[data-bs-theme='dark'] select, option, input, button {
+    color: var(--background-color-dark);
 }
 
 .rules h2 {
@@ -369,6 +393,12 @@ body {
     font-weight: 600;
 }
 
+html[data-bs-theme='dark'] .noUnderlineLink h2 {
+    color: var(--Turquoise);
+    font-weight: 600;
+    transition: var(--background-timing);
+}
+
 .reaction {
     display: inline-flex;
     box-sizing: border-box;
@@ -377,6 +407,14 @@ body {
     border-radius: 30px;
     margin-right: 30px;
     align-items: center;
+}
+
+html[data-bs-theme='dark'] .reaction {
+    border: 2px solid var(--background-color-light);
+}
+
+html[data-bs-theme='dark'] .reply {
+    border: 2px solid var(--background-color-light);
 }
 
 .reaction span.like-post-button, .reaction span.dislike-post-button {

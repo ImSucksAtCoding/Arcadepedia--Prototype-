@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@
                     Register
                 </div>
             </a>
-            <div class="bg-toggle-button" role="button" tabindex="0" aria-label="Toggle background">
+            <div class="bg-toggle-button" tabindex="0" aria-label="Toggle background">
                 <i class="fa-solid fa-moon"></i>
             </div>
         </div>
@@ -143,7 +143,7 @@
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
-                                0
+                                <span>0</span>
                                 <span class="dislike-post-button">&#x25BC;</span>    
                             </span>
                             <span class="reply">
@@ -185,7 +185,7 @@
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
-                                0
+                                <span>0</span>
                                 <span class="dislike-post-button">&#x25BC;</span>    
                             </span>
                             <span class="reply">
@@ -227,7 +227,7 @@
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
-                                0
+                                <span>0</span>
                                 <span class="dislike-post-button">&#x25BC;</span>    
                             </span>
                             <span class="reply">
@@ -269,7 +269,7 @@
                         <span>
                             <span class="reaction">
                                 <span class="like-post-button">&#x25B2;</span>
-                                0
+                                <span>0</span>
                                 <span class="dislike-post-button">&#x25BC;</span>    
                             </span>
                             <span class="reply">
@@ -470,6 +470,23 @@
             } else if (menuIcon.checked == false) {
                 console.log(menuIcon.checked);
                 sidebar.style.display = 'none';
+            }
+        })
+
+        //Toggle background function
+        let toggle = document.querySelector('.background')
+        let icon = document.querySelector('.fa-moon')
+        // Add click event 
+        icon.addEventListener('click', (e) => {
+            if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
+                document.documentElement.setAttribute('data-bs-theme' , 'light') 
+                //change the icon switch as well
+                icon.classList.remove('fa-sun')
+                icon.classList.add('fa-moon')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
+                icon.classList.remove('fa-moon')
+                icon.classList.add('fa-sun') 
             }
         })
     </script>

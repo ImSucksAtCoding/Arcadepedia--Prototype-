@@ -36,16 +36,17 @@ Author: Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
+    --background-timing: 400ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
 }
 
 html, body {
     margin: 0;
     padding: 0;
+    transition: var(--background-timing);
 }
 
 body {
-    background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
 }
 
@@ -127,6 +128,7 @@ body {
     padding: 35px;
     justify-content: space-between;
     border-radius: 20px;
+    color: var(--background-color-dark);
     box-shadow: 0px 0px 10px 2px var(--hover-background);
     margin-bottom: 100px;
 }
@@ -137,6 +139,7 @@ body {
 
 input {
     /* border: none; */
+    color: var(--background-color-dark);
     border-radius: 6px;
     background-color: whitesmoke;
     margin-right: 10px;
@@ -173,6 +176,7 @@ input {
 
 p {
     font-weight: 600;
+    color: var(--background-color-dark);
 }
 
 /** ------------------- Smaller tablet responsive -----------------------------***/
