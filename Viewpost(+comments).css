@@ -132,13 +132,14 @@ body {
     color: var(--Grapes);
 }
 
-html[data-bs-theme='dark'] .breadcrumb-item, html[data-bs-theme='dark'] .breadcrumb-item a {
+html[data-bs-theme='dark'] .breadcrumb-item a {
     color: var(--Turquoise);
 }
 
 html[data-bs-theme='dark'] .content {
     background-color: gray;
-    transition: var(--background-timing);
+    box-shadow: 0px 0px 10px 2px gray;
+    /* transition: var(--background-timing); */
 }
 
 .content-margin {
@@ -281,7 +282,7 @@ html[data-bs-theme='dark'] .reaction {
     border: 2px solid var(--background-color-light);
 }
 
-.reaction span.like-post-button, .reaction span.dislike-post-button, .reaction span {
+.reaction span.like-post-button, .reaction span.dislike-post-button {
     background: none;
     border: none;
     font-size: 20px;

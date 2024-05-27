@@ -207,6 +207,11 @@ html[data-bs-theme='dark'] .trending-discussion a {
     position: relative;
 }
 
+html[data-bs-theme='dark'] .post {
+    background-color: gray;
+    box-shadow: 0px 0px 10px 2px gray;
+}
+
 .profilePic {
     border-radius: 9999px;
     margin-right: 10px;
@@ -219,10 +224,6 @@ html[data-bs-theme='dark'] .trending-discussion a {
     gap: 5px;
     padding: 20px;
     font-size: 20px;
-}
-
-html[data-bs-theme="dark"] .userInfo {
-    color: var(--background-color-dark);
 }
 
 .options-container {
@@ -240,11 +241,7 @@ html[data-bs-theme="dark"] .userInfo {
     top: 0px;
     height: 100px;
     width: 100px;
-}
-
-html[data-bs-theme="dark"] .options-container {
-    color: var(--background-color-dark);
-}
+}   
 
 .userAction {
     cursor: pointer;
@@ -287,10 +284,6 @@ html[data-bs-theme="dark"] .options-container {
     max-width: 95%;
 }
 
-html[data-bs-theme="dark"] .text p { 
-    color: var(--background-color-dark);
-}
-
 .userAction:hover {
     background-color: white;
     border-radius: 20px;
@@ -313,6 +306,10 @@ html[data-bs-theme="dark"] .text p {
 .noUnderlineLink h2 {
     font-weight: 600;
     color: var(--Grapes);
+}
+
+html[data-bs-theme='dark'] .noUnderlineLink h2 {
+    color: var(--Turquoise);
 }
 
 .reaction {
@@ -358,6 +355,10 @@ html[data-bs-theme="dark"] .text p {
     align-items: center;
 }
 
+html[data-bs-theme='dark'] .reply, html[data-bs-theme='dark'] .reaction {
+    border: 2px solid var(--background-color-light);
+}
+
 .reply a {
     text-decoration: none;
     color: black;
@@ -387,10 +388,6 @@ html[data-bs-theme="dark"] .text p {
 
 .reaction, .reply {
     margin-bottom: 20px;
-}
-
-html[data-bs-theme="dark"], .reaction span, .reply span {
-    color: var(--background-color-dark);
 }
 
 /*** ----------------------------------------------------------- **/
