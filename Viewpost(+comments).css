@@ -133,7 +133,7 @@ body {
 }
 
 html[data-bs-theme='dark'] .breadcrumb-item a {
-    color: var(--Turquoise);
+    color: var(--Amenthys);
 }
 
 html[data-bs-theme='dark'] .content {
@@ -157,11 +157,11 @@ html[data-bs-theme='dark'] .content {
 }
 
 html[data-bs-theme='dark'] .noUnderlineLink {
-    color: var(--Turquoise);
+    color: var(--Amenthys);
 }
 
 html[data-bs-theme='dark'] .row h1 {
-    color: var(--Turquoise);
+    color: var(--Amenthys);
 }
 
 .post {

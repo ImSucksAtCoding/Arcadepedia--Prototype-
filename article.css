@@ -1,6 +1,6 @@
 /**
-Homepage (landing page) Css customize
-Author: Bui Thai Son (s4037172)
+Article Css customize
+Author: Nguyen Phuong Linh (s4034535)
 **/
 
 
@@ -50,56 +50,6 @@ body {
     background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
 }
-
-/* .hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
-    content: "";
-    width: 30px;
-    transform-origin: left center;
-    height: 5px;
-    background-color: var(--background-color-dark);
-    border-radius: 9999px;
-    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing);
-}
-
-.hamburger-menu {
-    --x-width: calc(var(--cross-height) * 1.41421356237); 
-
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding-left: 40px;
-    cursor: pointer;
-    width: max-content;
-    margin-top: 7.5px;
-    margin-right: 20px;
-}
-
-.hamburger-menu input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;
-}
-
-.hamburger-menu input:checked {
-    opacity: 0;
-    width: 0;
-}
-
-.hamburger-menu:has(input:checked)::before {
-    rotate: 45deg;
-    width: var(--x-width);
-    translate: 0 calc(5px / -2);
-}
-
-.hamburger-menu:has(input:checked)::after {
-    rotate: -45deg;
-    width: var(--x-width);
-    translate: 0 calc(5px / 2);
-} */
 
 
 .main {
@@ -197,6 +147,11 @@ h2 {
     margin-left: 10px;
     margin-top: -5px;
 }
+html[data-bs-theme="dark"] .rating-box button{
+    background-color: var(--Electric-blue);
+    color: black;
+    transition: var(--background-timing);
+}
 
 
 
@@ -228,9 +183,15 @@ span button:after {
 
 .table a {
     text-decoration: none;
+    color: #0645ad;
 }
 .table a:hover {
     text-decoration: underline;
+}
+
+html[data-bs-theme="dark"] .table a{
+    color: #d9e8ff;
+    transition: var(--background-timing);
 }
 
 .table-content {
@@ -266,6 +227,10 @@ span button:after {
     margin: 1em auto;
     padding: 0;
 }
+html[data-bs-theme="dark"] .infobox {
+    background-color: #121212;
+    transition: var(--background-timing);
+}
 
 .infobox th {
     background-color: var(--Electric-blue);
@@ -274,6 +239,9 @@ span button:after {
     text-align: center;
     font-weight: bold;
     border-bottom: 1px solid #aaa;
+}
+html[data-bs-theme="dark"] .infobox th a{
+    transition: var(--background-timing);
 }
 
 .infobox td {
@@ -287,22 +255,16 @@ span button:after {
     color: #0645ad;
     text-decoration: none;
 }
-
-.infobox a:visited {
-    color: #0b0080;
+html[data-bs-theme="dark"] .infobox td a{
+    background-color: #121212;
+    color: #d9e8ff;
+    transition: var(--background-timing);
 }
+
+
 
 .infobox a:hover {
     text-decoration: underline;
-}
-
-.infobox .infobox-header {
-    background-color: #66aaff;
-    color: #fff;
-    text-align: center;
-    font-size: 125%;
-    font-weight: bold;
-    padding: 0.75em;
 }
 
 .infobox .infobox-image {

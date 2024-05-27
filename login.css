@@ -71,6 +71,11 @@ html, body {
     font-style: underline;
 }
 
+html[data-bs-theme="dark"] a{
+    color: var(--Amenthys);
+    transition: var(--background-timing);
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -115,12 +120,18 @@ input {
     font-weight: 600;
     cursor: pointer;
 }
+html[data-bs-theme="dark"] .forgot-password{
+    color: var(--Amenthys);
+}
 
 #Submit {
     font-size: 15px;
     background-color: var(--Grapes);
     color: var(--background-color-light);
     cursor: pointer;
+}
+html[data-bs-theme="dark"] #submit{
+    color: var(--Amenthys);
 }
 
 .exit {
@@ -140,6 +151,11 @@ input {
 .exit a:hover {
     color: var(--Turquoise);
     transition: var(--animation-timing);
+}
+
+html[data-bs-theme="dark"] .exit a:hover {
+    color: var(--Electric-blue);
+    transition: var(--background-timing);
 }
 
 .exit a {
