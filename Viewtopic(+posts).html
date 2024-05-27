@@ -381,6 +381,7 @@
 
                 // Create the input element
                 let input = document.createElement('input');
+                input.className = 'title';
                 input.type = 'text';
                 input.name = 'post[title]';
                 input.placeholder = "Post title";
@@ -431,10 +432,10 @@
                 submitBtn.textContent = 'Post';
                 submitBtn.className = "submitBtnB";
 
-                //Create the "escape hatch" button, to put the textarea off
-                let exitBtn = document.createElement('div')
-                exitBtn.className = 'exitBtn'
-                exitBtn.textContent = 'Exit'
+                // //Create the "escape hatch" button, to put the textarea off
+                // let exitBtn = document.createElement('div')
+                // exitBtn.className = 'exitBtn'
+                // exitBtn.textContent = 'Exit'
 
                 //Click event on the 'exit' button to move out the form
                 // exitBtn.addEventListener('click', (event) => {
@@ -453,7 +454,7 @@
 
                 // Append the form to the e.currentTarget
                 e.currentTarget.appendChild(form);
-                e.currentTarget.appendChild(exitBtn)
+                // e.currentTarget.appendChild(exitBtn)
 
                 if (!document.querySelector('#myScript')) {
                     let script = document.createElement('script');
@@ -588,6 +589,23 @@
             } else if (menuIcon.checked == false) {
                 console.log(menuIcon.checked);
                 sidebar.style.display = 'none';
+            }
+        })
+
+        //Toggle background function
+        let toggle = document.querySelector('.background')
+        let icon = document.querySelector('.fa-moon')
+        // Add click event 
+        icon.addEventListener('click', (e) => {
+            if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
+                document.documentElement.setAttribute('data-bs-theme' , 'light') 
+                //change the icon switch as well
+                icon.classList.remove('fa-sun')
+                icon.classList.add('fa-moon')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
+                icon.classList.remove('fa-moon')
+                icon.classList.add('fa-sun') 
             }
         })
     </script>

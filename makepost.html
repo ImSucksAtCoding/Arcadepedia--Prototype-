@@ -194,19 +194,19 @@
     <script src="makepost.js"></script>
     <script>
         //Toggle background function
-        let toggle = document.querySelector('.bg-toggle-button')
+        let toggle = document.querySelector('.background')
         let icon = document.querySelector('.fa-moon')
         // Add click event 
         icon.addEventListener('click', (e) => {
-            if (document.documentElement.getAttribute('data-bs-theme') == 'light') {
-                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
-                //change the icon switch as well
-                icon.classList.remove('fa-moon')
-                icon.classList.add('fa-sun')
-            } else {
+            if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
                 document.documentElement.setAttribute('data-bs-theme' , 'light') 
+                //change the icon switch as well
                 icon.classList.remove('fa-sun')
-                icon.classList.add('fa-moon') 
+                icon.classList.add('fa-moon')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme' , 'dark') 
+                icon.classList.remove('fa-moon')
+                icon.classList.add('fa-sun') 
             }
         })
     </script>
