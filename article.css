@@ -37,7 +37,6 @@ Author: Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 200ms ease-in-out;
-    --background-timing: 400ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
 }
 
@@ -48,7 +47,7 @@ html, body {
 }
 
 body {
-    transition: var(--background-timing);
+    background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
 }
 
@@ -226,6 +225,7 @@ span button:after {
     margin-bottom: 50px;
 }
 
+
 .table a {
     text-decoration: none;
 }
@@ -236,6 +236,7 @@ span button:after {
 .table-content {
     margin-top: 20px;
     margin-left: 90px;
+    
 }
 
 .table-content li {

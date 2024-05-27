@@ -118,25 +118,6 @@
                             </div>
                         </div>
                     </div>
-                <script>
-                fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Pac-Man&format=json&origin=*')
-                .then(response => response.json())
-                .then(data => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(data.parse.text['*'], 'text/html');
-                    const table = doc.querySelector('.infobox');
-                    const links = table.querySelectorAll('a');
-                    links.forEach(link => {
-                        const href = link.getAttribute('href');
-                        if (href.startsWith('/wiki/')) {
-                            link.href = 'https://en.wikipedia.org' + href;
-                        }
-                    });
-                    const div = document.querySelector('.mw-content-ltr');
-                    div.innerHTML += table.outerHTML;
-                })
-                .catch(error => console.error('Error:', error));
-                </script>
             
 
             <div class="section table">
@@ -154,7 +135,7 @@
             </div>
 
             <div class="section">
-                <h2>Overview<span><button class="display-btn" data-target="overview">[hide]</button></span></h2>
+                <h2>Overview<span><button class="display-btn" data-target="overview"></button></span></h2>
                 <div id="overview">
                     <p>Pac-Man, originally called Puck Man in Japan, is a 1980 maze action video game developed and released by Namco for arcades. In North America, the game was released by Midway Manufacturing as part of its licensing agreement with Namco America. The player controls Pac-Man, who must eat all the dots inside an enclosed maze while avoiding four colored ghosts. Eating large flashing dots called "Power Pellets" causes the ghosts to temporarily turn blue, allowing Pac-Man to eat them for bonus points.</p>
                 </div>
@@ -163,7 +144,7 @@
             </div>
 
             <div class="section">
-                <h2>Gameplay<span><button class="display-btn"  data-target="gameplay">[hide]</button></span></h2>
+                <h2>Gameplay<span><button class="display-btn"  data-target="gameplay"></button></span></h2>
                 <div id="gameplay">
                     <p>Pac-Man is an action maze chase video game; the player controls the eponymous character through an enclosed maze. The objective of the game is to eat all of the dots placed in the maze while avoiding four colored ghosts—Blinky (red), Pinky (pink), Inky (cyan), and Clyde (orange)—who pursue Pac-Man. When Pac-Man eats all of the dots, the player advances to the next level. Levels are indicated by fruit icons at the bottom of the screen. In between levels are short cutscenes featuring Pac-Man and Blinky in humorous, comical situations.</p>
                     <p>If Pac-Man is caught by a ghost, he loses a life; the game ends when all lives are lost. Each of the four ghosts has its own unique artificial intelligence (A.I.), or "personality": Blinky gives direct chase to Pac-Man; Pinky and Inky try to position themselves in front of Pac-Man, usually by cornering him; and Clyde switches between chasing Pac-Man and fleeing from him.</p>
@@ -173,7 +154,7 @@
             </div>
 
             <div class="section">
-                <h2>Development<span><button class="display-btn" data-target="development">[hide]</button></span></h2>
+                <h2>Development<span><button class="display-btn" data-target="development"></button></span></h2>
                 <div id="development">
                     <p>After acquiring the struggling Japanese division of Atari in 1974, video game developer Namco began producing its own video games in-house, as opposed to licensing them from other developers and distributing them in Japan. Company president Masaya Nakamura created a small video game development group within the company and ordered them to study several NEC-produced microcomputers to potentially create games with. One of the first people assigned to this division was a 24-year-old employee named Toru Iwatani.</p>
                     <p>The Japanese video game industry had surged in popularity with games such as Space Invaders and Breakout, which led to the market being flooded with similar titles from other manufacturers in an attempt to cash in on the success. Iwatani felt that arcade games only appealed to men for their crude graphics and violence, and that arcades in general were seen as seedy environments. For his next project, Iwatani chose to create a non-violent, cheerful video game that appealed mostly to women, as he believed that attracting women and couples into arcades would potentially make them appear to be much more family friendly in tone. Iwatani began thinking of things that women liked to do in their time; he decided to center his game around eating, basing this on women liking to eat desserts and other sweets. His game was initially called Pakkuman, based on the Japanese onomatopoeia term "paku paku taberu", referencing the mouth movement of opening and closing in succession.</p>
@@ -181,21 +162,21 @@
             </div>
 
             <div class="section">
-                <h2>Reception<span><button class="display-btn"  data-target="reception">[hide]</button></span></h2>
+                <h2>Reception<span><button class="display-btn"  data-target="reception"></button></span></h2>
                 <div id="reception">
                     <p>When it was first released in Japan, Pac-Man was initially only a modest success; Namco's own Galaxian (1979) had quickly outdone the game in popularity because its predominately male player base was familiar with its shooting gameplay as opposed to Pac-Man's cute characters and maze-chase theme. Pac-Man eventually became very successful in Japan, where it went on to be Japan's highest-grossing arcade game of 1980 according to the annual Game Machine charts, dethroning Space Invaders (1978) which had topped the annual charts for two years in a row and leading to a shift in the Japanese market away from space shooters towards action games featuring comical characters. Pac-Man was Japan's fourth highest-grossing arcade game of 1981.</p>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Legacy<span><button class="display-btn"  data-target="legacy">[hide]</button></span></h2>
+                <h2>Legacy<span><button class="display-btn"  data-target="legacy"></button></span></h2>
                 <div id="legacy">
                     <p>In 2009, Guinness World Records listed Pac-Man as the most recognizable video game character in the United States, recognized by 94% of the population, above Mario who was recognized by 93% of the population. In 2015, The Strong National Museum of Play inducted Pac-Man to its World Video Game Hall of Fame. The Pac-Man character and game series became an icon of video game culture during the 1980s.</p>              
                 </div>
             </div>
 
             <div class="section">
-                <h2>References<span><button class="display-btn"  data-target="references">[hide]</button></span></h2>
+                <h2>References<span><button class="display-btn"  data-target="references"></button></span></h2>
                 <div id="references">
                     <a href="https://en.wikipedia.org/wiki/Space_Invaders"><p>https://en.wikipedia.org/wiki/Pac-Man</p></a>
                 </div>
@@ -275,10 +256,32 @@
     </footer>
     
   <script>
+     // Get infobox
+     fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Space_Invaders&format=json&origin=*')
+                                .then(response => response.json())
+                                .then(data => {
+                                    const parser = new DOMParser();
+                                    const doc = parser.parseFromString(data.parse.text['*'], 'text/html');
+                                    const table = doc.querySelector('.infobox');
+                                    const links = table.querySelectorAll('a');
+                                    links.forEach(link => {
+                                        const href = link.getAttribute('href');
+                                        if (href.startsWith('/wiki/')) {
+                                            link.href = 'https://en.wikipedia.org' + href;
+                                        }
+                                    });
+                                    const div = document.querySelector('.mw-content-ltr');
+                                    div.innerHTML += table.outerHTML;
+                                })
+                                .catch(error => console.error('Error:', error));
 
+
+
+    // Hide section
     document.querySelectorAll('.display-btn').forEach(function(button) {
         button.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default anchor behavior
+            this.classList.toggle("active");
 
             // Get the target ID from the data-target attribute
             var targetId = this.getAttribute('data-target');
@@ -292,6 +295,8 @@
             }
         });
     });
+
+
 </script>
       
   <!-- Main Body Ends -->
