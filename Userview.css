@@ -133,6 +133,12 @@ body {
     margin-bottom: 100px;
 }
 
+html[data-bs-theme='dark'] .Userlist-Description {
+    background-color: gray;
+    color: var(--background-color-light);
+    box-shadow: 0px 0px 10px 2px gray;
+}
+
 .Userlist-Description form {
     padding-top: 20px;
 }
@@ -156,6 +162,11 @@ input {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
 }
 
+html[data-bs-theme='dark'] .Userlist {
+    background-color: gray;
+    box-shadow: 0px 0px 10px 2px gray;
+}
+
 .info {
     display: flex;
     align-items: center;
@@ -174,9 +185,17 @@ input {
     font-weight: 600;
 }
 
+html[data-bs-theme='dark'] .info a {
+    color: var(--Turquoise);
+}
+
 p {
     font-weight: 600;
     color: var(--background-color-dark);
+}
+
+html[data-bs-theme='dark'] p {
+    color: var(--background-color-light);
 }
 
 /** ------------------- Smaller tablet responsive -----------------------------***/

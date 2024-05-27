@@ -535,6 +535,10 @@
 
                 textarea.addEventListener('input', () => {
                     output.innerHTML = textarea.value;
+                    // The output color should be black when using darkmode
+                    if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
+                        output.style.color = 'black';
+                    }
                 });
 
                 function replaceSelectionWith(text) {

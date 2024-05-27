@@ -125,7 +125,6 @@ body {
 
 html[data-bs-theme='dark'] .topicDescription {
     background-color: gray;
-    transition: var(--background-timing);
 }
 
 .topicDescription h1 {
@@ -142,9 +141,17 @@ html[data-bs-theme='dark'] .topicDescription {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
 }
 
+.breadcrumb-item a {
+    color: var(--Grapes);
+}
+
+html[data-bs-theme='dark'] .breadcrumb-item a {
+    color: var(--Turquoise);
+}
+
 html[data-bs-theme='dark'] .feed {
     background-color: gray;
-    transition: var(--background-timing);
+    box-shadow: 0px 0px 10px 2px gray;
 }
 
 html[data-bs-theme='dark'] .title {
@@ -163,7 +170,6 @@ html[data-bs-theme='dark'] .title {
 
 html[data-bs-theme='dark'] .rules {
     background-color: gray;
-    transition: var(--background-timing);
 }
 
 html[data-bs-theme='dark'] select, option, input, button {

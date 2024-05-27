@@ -310,6 +310,11 @@ html[data-bs-theme='dark'] .activity-after {
     position: relative;
 }
 
+html[data-bs-theme='dark'] .post {
+    background-color: gray;
+    box-shadow: 0px 0px 10px 2px gray;
+}
+
 .profilePic {
     border-radius: 9999px;
     margin-right: 10px;
@@ -318,7 +323,6 @@ html[data-bs-theme='dark'] .activity-after {
 .userInfo {
     display: flex;
     align-items: center;
-    color: var(--background-color-dark);
     font-weight: 600;
     gap: 5px;
     padding: 20px;
@@ -333,7 +337,6 @@ html[data-bs-theme='dark'] .activity-after {
    left: 95%;
    top: 8%;
    font-size: 20px;
-   color: var(--background-color-dark);
    position: absolute;
    cursor: pointer;
 }
@@ -395,7 +398,6 @@ html[data-bs-theme='dark'] .activity-after {
 
 .text p {
     /* font-weight: 600; */
-    color: var(--background-color-dark);
     font-size: 20px;
     max-width: 95%;
 }
@@ -424,6 +426,10 @@ html[data-bs-theme='dark'] .activity-after {
     font-weight: 600;
 }
 
+html[data-bs-theme='dark'] .noUnderlineLink h2 {
+    color: var(--Turquoise);
+}
+
 .reaction {
     display: inline-flex;
     box-sizing: border-box;
@@ -434,11 +440,10 @@ html[data-bs-theme='dark'] .activity-after {
     align-items: center;
 }
 
-.reaction span.like-post-button, .reaction span.dislike-post-button, .reaction span {
+.reaction span.like-post-button, .reaction span.dislike-post-button {
     background: none;
     border: none;
     font-size: 20px;
-    color: var(--background-color-dark);
     cursor: pointer;
     padding: 0 5px 0 5px;
     border-radius: 9999px;
@@ -469,11 +474,19 @@ html[data-bs-theme='dark'] .activity-after {
     color: var(--background-color-dark);
 }
 
+html[data-bs-theme='dark'] .reply , html[data-bs-theme='dark'] .reaction {
+    border: 2px solid var(--background-color-light);
+}
+
 .reply a {
     text-decoration: none;
     color: black;
     border-radius: 30px;
     transition: background 0.3s ease;
+}
+
+html[data-bs-theme='dark'] .reply span {
+    color: var(--background-color-light);
 }
 
 .reply a:hover {

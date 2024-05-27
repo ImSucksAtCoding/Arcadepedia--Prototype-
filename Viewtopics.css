@@ -37,6 +37,7 @@ Authors: - Bui Thai Son (s4037172)
     --post-background-light: #d8d8d8;
     --post-background-dark: #231F20;
     --animation-timing: 300ms ease-in-out;
+    --background-timing: 400ms ease-in-out;
     --cross-height: calc(4px * 3 + 4px * 2);
 }
 
@@ -46,8 +47,8 @@ html, body {
 }
 
 body {
-    background-color: var(--background-color-light);
     font-family: 'Inter', sans-serif;
+    transition: var(--background-timing);
 }
 
 /* .hamburger-menu::before,
@@ -113,12 +114,25 @@ body {
     height: calc(100% - 80px); /* Actually this is the real reason why the sidebar is wrong :) */
 }
 
+.breadcrumb-item a {
+    color: var(--Grapes);
+}
+
+html[data-bs-theme='dark'] .breadcrumb-item a {
+    color: var(--Turquoise);
+}
+
 .forumDescription {
     background-color: #DADADA;
     margin: 50px 0 10px 0;
     padding: 35px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0px 0px 10px 2px var(--hover-background);
+}
+
+html[data-bs-theme='dark'] .forumDescription {
+    background-color: gray;
+    box-shadow: 0px 0px 10px 2px gray;
 }
 
 .forumDescription h1 {
@@ -153,12 +167,21 @@ body {
     box-shadow: 0px 0px 10px 2px var(--hover-background);
 }
 
+html[data-bs-theme='dark'] .feed, html[data-bs-theme='dark'] .stats {
+    background-color: gray;
+    box-shadow: 0px 0px 10px 2px gray;
+}
+
 .ribbon h2, .stats h3 {
     font-weight: 600;
 }
 
 .ribbon a {
     color: var(--Grapes);
+}
+
+html[data-bs-theme='dark'] .ribbon a {
+    color: var(--Turquoise);
 }
 
 .infoRow {
@@ -214,6 +237,10 @@ body {
     font-weight: 600;
 }
 
+html[data-bs-theme='dark'] .newestPostInfo a {
+    color: var(--Turquoise);
+}
+
 .infoRow a {
     text-decoration: none;
 }
@@ -238,6 +265,10 @@ body {
     text-decoration: none;
     color: var(--Grapes);
     font-weight: 600;
+}
+
+html[data-bs-theme='dark'] .noUnderlineLink, html[data-bs-theme='dark'] .title, html[data-bs-theme='dark'] .username {
+    color: var(--Turquoise);
 }
 
 .timestampSeperator {
