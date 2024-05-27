@@ -114,6 +114,10 @@ header .username {
     margin-right: 10px;
 }
 
+html[data-bs-theme='dark'] .username {
+    color: var(--background-color-light);
+}
+
 .username img {
     border-radius: 9999px;
 }
