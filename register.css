@@ -133,6 +133,11 @@ html[data-bs-theme="dark"] #submit{
     transition: var(--animation-timing);
 }
 
+html[data-bs-theme="dark"] .exit a:hover {
+    color: var(--Electric-blue);
+    transition: var(--background-timing);
+}
+
 .exit a {
     text-decoration: none;
     color: var(--background-color-dark);

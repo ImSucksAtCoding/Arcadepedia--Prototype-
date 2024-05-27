@@ -21,6 +21,11 @@
     overflow: hidden;
 }
 
+html[data-bs-theme="dark"] .header {
+    border-bottom: #121212;
+    transition: var(--background-timing);
+}
+
 .left-section {
     display: flex;
     flex-direction: row;
