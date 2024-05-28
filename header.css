@@ -111,12 +111,11 @@ html[data-bs-theme='dark'] .fa-magnifying-glass {
 
 html[data-bs-theme="dark"] .login-button {
     background-color: var(--Electric-blue);
-    transition: var(--background-timing);
 }
 
 html[data-bs-theme="dark"] .register-button {
     background-color: var(--Amenthys);
-    transition: var(--background-timing);
+    color: black;
 }
 
 header .username {

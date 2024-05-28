@@ -177,7 +177,7 @@ body {
 }
 
 html[data-bs-theme='dark'] .content h1 {
-    color: var(--Electric-blue);
+    color: var(--Amenthys);
 }
 
 .teammate {
@@ -245,7 +245,10 @@ html[data-bs-theme='dark'] .social-links a:hover {
 }
 
 .teammate-info h3{
-    color:#AC63D4;
+    color: var(--Grapes);
+}
+html[data-bs-theme='dark'] .teammate-info h3 {
+    color: var(--Amenthys)
 }
 
 .content h1 {

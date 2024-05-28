@@ -42,7 +42,6 @@ Author: - Nguyen Anh Tung (s4045602)
 html, body {
     margin: 0;
     padding: 0;
-    transition: var(--background-timing);
 }
 
 body {
@@ -101,7 +100,7 @@ body {
 }
 
 html[data-bs-theme='dark'] .container h1 {
-    color: var(--Turquoise);
+    color: var(--Amenthys);
 }
 
 .content {
@@ -138,7 +137,6 @@ html[data-bs-theme='dark'] .container h1 {
 
 .legal-button:hover {
     color: cyan;
-    transition: var(--animation-timing);
 }
 
 .legal-info {
@@ -147,7 +145,6 @@ html[data-bs-theme='dark'] .container h1 {
     flex-direction: column;
     gap: 10px;
     font-weight: 600;
-    transition: var(--animation-timing);
 }
 
 /* Rules content styles */
@@ -160,8 +157,7 @@ html[data-bs-theme='dark'] .container h1 {
 }
 
 html[data-bs-theme='dark'] .rule {
-    background-color: gray;
-    box-shadow: 0px 0px 10px 2px gray;
+    background-color: #121212;
 }
 
 .container main .rule h2 {
@@ -171,7 +167,7 @@ html[data-bs-theme='dark'] .rule {
 }
 
 html[data-bs-theme='dark'] .rule h2 {
-    color: var(--Turquoise);
+    color: var(--Amenthys);
 }
 
 .container main .rule p {
