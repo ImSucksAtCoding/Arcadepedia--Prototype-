@@ -83,6 +83,10 @@ html[data-bs-theme="dark"] input[type="file"]{
     color: white;
 }
 
+html[data-bs-theme="dark"] textarea {
+    background-color: #231F20;
+}
+
 .update-form h1 {
     font-weight: 600;
     color: var(--background-color-dark);

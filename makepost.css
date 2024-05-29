@@ -107,6 +107,10 @@ div.editor button.edit-btn {
     background-color: #e5e5e5;
 }
 
+html[data-bs-theme='dark'] .edit-btn:hover {
+    background-color: #121212;
+}
+
 .rules {
     flex: 0 1 30%;
     background-color: #e5e5e5;
@@ -115,6 +119,18 @@ div.editor button.edit-btn {
     height: fit-content;
     border-radius: 1px;
     margin: 50px auto;
+}
+
+html[data-bs-theme='dark'] .rules {
+    background-color: #121212;
+}
+
+html[data-bs-theme='dark'] .rules h2{
+    color: white;
+}
+
+html[data-bs-theme='dark'] .rules li {
+    color: white;
 }
 
 .rules h2 {
@@ -147,6 +163,11 @@ ol li {
     float: right;
     margin-right: 120px;
     margin-bottom: 5px;
+}
+
+html[data-bs-theme='dark'] #submit {
+    background-color: var(--Electric-blue);
+    color: black;
 }
 
 textarea {

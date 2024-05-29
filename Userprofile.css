@@ -215,6 +215,16 @@ html[data-bs-theme='dark'] .edit:hover {
     transition: var(--animation-timing);
 }
 
+html[data-bs-theme='dark'] .deactivate {
+    color: red;   
+    border: 2px solid red;
+}
+
+html[data-bs-theme='dark'] .deactivate:hover {
+    color: white;   
+    background-color: red;
+}
+
 .filter {
     margin-top: 80px;
     display: flex;
@@ -238,6 +248,11 @@ html[data-bs-theme='dark'] .edit:hover {
     cursor: pointer;
     transition: var(--animation-timing);
 }
+html[data-bs-theme='dark'] .about {
+    border-bottom: 5px solid var(--Electric-blue);
+    color: var(--Electric-blue);
+    transition: var(--animation-timing);
+}
 
 html[data-bs-theme='light'] .about-after {
     color: var(--background-color-dark);
@@ -250,7 +265,7 @@ html[data-bs-theme='dark'] .about-after {
     border: none;
 }
 
-html[data-bs-theme='light'] .activity {
+ .activity {
     padding: 10px;
     color: var(--background-color-dark);
     cursor: pointer;
@@ -260,10 +275,9 @@ html[data-bs-theme='light'] .activity {
 html[data-bs-theme='dark'] .activity {
     padding: 10px;
     color: var(--background-color-light);
-    padding: 10px;
 }
 
-html[data-bs-theme='light'] .activity-after {
+.activity-after {
     border-bottom: 5px solid var(--Turquoise);
     padding: 10px;
     color: var(--Turquoise);
@@ -272,9 +286,9 @@ html[data-bs-theme='light'] .activity-after {
 }
 
 html[data-bs-theme='dark'] .activity-after {
-    border-bottom: 5px solid var(--Turquoise);
+    border-bottom: 5px solid var(--Electric-blue);
     padding: 10px;
-    color: var(--Turquoise);
+    color: var(--Electric-blue);
     cursor: pointer;
     transition: var(--animation-timing);
 }
@@ -311,8 +325,8 @@ html[data-bs-theme='dark'] .activity-after {
 }
 
 html[data-bs-theme='dark'] .post {
-    background-color: gray;
-    box-shadow: 0px 0px 10px 2px gray;
+    background-color: #121212;
+    box-shadow: none;
 }
 
 .profilePic {
@@ -427,7 +441,7 @@ html[data-bs-theme='dark'] .post {
 }
 
 html[data-bs-theme='dark'] .noUnderlineLink h2 {
-    color: var(--Turquoise);
+    color: var(--Electric-blue);
 }
 
 .reaction {

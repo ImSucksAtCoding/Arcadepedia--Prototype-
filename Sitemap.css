@@ -120,6 +120,11 @@ body {
     color: #7B1DaE;
     margin-bottom: 20px;
 }
+
+html[data-bs-theme='dark'] .sidemap h1 {
+    color: var(--Amenthys);    
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -133,10 +138,17 @@ p{
     text-decoration: none;
     color: #7B1DaE;
 }
+
+html[data-bs-theme='dark'] p {
+    color: var(--Amenthys);    
+}
+
 a {
     text-decoration: none;
     color: #7B1DaE;
 }
+
+
 a:hover {
     text-decoration: underline;
 }
@@ -148,6 +160,11 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+html[data-bs-theme='dark'] .sidemap {
+    background-color: #121212;
+    border-color: transparent;    
 }
 
 .large-section {

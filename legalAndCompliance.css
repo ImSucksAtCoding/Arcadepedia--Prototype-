@@ -165,11 +165,15 @@ body {
 }
 
 html[data-bs-theme='dark'] .content h1 {
-    color: var(--Electric-blue);    
+    color: var(--Amenthys);    
 }
 
 .content h3 {
     color: #7B1DaE;
+}
+
+html[data-bs-theme='dark'] .content h3 {
+    color: var(--Amenthys);    
 }
 
 .center-title {
