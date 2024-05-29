@@ -98,6 +98,7 @@ html[data-bs-theme='dark'] .fa-magnifying-glass {
     padding: 13px 40px;
     background-color: var(--Grapes);
     border-radius: 8px;
+    font-weight: 600;
 }
 
 .logout-button {
